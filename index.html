@@ -204,7 +204,13 @@ function searchJobs(){
     }
     else if(input.includes("government") || input.includes("सरकारी")){
         window.location.href = "government.html";
-    }
+    }else if(
+    input.includes("nrlm") ||
+    input.includes("rural livelihood") ||
+    input.includes("livelihood")
+){
+    window.location.href = "nrlm-2026.html";
+}
     else if(input.includes("private") || input.includes("प्राइवेट")){
         window.location.href = "private.html";
     }
