@@ -88,6 +88,29 @@ footer{margin-top:30px;background:#222;color:white;text-align:center;padding:20p
 <p>© 2026 Rozgar Sathi</p>
 <p>Jobs • Career • Employment</p>
 </footer>
+<script>
+function searchJobs(){
+    let input = document.getElementById("jobSearch").value.toLowerCase();
 
+    if(input.includes("10th") || input.includes("दसवीं")){
+        window.location.href = "10th-pass.html";
+    }
+    else if(input.includes("12th") || input.includes("बारहवीं")){
+        window.location.href = "12th-pass.html";
+    }
+    else if(input.includes("graduate") || input.includes("graduation")){
+        window.location.href = "graduate-jobs.html";
+    }
+    else if(input.includes("work from home") || input.includes("wfh") || input.includes("घर से")){
+        window.location.href = "work-from-home.html";
+    }
+    else if(input.includes("government") || input.includes("सरकारी")){
+        window.location.href = "government.html";
+    }
+    else if(input.includes("private") || input.includes("प्राइवेट")){
+        window.location.href = "private.html";
+    }
+}
+</script>
 </body>
 </html>
