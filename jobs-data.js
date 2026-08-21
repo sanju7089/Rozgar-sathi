@@ -397,4 +397,123 @@ const jobs = [
     lastDate: "2026-08-21",
     page: "10th-pass.html"
       }
+{
+    id: "isro-dos-director-2026",
+    title: "ISRO Department of Space Director (Technical & Strategy)",
+    category: "government",
+    qualification: "Relevant qualification",
+    posts: "1",
+    lastDate: "2026-09-12",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "isro-lpsc-2026",
+    title: "ISRO LPSC Technical Assistant / Technician / Draughtsman / Fireman",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-09-04",
+    page: "government.html"
+  },
+
+  {
+    id: "isro-hsfc-2026",
+    title: "ISRO HSFC Scientist / Engineer",
+    category: "government",
+    qualification: "Engineering / संबंधित योग्यता",
+    posts: "Multiple",
+    lastDate: "2026-08-30",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "isro-nrsc-2026",
+    title: "ISRO NRSC Temporary Research Personnel",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-08-21",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "isro-ursc-apprentice-2026",
+    title: "ISRO URSC Graduate / Diploma Apprentice",
+    category: "government",
+    qualification: "Graduate / Diploma",
+    posts: "Multiple",
+    lastDate: "2026-08-28",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "isro-prl-2026",
+    title: "ISRO PRL Administrative / Accounts / Purchase & Stores Officer",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-08-24",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "india-post-driver-2026",
+    title: "India Post Driver Recruitment",
+    category: "government",
+    qualification: "Notification के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-30",
+    page: "government.html"
+  },
+
+  {
+    id: "india-post-skilled-artisan-2026",
+    title: "India Post Skilled Artisan",
+    category: "government",
+    qualification: "Trade / संबंधित qualification",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-30",
+    page: "10th-pass.html"
+  },
+
+  {
+    id: "ship-min-pilot-2026",
+    title: "Ministry of Ports - Pilot Recruitment",
+    category: "government",
+    qualification: "Relevant qualification",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-11",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "ship-min-materials-manager-2026",
+    title: "Materials Manager - Mormugao Port Authority",
+    category: "government",
+    qualification: "Relevant qualification",
+    posts: "1",
+    lastDate: "2026-09-06",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "ship-min-medical-superintendent-2026",
+    title: "Medical Superintendent - Haldia Dock Complex",
+    category: "government",
+    qualification: "Medical qualification",
+    posts: "1",
+    lastDate: "2026-09-12",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "ship-min-deputy-chief-mech-2026",
+    title: "Deputy Chief Mechanical Engineer - Chennai Port",
+    category: "government",
+    qualification: "Engineering",
+    posts: "1",
+    lastDate: "2026-09-30",
+    page: "graduate-jobs.html"
+      }
 ];
