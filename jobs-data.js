@@ -516,4 +516,153 @@ const jobs = [
     lastDate: "2026-09-30",
     page: "graduate-jobs.html"
       }
+{
+    id: "rrb-je-2026",
+    title: "RRB Junior Engineer 2026",
+    category: "government",
+    qualification: "Diploma / Engineering",
+    posts: "3993",
+    lastDate: "2026-09-13",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "iocl-engineer-officer-law-2026",
+    title: "IOCL Engineer / Officer / Law Recruitment",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "470",
+    lastDate: "2026-09-03",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "iit-bombay-technical-officer-2026",
+    title: "IIT Bombay Technical / Officer / Nursing & Other Posts",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "27",
+    lastDate: "2026-09-04",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "ncrtc-assistant-manager-civil-2026",
+    title: "NCRTC Assistant Manager Civil",
+    category: "government",
+    qualification: "Civil Engineering",
+    posts: "1",
+    lastDate: "2026-09-12",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "cci-engineer-officer-analyst-2026",
+    title: "Cement Corporation of India Engineer / Officer / Analyst",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "15",
+    lastDate: "2026-09-15",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "income-tax-pune-sports-quota-2026",
+    title: "Income Tax Pune Sports Quota Recruitment",
+    category: "government",
+    qualification: "Sports Quota Eligibility",
+    posts: "85",
+    lastDate: "2026-09-15",
+    page: "government.html"
+  },
+
+  {
+    id: "cpcl-junior-engineering-assistant-2026",
+    title: "CPCL Junior Engineering Assistant",
+    category: "government",
+    qualification: "Relevant Diploma / Qualification",
+    posts: "60",
+    lastDate: "2026-09-11",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "aai-apprentice-northern-region-2026",
+    title: "AAI Northern Region Apprentice",
+    category: "government",
+    qualification: "Graduate / Diploma / ITI as applicable",
+    posts: "205",
+    lastDate: "2026-09-16",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "mp-high-court-assistant-2026",
+    title: "MP High Court Assistant Grade-3",
+    category: "government",
+    qualification: "Notification के अनुसार",
+    posts: "1174",
+    lastDate: "2026-09-15",
+    page: "12th-pass.html"
+  },
+
+  {
+    id: "bhel-trichy-apprentice-2026",
+    title: "BHEL Trichy Trade Apprentice",
+    category: "government",
+    qualification: "ITI / Trade के अनुसार",
+    posts: "380",
+    lastDate: "2026-09-12",
+    page: "10th-pass.html"
+  },
+
+  {
+    id: "mecon-manager-2026",
+    title: "MECON Various Manager Posts",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "7",
+    lastDate: "2026-09-13",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "iitb-technical-posts-2026",
+    title: "IIT Bombay Technical & Other Recruitment",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "27",
+    lastDate: "2026-09-04",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "sjvn-buxar-executive-2026",
+    title: "SJVN Executive Recruitment - Buxar Thermal Power Project",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-08-26",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "itbp-medical-specialist-2026",
+    title: "ITBP Medical Officer / Specialist",
+    category: "government",
+    qualification: "Medical Qualification",
+    posts: "282",
+    lastDate: "2026-09-08",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "eastern-railway-scout-guide-2026",
+    title: "Eastern Railway Scouts & Guides Quota",
+    category: "government",
+    qualification: "10th / 12th as applicable",
+    posts: "15",
+    lastDate: "2026-09-06",
+    page: "10th-pass.html"
+      }
 ];
