@@ -1079,7 +1079,100 @@ style="text-decoration:none;color:#075e54;font-weight:bold"
 
 
 <script>
+<script src="jobs-data.js"></script>
 
+<script>
+
+function loadDataJobs(){
+
+const container = document.getElementById("jobList");
+
+if(typeof jobs === "undefined") return;
+
+jobs.forEach(function(job){
+
+const card = document.createElement("div");
+
+card.className = "job searchable";
+
+card.dataset.search =
+(
+job.title + " " +
+job.category + " " +
+job.qualification + " " +
+job.posts
+).toLowerCase();
+
+card.dataset.lastdate = job.lastDate;
+
+const dateParts = job.lastDate.split("-");
+
+const formattedDate =
+dateParts[2] + " " +
+new Date(
+dateParts[0],
+parseInt(dateParts[1])-1,
+1
+).toLocaleString("en-US",{month:"long"}) +
+" " + dateParts[0];
+
+card.innerHTML = `
+
+<h3>📋 ${job.title}</h3>
+
+<span class="badge new-badge">🆕 New</span>
+<span class="badge">${job.category}</span>
+
+<span class="status-badge">Checking...</span>
+
+<div class="job-info">
+
+<div>
+🎓 <b>Qualification</b><br>
+${job.qualification}
+</div>
+
+<div>
+💼 <b>Total Posts</b><br>
+${job.posts}
+</div>
+
+<div>
+📅 <b>Last Date</b><br>
+<span class="last-date">${formattedDate}</span>
+</div>
+
+<div>
+🇮🇳 <b>Category</b><br>
+${job.category}
+</div>
+
+</div>
+
+<div class="countdown">
+⏳ Status check हो रहा है...
+</div>
+
+<a
+class="apply"
+href="${job.page}"
+target="_blank"
+rel="noopener"
+>
+🔎 Official Details →
+</a>
+
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+loadDataJobs();
+
+</script>
 /* =====================================================
    ROZGAR SATHI PROFESSIONAL SEARCH
 ===================================================== */
