@@ -3,12 +3,18 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
 <title>Closed Jobs | Rozgar Sathi</title>
 
-<meta name="description"
-content="Rozgar Sathi पर आवेदन की अंतिम तारीख समाप्त हो चुकी सरकारी और प्राइवेट jobs की जानकारी।">
+<meta
+name="description"
+content="Rozgar Sathi पर आवेदन की अंतिम तारीख समाप्त हो चुकी सरकारी और प्राइवेट jobs की जानकारी।"
+>
 
 <style>
 
@@ -24,7 +30,11 @@ color:#222;
 }
 
 header{
-background:linear-gradient(135deg,#064e46,#087f70);
+background:linear-gradient(
+135deg,
+#064e46,
+#087f70
+);
 color:white;
 padding:35px 15px 45px;
 text-align:center;
@@ -33,7 +43,6 @@ text-align:center;
 header h1{
 margin:0;
 font-size:32px;
-font-weight:800;
 }
 
 header p{
@@ -74,7 +83,11 @@ padding:18px 15px 35px;
 }
 
 .hero{
-background:linear-gradient(135deg,#ffffff,#eef9f7);
+background:linear-gradient(
+135deg,
+#ffffff,
+#eef9f7
+);
 border-radius:16px;
 padding:25px;
 box-shadow:0 4px 15px rgba(0,0,0,.08);
@@ -85,17 +98,16 @@ border:1px solid #e2eeee;
 .hero h2{
 margin:0 0 10px;
 color:#075e54;
-font-size:25px;
 }
 
 .hero p{
 line-height:1.6;
-margin:8px 0;
 }
 
 .stats{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:
+repeat(3,1fr);
 gap:12px;
 margin-bottom:20px;
 }
@@ -106,10 +118,6 @@ padding:18px 10px;
 border-radius:13px;
 text-align:center;
 box-shadow:0 3px 12px rgba(0,0,0,.07);
-}
-
-.stat .icon{
-font-size:25px;
 }
 
 .stat strong{
@@ -148,20 +156,6 @@ font-size:16px;
 outline:none;
 }
 
-.search-box input:focus{
-border-color:#075e54;
-box-shadow:0 0 0 3px rgba(7,94,84,.08);
-}
-
-.info{
-background:#fff8dc;
-border-left:5px solid #e0b100;
-padding:15px;
-border-radius:9px;
-margin-bottom:20px;
-line-height:1.6;
-}
-
 .job{
 background:white;
 padding:20px;
@@ -169,12 +163,6 @@ margin-bottom:16px;
 border-radius:14px;
 box-shadow:0 3px 13px rgba(0,0,0,.08);
 border-left:5px solid #777;
-transition:.2s;
-}
-
-.job:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 18px rgba(0,0,0,.11);
 }
 
 .job h3{
@@ -196,7 +184,8 @@ margin-bottom:12px;
 
 .job-info{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:
+repeat(3,1fr);
 gap:9px;
 margin:14px 0;
 }
@@ -214,11 +203,6 @@ color:#075e54;
 margin-bottom:4px;
 }
 
-.job p{
-line-height:1.55;
-margin:8px 0;
-}
-
 .apply{
 display:inline-block;
 margin-top:10px;
@@ -230,11 +214,7 @@ text-decoration:none;
 font-weight:bold;
 }
 
-.apply:hover{
-background:#064e46;
-}
-
-#noClosed{
+.empty{
 background:white;
 padding:30px 20px;
 border-radius:14px;
@@ -242,9 +222,8 @@ text-align:center;
 box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
-#noClosed h3{
+.empty h3{
 color:#075e54;
-margin-top:0;
 }
 
 .warning{
@@ -256,29 +235,27 @@ margin-top:20px;
 line-height:1.6;
 }
 
-.warning b{
-color:#b00020;
-}
-
-.bottom-links{
+.bottom{
 text-align:center;
-padding:25px 5px 10px;
+padding:25px 5px;
 }
 
-.bottom-links .apply{
+.bottom a{
+display:inline-block;
+background:#075e54;
+color:white;
+padding:11px 18px;
+border-radius:8px;
+text-decoration:none;
 margin:5px;
+font-weight:bold;
 }
 
 footer{
-margin-top:25px;
 background:#202020;
 color:white;
 text-align:center;
 padding:28px 15px;
-}
-
-footer p{
-margin:7px 0;
 }
 
 footer a{
@@ -288,16 +265,13 @@ text-decoration:none;
 
 @media(max-width:650px){
 
-header{
-padding:28px 12px 35px;
-}
-
 header h1{
 font-size:26px;
 }
 
 .stats{
-grid-template-columns:1fr 1fr 1fr;
+grid-template-columns:
+repeat(3,1fr);
 gap:7px;
 }
 
@@ -311,14 +285,6 @@ font-size:18px;
 
 .stat span{
 font-size:11px;
-}
-
-.hero{
-padding:20px;
-}
-
-.hero h2{
-font-size:22px;
 }
 
 .job{
@@ -341,7 +307,9 @@ grid-template-columns:1fr;
 
 <h1>📁 Closed Jobs</h1>
 
-<p>आवेदन की अंतिम तारीख समाप्त हो चुकी Jobs</p>
+<p>
+आवेदन की अंतिम तारीख समाप्त हो चुकी Jobs
+</p>
 
 </header>
 
@@ -349,19 +317,33 @@ grid-template-columns:1fr;
 
 <a href="index.html">🏠 Home</a>
 
-<a href="government.html">🏛️ Government</a>
+<a href="government.html">
+🏛️ Government
+</a>
 
-<a href="private.html">🏢 Private</a>
+<a href="private.html">
+🏢 Private
+</a>
 
-<a href="10th-pass.html">🎓 10th</a>
+<a href="10th-pass.html">
+🎓 10th
+</a>
 
-<a href="12th-pass.html">🎓 12th</a>
+<a href="12th-pass.html">
+🎓 12th
+</a>
 
-<a href="graduate-jobs.html">🎓 Graduate</a>
+<a href="graduate-jobs.html">
+🎓 Graduate
+</a>
 
-<a href="work-from-home.html">🏠 WFH</a>
+<a href="work-from-home.html">
+🏠 WFH
+</a>
 
-<a href="closed-jobs.html">📁 Closed</a>
+<a href="closed-jobs.html">
+📁 Closed
+</a>
 
 </nav>
 
@@ -369,16 +351,20 @@ grid-template-columns:1fr;
 
 <div class="hero">
 
-<h2>📂 Closed Job Archive</h2>
+<h2>
+📂 Closed Job Archive
+</h2>
 
 <p>
-जिन सरकारी या प्राइवेट jobs की application
-last date समाप्त हो चुकी है, वे यहाँ दिखाई देंगी।
+जिन jobs की application last date
+समाप्त हो चुकी है, वे यहाँ automatically
+दिखाई जाएंगी।
 </p>
 
 <p>
-यह page <b>closed-jobs-data.js</b> से expired vacancies
-अपने-आप दिखाता है।
+नई vacancy की last date खत्म होने के बाद
+automatic system उसे Active Jobs से
+Closed Jobs में भेज देगा।
 </p>
 
 </div>
@@ -387,31 +373,43 @@ last date समाप्त हो चुकी है, वे यहाँ द
 
 <div class="stat">
 
-<div class="icon">📁</div>
+<div>📁</div>
 
-<strong id="jobCount">0</strong>
+<strong id="jobCount">
+0
+</strong>
 
-<span>Closed Jobs</span>
-
-</div>
-
-<div class="stat">
-
-<div class="icon">🇮🇳</div>
-
-<strong>All India</strong>
-
-<span>Job Updates</span>
+<span>
+Closed Jobs
+</span>
 
 </div>
 
 <div class="stat">
 
-<div class="icon">🔎</div>
+<div>🇮🇳</div>
 
-<strong>Search</strong>
+<strong>
+All India
+</strong>
 
-<span>Jobs Easily</span>
+<span>
+Job Archive
+</span>
+
+</div>
+
+<div class="stat">
+
+<div>🔎</div>
+
+<strong>
+Search
+</strong>
+
+<span>
+Jobs Easily
+</span>
 
 </div>
 
@@ -419,73 +417,69 @@ last date समाप्त हो चुकी है, वे यहाँ द
 
 <div class="search-box">
 
-<label for="jobSearch">
+<label for="search">
 🔎 Closed Job खोजें
 </label>
 
 <input
-type="text"
-id="jobSearch"
-placeholder="जैसे SBI, Railway, SSC, 10th, Graduate..."
-autocomplete="off"
+id="search"
+type="search"
+placeholder="SSC, Railway, SBI, DRDO, India Post..."
+oninput="searchJobs()"
 >
 
 </div>
 
-<div class="info">
+<div id="jobList"></div>
 
-<b>📌 Automatic Closed Job System</b>
+<div
+id="empty"
+class="empty"
+style="display:none"
+>
 
-<p>
-जैसे ही किसी vacancy की Last Date समाप्त होती है,
-automatic system उसे Active Jobs से हटाकर
-Closed Jobs में डाल देगा।
-</p>
-
-</div>
-
-<div id="closedJobs"></div>
-
-<div id="noClosed" style="display:none;">
-
-<h3>📂 अभी कोई Closed Job नहीं है</h3>
+<h3>
+📂 अभी कोई Closed Job नहीं है
+</h3>
 
 <p>
-जब किसी job की Last Date समाप्त होगी,
-वह यहाँ दिखाई देगी।
+जब किसी active job की Last Date समाप्त होगी,
+वह यहाँ automatically दिखाई देगी।
 </p>
 
 </div>
 
 <div class="warning">
 
-<b>🚨 जरूरी सावधानी</b>
+<b>
+🚨 जरूरी सावधानी
+</b>
 
 <p>
-Closed job में application submit करने की कोशिश
-न करें। यह page केवल previous vacancy information
-के लिए है।
+Closed job में application submit करने की
+कोशिश न करें। केवल previous vacancy की
+जानकारी के लिए इसका उपयोग करें।
 </p>
 
 <p>
-OTP, UPI PIN, ATM PIN, password या किसी भी
-अनावश्यक payment की जानकारी किसी के साथ share न करें।
+OTP, UPI PIN, ATM PIN, password या
+अनावश्यक payment किसी को न दें।
 </p>
 
 </div>
 
-<div class="bottom-links">
+<div class="bottom">
 
-<a class="apply" href="government.html">
+<a href="index.html">
+🏠 Home
+</a>
+
+<a href="government.html">
 🏛️ Government Jobs
 </a>
 
-<a class="apply" href="private.html">
+<a href="private.html">
 🏢 Private Jobs
-</a>
-
-<a class="apply" href="index.html">
-🏠 Home
 </a>
 
 </div>
@@ -525,29 +519,16 @@ Disclaimer
 </footer>
 
 
-<!-- CLOSED JOB DATABASE -->
+<!-- AUTOMATIC CLOSED DATABASE -->
 
 <script src="closed-jobs-data.js"></script>
 
 
 <script>
 
-const container =
-document.getElementById("closedJobs");
+function escapeHTML(value){
 
-const countElement =
-document.getElementById("jobCount");
-
-const noClosed =
-document.getElementById("noClosed");
-
-const searchInput =
-document.getElementById("jobSearch");
-
-
-function escapeHTML(text){
-
-return String(text || "")
+return String(value || "")
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -557,26 +538,27 @@ return String(text || "")
 }
 
 
-function formatDate(dateString){
+function formatDate(value){
 
 const date =
-new Date(dateString);
+new Date(value);
 
-if(isNaN(date.getTime())){
-return dateString;
+if(
+isNaN(
+date.getTime()
+)
+){
+
+return value;
 }
 
-return (
-String(date.getDate()).padStart(2,"0")
-+
-" " +
-date.toLocaleString(
-"en-US",
-{month:"long"}
-)
-+
-" " +
-date.getFullYear()
+return date.toLocaleDateString(
+"en-IN",
+{
+day:"2-digit",
+month:"long",
+year:"numeric"
+}
 );
 
 }
@@ -584,39 +566,51 @@ date.getFullYear()
 
 function renderClosedJobs(){
 
-container.innerHTML = "";
+const list =
+document.getElementById(
+"jobList"
+);
+
+list.innerHTML = "";
 
 if(
-typeof closedJobs === "undefined" ||
-!Array.isArray(closedJobs) ||
-closedJobs.length === 0
+typeof closedJobs === "undefined"
+||
+!Array.isArray(closedJobs)
 ){
 
-countElement.textContent = "0";
-
-noClosed.style.display = "block";
+showEmpty();
 
 return;
 
 }
 
+if(
+closedJobs.length === 0
+){
 
-countElement.textContent =
+showEmpty();
+
+return;
+
+}
+
+document.getElementById(
+"jobCount"
+).textContent =
 closedJobs.length;
 
 
-noClosed.style.display =
-"none";
-
-
-closedJobs.forEach(function(job){
+closedJobs.forEach(
+function(job){
 
 const card =
-document.createElement("div");
+document.createElement(
+"div"
+);
 
 card.className =
 "job searchable";
-
 
 card.dataset.search = (
 
@@ -677,56 +671,71 @@ formatDate(job.lastDate)
 
 </div>
 
+<div>
+
+<b>📂 Category</b>
+
+${escapeHTML(
+job.category ||
+"Government / Private"
+)}
+
+</div>
+
 </div>
 
 <p>
 यह vacancy अब closed है।
-पूरी जानकारी के लिए official details देखें।
+Previous vacancy details देखने के लिए
+official page खोलें।
 </p>
 
 <a
 class="apply"
-href="${escapeHTML(job.page || "#")}"
+href="${escapeHTML(
+job.page || "#"
+)}"
 target="_blank"
 rel="noopener"
 >
-📄 A2Z Details →
+📄 Official Details →
 </a>
 
 `;
 
-container.appendChild(card);
+list.appendChild(card);
 
 });
+
+hideEmpty();
 
 }
 
 
-function searchClosedJobs(){
+function searchJobs(){
 
 const input =
-searchInput.value
+document.getElementById(
+"search"
+).value
 .toLowerCase()
 .trim();
 
-
 const cards =
 document.querySelectorAll(
-"#closedJobs .searchable"
+".searchable"
 );
-
 
 let found = 0;
 
-
-cards.forEach(function(card){
+cards.forEach(
+function(card){
 
 const text =
-card.dataset.search || "";
-
+card.dataset.search;
 
 if(
-input === "" ||
+!input ||
 text.includes(input)
 ){
 
@@ -744,15 +753,23 @@ card.style.display =
 
 });
 
+if(
+input &&
+found === 0
+){
 
-if(input !== "" && found === 0){
-
-noClosed.style.display =
+document.getElementById(
+"empty"
+).style.display =
 "block";
 
-noClosed.innerHTML = `
+document.getElementById(
+"empty"
+).innerHTML = `
 
-<h3>😔 Job नहीं मिली</h3>
+<h3>
+😔 Job नहीं मिली
+</h3>
 
 <p>
 दूसरा keyword try करें।
@@ -760,29 +777,63 @@ noClosed.innerHTML = `
 
 `;
 
-}else if(input === ""){
-
-noClosed.style.display =
-closedJobs.length === 0
-?
-"block"
-:
-"none";
-
 }else{
 
-noClosed.style.display =
+document.getElementById(
+"empty"
+).innerHTML = `
+
+<h3>
+📂 अभी कोई Closed Job नहीं है
+</h3>
+
+<p>
+जब किसी active job की Last Date समाप्त होगी,
+वह यहाँ automatically दिखाई देगी।
+</p>
+
+`;
+
+if(
+input &&
+found > 0
+){
+
+document.getElementById(
+"empty"
+).style.display =
 "none";
 
 }
 
 }
 
+}
 
-searchInput.addEventListener(
-"input",
-searchClosedJobs
-);
+
+function showEmpty(){
+
+document.getElementById(
+"jobCount"
+).textContent =
+"0";
+
+document.getElementById(
+"empty"
+).style.display =
+"block";
+
+}
+
+
+function hideEmpty(){
+
+document.getElementById(
+"empty"
+).style.display =
+"none";
+
+}
 
 
 renderClosedJobs();
