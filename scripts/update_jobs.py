@@ -2,10 +2,23 @@ import re
 from datetime import datetime
 
 JOBS_FILE = "jobs-data.js"
+CLOSED_FILE = "closed-jobs-data.js"
 
 
 def parse_date(date_string):
     return datetime.strptime(date_string, "%Y-%m-%d").date()
+
+
+def job_to_js(job):
+    return f'''{{
+  id:"{job[0]}",
+  title:"{job[1]}",
+  category:"{job[2]}",
+  qualification:"{job[3]}",
+  posts:"{job[4]}",
+  lastDate:"{job[5]}",
+  page:"{job[6]}"
+}}'''
 
 
 def update_jobs():
@@ -35,18 +48,9 @@ def update_jobs():
 
     for job in jobs:
 
-        job_id = job[0]
-        title = job[1]
-        category = job[2]
-        qualification = job[3]
-        posts = job[4]
-        last_date = job[5]
-        page = job[6]
-
         try:
-            expiry_date = parse_date(last_date)
+            expiry_date = parse_date(job[5])
         except ValueError:
-            print(f"Invalid date: {last_date}")
             active_jobs.append(job)
             continue
 
@@ -55,28 +59,38 @@ def update_jobs():
         else:
             active_jobs.append(job)
 
-    print("================================")
-    print("ROZGAR SATHI JOB UPDATE")
-    print("================================")
+    # Active jobs update
+    active_js = "const jobs = [\n\n"
 
+    active_js += ",\n\n".join(
+        job_to_js(job) for job in active_jobs
+    )
+
+    active_js += "\n\n];\n"
+
+    with open(JOBS_FILE, "w", encoding="utf-8") as f:
+        f.write(active_js)
+
+    # Closed jobs update
+    closed_js = "const closedJobs = [\n\n"
+
+    closed_js += ",\n\n".join(
+        job_to_js(job) for job in closed_jobs
+    )
+
+    closed_js += "\n\n];\n"
+
+    with open(CLOSED_FILE, "w", encoding="utf-8") as f:
+        f.write(closed_js)
+
+    print("================================")
+    print("ROZGAR SATHI AUTOMATIC UPDATE")
+    print("================================")
     print(f"Today's date: {today}")
     print(f"Total jobs: {len(jobs)}")
     print(f"Active jobs: {len(active_jobs)}")
-    print(f"Expired jobs: {len(closed_jobs)}")
-
-    if closed_jobs:
-
-        print("\nExpired Jobs:")
-
-        for job in closed_jobs:
-            print("-", job[1], "|", job[5])
-
-    print("\nActive Jobs:")
-
-    for job in active_jobs:
-        print("-", job[1], "|", job[5])
-
-    print("\nUpdate check completed.")
+    print(f"Closed jobs: {len(closed_jobs)}")
+    print("================================")
 
 
 if __name__ == "__main__":
