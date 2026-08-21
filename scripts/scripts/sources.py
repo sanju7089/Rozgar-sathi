@@ -1,4 +1,6 @@
-# Rozgar Sathi - Official Job Sources
+# =========================================================
+# ROZGAR SATHI - OFFICIAL JOB SOURCES
+# =========================================================
 
 GOVERNMENT_SOURCES = {
 
@@ -14,7 +16,7 @@ GOVERNMENT_SOURCES = {
 
     "RRB": {
         "category": "Government",
-        "url": "https://www.rrbcdg.gov.in/"
+        "url": "https://www.rrbbhopal.gov.in/"
     },
 
     "India Post": {
@@ -31,20 +33,77 @@ GOVERNMENT_SOURCES = {
         "category": "Banking",
         "url": "https://sbi.bank.in/web/careers"
     }
+
 }
 
+
+# =========================================================
+# PRIVATE COMPANY SOURCES
+# =========================================================
 
 PRIVATE_SOURCES = {
 
-    # Private section में केवल verified
-    # company career sources जोड़े जाएंगे।
+    # Private companies बाद में यहाँ
+    # केवल official career pages से जोड़ी जाएँगी।
 
 }
 
 
+# =========================================================
+# SOURCE FUNCTIONS
+# =========================================================
+
 def get_government_sources():
+
     return GOVERNMENT_SOURCES
 
 
 def get_private_sources():
+
     return PRIVATE_SOURCES
+
+
+# =========================================================
+# SOURCE CATEGORY
+# =========================================================
+
+def get_source_category(source_name):
+
+    if source_name in GOVERNMENT_SOURCES:
+
+        return GOVERNMENT_SOURCES[
+            source_name
+        ]["category"]
+
+
+    if source_name in PRIVATE_SOURCES:
+
+        return PRIVATE_SOURCES[
+            source_name
+        ]["category"]
+
+
+    return "Other"
+
+
+# =========================================================
+# SOURCE URL
+# =========================================================
+
+def get_source_url(source_name):
+
+    if source_name in GOVERNMENT_SOURCES:
+
+        return GOVERNMENT_SOURCES[
+            source_name
+        ]["url"]
+
+
+    if source_name in PRIVATE_SOURCES:
+
+        return PRIVATE_SOURCES[
+            source_name
+        ]["url"]
+
+
+    return ""
