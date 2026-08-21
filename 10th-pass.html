@@ -1,127 +1,641 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>10th Pass Jobs | Rozgar Sathi</title>
-<meta name="description" content="10वीं पास उम्मीदवारों के लिए Government और Private Jobs की जानकारी।">
+
+<meta name="description" content="10वीं पास और 10th + ITI उम्मीदवारों के लिए Government, Apprentice और Private Jobs।">
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#222}
-header{background:linear-gradient(135deg,#075e54,#0b806f);color:white;text-align:center;padding:28px 15px}
-header h1{margin:0;font-size:28px}
-header p{margin:7px 0 0}
-nav{background:white;padding:10px;text-align:center;overflow-x:auto;white-space:nowrap;box-shadow:0 2px 7px #ddd;position:sticky;top:0;z-index:10}
-nav a{display:inline-block;margin:3px;padding:9px 12px;text-decoration:none;color:#075e54;font-weight:bold;border-radius:7px}
-nav a:hover{background:#e8f5f3}
-.container{max-width:900px;margin:auto;padding:15px}
-.intro,.job{background:white;border-radius:12px;box-shadow:0 2px 8px #ddd}
-.intro{padding:20px;margin-bottom:20px}
-.intro h2,.job h3{color:#075e54}
-.job{padding:18px;margin-bottom:15px}
-.badge{display:inline-block;background:#e8f5f3;color:#075e54;padding:5px 9px;border-radius:15px;font-size:13px;font-weight:bold;margin:2px}
-.apply{display:inline-block;margin-top:10px;background:#075e54;color:white;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:bold}
-.notice{background:#fff8dc;border-left:5px solid #e0b100;padding:14px;border-radius:7px}
-footer{margin-top:30px;background:#222;color:white;text-align:center;padding:25px 15px}
-footer a{color:white;text-decoration:none}
-@media(max-width:600px){header h1{font-size:25px}}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#222;
+}
+
+header{
+background:linear-gradient(135deg,#075e54,#0b806f);
+color:white;
+text-align:center;
+padding:28px 15px;
+}
+
+header h1{
+margin:0;
+font-size:28px;
+}
+
+header p{
+margin:7px 0 0;
+}
+
+nav{
+background:white;
+padding:10px;
+text-align:center;
+overflow-x:auto;
+white-space:nowrap;
+box-shadow:0 2px 7px #ddd;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+nav a{
+display:inline-block;
+margin:3px;
+padding:9px 12px;
+text-decoration:none;
+color:#075e54;
+font-weight:bold;
+border-radius:7px;
+}
+
+nav a:hover{
+background:#e8f5f3;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:15px;
+}
+
+.intro{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 8px #ddd;
+margin-bottom:20px;
+}
+
+.intro h2{
+color:#075e54;
+margin-top:0;
+}
+
+.search{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 2px 8px #ddd;
+margin-bottom:20px;
+}
+
+.search input{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+outline:none;
+}
+
+.job{
+background:white;
+padding:18px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 8px #ddd;
+border-left:5px solid #075e54;
+}
+
+.job h3{
+color:#075e54;
+margin-top:0;
+}
+
+.badge{
+display:inline-block;
+background:#e8f5f3;
+color:#075e54;
+padding:5px 9px;
+border-radius:15px;
+font-size:13px;
+font-weight:bold;
+margin:2px;
+}
+
+.info{
+background:#f4f6f8;
+padding:10px;
+border-radius:8px;
+margin-top:12px;
+}
+
+.last-date{
+color:#c62828;
+font-weight:bold;
+}
+
+.apply{
+display:inline-block;
+margin-top:10px;
+background:#075e54;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.noresult{
+display:none;
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 8px #ddd;
+}
+
+.warning{
+background:#fff3f3;
+border-left:5px solid #d32f2f;
+padding:14px;
+border-radius:7px;
+margin-top:20px;
+}
+
+.notice{
+background:#fff8dc;
+border-left:5px solid #e0b100;
+padding:14px;
+border-radius:7px;
+margin-top:15px;
+}
+
+footer{
+margin-top:30px;
+background:#222;
+color:white;
+text-align:center;
+padding:25px 15px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+@media(max-width:600px){
+
+header h1{
+font-size:25px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <h1>🎓 10th Pass Jobs</h1>
-<p>10वीं पास उम्मीदवारों के लिए नौकरी की जानकारी</p>
+
+<p>10वीं पास • ITI • Apprentice • Private Jobs</p>
+
 </header>
 
+
 <nav>
+
 <a href="index.html">🏠 Home</a>
+
 <a href="government.html">🏛️ Government</a>
+
 <a href="private.html">🏢 Private</a>
+
 <a href="10th-pass.html">🎓 10th</a>
+
 <a href="12th-pass.html">🎓 12th</a>
+
 <a href="graduate-jobs.html">🎓 Graduate</a>
+
 <a href="work-from-home.html">🏠 WFH</a>
+
 <a href="closed-jobs.html">📁 Closed</a>
+
 </nav>
+
 
 <div class="container">
 
+
 <div class="intro">
-<h2>10वीं पास के लिए Jobs</h2>
+
+<h2>🎓 10वीं पास के लिए Jobs</h2>
+
 <p>
-10th Pass candidates के लिए Government और Private
-jobs की जानकारी इस page पर category-wise दी जाएगी।
+इस page पर 10th Pass, 10th + ITI,
+Apprentice और Private job opportunities
+category-wise दिखाई जाएँगी।
 </p>
+
+<p>
+<strong>
+नई vacancy मिलने पर उसे official notification
+से verify करके ही जोड़ा जाएगा।
+</strong>
+</p>
+
 </div>
 
-<div class="job">
-<h3>🏛️ Government Jobs</h3>
-<span class="badge">10th Pass</span>
-<span class="badge">Government</span>
+
+<div class="search">
+
+<input
+type="text"
+id="jobSearch"
+placeholder="🔎 Job खोजें... जैसे ITI, Apprentice, Private"
+onkeyup="searchJobs()"
+>
+
+</div>
+
+
+<div id="jobList">
+
+
+<!-- BHEL TRADE APPRENTICE -->
+
+<div
+class="job searchable"
+data-search="BHEL BHEL Trichy Trade Apprentice 2026 10th ITI apprentice tamil nadu">
+
+<h3>⚡ BHEL Trichy Trade Apprentice 2026</h3>
+
+<span class="badge">
+10th + ITI
+</span>
+
+<span class="badge">
+Apprentice
+</span>
+
+<span class="badge">
+BHEL
+</span>
+
+<div class="info">
 
 <p>
-10वीं पास उम्मीदवारों के लिए आने वाली सरकारी
-भर्तियों को यहाँ जोड़ा जाएगा।
+<b>🏢 Organization:</b>
+Bharat Heavy Electricals Limited (BHEL), Tiruchirappalli
 </p>
 
-<a class="apply" href="government.html">
-Government Jobs →
+<p>
+<b>🎓 Qualification:</b>
+10th + relevant ITI trade
+</p>
+
+<p>
+<b>📅 Last Date:</b>
+<span class="last-date">
+12 September 2026
+</span>
+</p>
+
+<p>
+<b>📍 Location:</b>
+Tiruchirappalli, Tamil Nadu
+</p>
+
+</div>
+
+<p>
+BHEL की official apprentice system पर
+2026-27 के Trade Apprentice के लिए application
+window उपलब्ध है।
+</p>
+
+<a
+class="apply"
+href="https://trichy.bhel.com/tms/app_pro/index.jsp"
+target="_blank"
+rel="noopener"
+>
+🔎 A2Z Details / Apply →
 </a>
+
 </div>
 
-<div class="job">
-<h3>🏢 Private Jobs</h3>
-<span class="badge">10th Pass</span>
-<span class="badge">Private</span>
+
+<!-- APPRENTICESHIP INDIA -->
+
+<div
+class="job searchable"
+data-search="Apprenticeship India 10th ITI apprentice government private all india">
+
+<h3>🛠️ Apprenticeship India – 10th / ITI Opportunities</h3>
+
+<span class="badge">
+ITI
+</span>
+
+<span class="badge">
+Apprentice
+</span>
+
+<span class="badge">
+All India
+</span>
 
 <p>
-10वीं पास candidates के लिए private और fresher
-opportunities देखने के लिए नीचे जाएँ।
+Apprenticeship India portal पर अलग-अलग
+companies और establishments की apprenticeship
+opportunities खोज सकते हैं।
 </p>
-
-<a class="apply" href="private.html">
-Private Jobs →
-</a>
-</div>
-
-<div class="job">
-<h3>🏠 Work From Home</h3>
-<span class="badge">Remote</span>
 
 <p>
-10वीं पास candidates के लिए उपलब्ध work-from-home
-opportunities यहाँ दिखाई जाएँगी।
+Qualification और last date हर opportunity
+के अनुसार अलग होती है।
 </p>
 
-<a class="apply" href="work-from-home.html">
-WFH Jobs →
+<a
+class="apply"
+href="https://www.apprenticeshipindia.gov.in/apprenticeship/opportunity"
+target="_blank"
+rel="noopener"
+>
+🔎 Current Opportunities →
 </a>
+
 </div>
+
+
+<!-- PRIVATE 10TH -->
+
+<div
+class="job searchable"
+data-search="private jobs 10th pass fresher sales customer support delivery warehouse">
+
+<h3>🏢 Private Jobs – 10th Pass</h3>
+
+<span class="badge">
+10th Pass
+</span>
+
+<span class="badge">
+Private
+</span>
+
+<span class="badge">
+Fresher
+</span>
+
+<p>
+10वीं पास candidates के लिए Sales,
+Customer Support, Delivery, Warehouse,
+Retail और अन्य private opportunities खोजें।
+</p>
+
+<a
+class="apply"
+href="private.html"
+>
+🏢 Private Jobs →
+</a>
+
+</div>
+
+
+<!-- WFH -->
+
+<div
+class="job searchable"
+data-search="work from home WFH 10th pass remote private">
+
+<h3>🏠 Work From Home – 10th Pass</h3>
+
+<span class="badge">
+WFH
+</span>
+
+<span class="badge">
+Remote
+</span>
+
+<p>
+घर से काम करने वाली private और remote
+opportunities के लिए WFH section देखें।
+</p>
+
+<a
+class="apply"
+href="work-from-home.html"
+>
+🏠 WFH Jobs →
+</a>
+
+</div>
+
+
+<!-- GOVERNMENT -->
+
+<div
+class="job searchable"
+data-search="government jobs 10th pass sarkari vacancy government india">
+
+<h3>🏛️ Government Jobs – 10th Pass</h3>
+
+<span class="badge">
+Government
+</span>
+
+<span class="badge">
+10th Pass
+</span>
+
+<p>
+10वीं पास के लिए नई सरकारी vacancy आने पर
+उसे official notification verify करके यहाँ
+जोड़ा जाएगा।
+</p>
+
+<a
+class="apply"
+href="government.html"
+>
+🏛️ Government Jobs →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div
+id="noResult"
+class="noresult"
+>
+
+<h3>😔 कोई Job नहीं मिली</h3>
+
+<p>
+दूसरा keyword try करें।
+</p>
+
+</div>
+
+
+<div class="warning">
+
+<b>🚨 सावधान!</b>
+
+<p>
+नौकरी या apprenticeship के नाम पर कोई
+registration fee, security deposit,
+OTP, UPI PIN या password माँगे तो
+सावधान रहें।
+</p>
+
+</div>
+
 
 <div class="notice">
-<b>⚠️ जरूरी सूचना:</b>
+
+<b>⚠️ जरूरी सूचना</b>
+
 <p>
-हर भर्ती के लिए official notification में qualification,
-age limit, salary, fee और last date जरूर verify करें।
+हर vacancy की qualification, age limit,
+salary/stipend, location, fee और last date
+को apply करने से पहले official notification
+से जरूर verify करें।
 </p>
-</div>
 
 </div>
+
+
+<div style="text-align:center;padding:20px">
+
+<a
+class="apply"
+href="12th-pass.html"
+>
+🎓 12th Pass Jobs →
+</a>
+
+<a
+class="apply"
+href="index.html"
+>
+🏠 Home →
+</a>
+
+</div>
+
+
+</div>
+
 
 <footer>
-<p><b>© 2026 Rozgar Sathi</b></p>
-<p>Jobs • Career • Employment</p>
+
 <p>
-<a href="about.html">About Us</a>
-&nbsp; | &nbsp;
-<a href="contact.html">Contact</a>
-&nbsp; | &nbsp;
-<a href="disclaimer.html">Disclaimer</a>
+<b>© 2026 Rozgar Sathi</b>
 </p>
+
+<p>
+Jobs • Career • Employment
+</p>
+
+<p>
+
+<a href="about.html">
+About Us
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="contact.html">
+Contact
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="disclaimer.html">
+Disclaimer
+</a>
+
+</p>
+
 </footer>
 
+
+<script>
+
+function searchJobs(){
+
+let input =
+document.getElementById("jobSearch")
+.value
+.toLowerCase()
+.trim();
+
+let jobs =
+document.querySelectorAll(".searchable");
+
+let found = 0;
+
+jobs.forEach(function(job){
+
+let text =
+(
+job.innerText +
+" " +
+(job.dataset.search || "")
+)
+.toLowerCase();
+
+if(
+input === "" ||
+text.includes(input)
+){
+
+job.style.display="block";
+
+found++;
+
+}else{
+
+job.style.display="none";
+
+}
+
+});
+
+if(
+input !== "" &&
+found === 0
+){
+
+document.getElementById(
+"noResult"
+).style.display="block";
+
+}else{
+
+document.getElementById(
+"noResult"
+).style.display="none";
+
+}
+
+}
+
+</script>
+
+
 </body>
-</html>
+  </html>
