@@ -218,4 +218,183 @@ const jobs = [
     lastDate: "2026-09-30",
     page: "work-from-home.html"
       }
+{
+    id: "desidoc-apprentice-2026",
+    title: "DRDO DESIDOC Apprentice 2026",
+    category: "government",
+    qualification: "Apprenticeship के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-05",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "drdo-dmsrde-rajrf-2026",
+    title: "DRDO DMSRDE RA & JRF",
+    category: "government",
+    qualification: "Relevant PG / Qualification",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-02",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "drdo-rci-rajrf-2026",
+    title: "DRDO RCI RA & JRF",
+    category: "government",
+    qualification: "Relevant Qualification",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-19",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "drdo-hemerl-apprentice-2026",
+    title: "DRDO HEMRL Apprentice 2026",
+    category: "government",
+    qualification: "Apprenticeship के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-08-28",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "drdo-ada-project-assistant-2026",
+    title: "DRDO ADA Project Assistant",
+    category: "government",
+    qualification: "Relevant Qualification",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-13",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "iifcl-agm-2026",
+    title: "IIFCL AGM Grade C Recruitment",
+    category: "bank",
+    qualification: "Post के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-08-25",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "bob-local-bank-officer-2026",
+    title: "Bank of Baroda Local Bank Officer",
+    category: "bank",
+    qualification: "Graduate",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-07",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "nbl-specialist-officer-2026",
+    title: "NBL Specialist Officer",
+    category: "bank",
+    qualification: "Post के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-07",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "iocl-executive-2026",
+    title: "IOCL Executive Recruitment 2026",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-03",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "sbi-junior-associate-2026",
+    title: "SBI Junior Associate",
+    category: "bank",
+    qualification: "Graduate",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-08-31",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "gpcb-clerk-2026",
+    title: "GPCB Clerk Recruitment",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-08-31",
+    page: "government.html"
+  },
+
+  {
+    id: "aai-manager-junior-executive-2026",
+    title: "AAI Manager & Junior Executive",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-09-07",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "aiims-group-a-2026",
+    title: "AIIMS Group-A Non-Faculty Recruitment",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-09-07",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "iob-local-bank-officer-2026",
+    title: "Indian Overseas Bank Local Bank Officer",
+    category: "bank",
+    qualification: "Graduate",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-08-24",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "sbi-csa-2026",
+    title: "SBI Customer Support & Sales",
+    category: "bank",
+    qualification: "Graduate",
+    posts: "Notification के अनुसार",
+    lastDate: "2026-08-27",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "rrvun-je-accountant-assistant-2026",
+    title: "RRVUN Junior Engineer / Accountant / Assistant",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-08-25",
+    page: "government.html"
+  },
+
+  {
+    id: "nimhr-sehore-consultant-2026",
+    title: "NIMHR Sehore Consultant Recruitment",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-09-13",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "vellore-security-helper-2026",
+    title: "Vellore Security & Multipurpose Helper",
+    category: "government",
+    qualification: "Post के अनुसार",
+    posts: "Multiple",
+    lastDate: "2026-08-21",
+    page: "10th-pass.html"
+      }
 ];
