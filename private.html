@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Private Jobs | Rozgar Sathi</title>
 
-<meta name="description" content="Rozgar Sathi पर Private Jobs, Fresher Jobs और Career Opportunities की जानकारी।">
+<meta name="description" content="Private Jobs, Fresher Jobs, Customer Support, Sales, Data Entry और Remote Jobs की जानकारी।">
 
 <style>
 
@@ -82,12 +83,30 @@ color:#075e54;
 margin-top:0;
 }
 
+.search{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 2px 8px #ddd;
+margin-bottom:20px;
+}
+
+.search input{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+outline:none;
+}
+
 .job{
 background:white;
 padding:18px;
 margin-bottom:15px;
 border-radius:10px;
 box-shadow:0 2px 8px #ddd;
+border-left:5px solid #075e54;
 }
 
 .job h3{
@@ -117,7 +136,24 @@ text-decoration:none;
 font-weight:bold;
 }
 
+.noresult{
+display:none;
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 8px #ddd;
+}
+
 .warning{
+background:#fff3f3;
+border-left:5px solid #d32f2f;
+padding:14px;
+border-radius:7px;
+margin-top:20px;
+}
+
+.notice{
 background:#fff8dc;
 border-left:5px solid #e0b100;
 padding:14px;
@@ -155,7 +191,7 @@ font-size:25px;
 
 <h1>🏢 Private Jobs</h1>
 
-<p>Private और Fresher Jobs की जानकारी</p>
+<p>Private • Fresher • Remote • All India</p>
 
 </header>
 
@@ -189,76 +225,375 @@ font-size:25px;
 <h2>🏢 Private Job Opportunities</h2>
 
 <p>
-यहाँ private companies की vacancies,
-fresher jobs और अलग-अलग career opportunities
-category-wise जोड़ी जाएँगी।
+भारत में Private और Fresher jobs खोजने के लिए
+नीचे अलग-अलग job categories दी गई हैं।
 </p>
-
-</div>
-
-
-<div class="job">
-
-<h3>💼 Private & Fresher Jobs</h3>
-
-<span class="badge">
-Private
-</span>
-
-<span class="badge">
-Fresher
-</span>
 
 <p>
-10th, 12th और graduate candidates के लिए
-अलग-अलग private opportunities उपलब्ध हो सकती हैं।
+यहाँ Customer Support, Sales, Data Entry,
+Back Office, IT, Delivery और Work From Home
+जैसी opportunities खोज सकते हैं।
 </p>
 
-<a class="apply" href="10th-pass.html">
-10th Jobs →
-</a>
+</div>
 
-<a class="apply" href="12th-pass.html">
-12th Jobs →
-</a>
 
-<a class="apply" href="graduate-jobs.html">
-Graduate Jobs →
+<div class="search">
+
+<input
+type="text"
+id="jobSearch"
+placeholder="🔎 Private Job खोजें... जैसे Sales, Data Entry, IT"
+onkeyup="searchJobs()"
+>
+
+</div>
+
+
+<div id="jobList">
+
+
+<!-- CUSTOMER SUPPORT -->
+
+<div class="job searchable"
+data-search="customer support customer care private fresher call center remote">
+
+<h3>📞 Customer Support Jobs</h3>
+
+<span class="badge">Private</span>
+<span class="badge">Fresher</span>
+<span class="badge">Customer Support</span>
+
+<p>
+Customer care, customer support और call support
+से जुड़ी private vacancies खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Jobs खोजें →
 </a>
 
 </div>
 
 
-<div class="job">
+<!-- SALES -->
+
+<div class="job searchable"
+data-search="sales sales executive business development private fresher commission incentive">
+
+<h3>💰 Sales Executive Jobs</h3>
+
+<span class="badge">Private</span>
+<span class="badge">Sales</span>
+<span class="badge">Fresher</span>
+
+<p>
+Sales Executive, Business Development और
+field/inside sales की opportunities खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Sales Jobs →
+</a>
+
+</div>
+
+
+<!-- DATA ENTRY -->
+
+<div class="job searchable"
+data-search="data entry typing computer operator private fresher">
+
+<h3>⌨️ Data Entry Jobs</h3>
+
+<span class="badge">Private</span>
+<span class="badge">Data Entry</span>
+
+<p>
+Data entry, computer operator और typing से
+जुड़ी private jobs खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Data Entry Jobs →
+</a>
+
+</div>
+
+
+<!-- BACK OFFICE -->
+
+<div class="job searchable"
+data-search="back office office assistant administration private fresher">
+
+<h3>🗂️ Back Office Jobs</h3>
+
+<span class="badge">Private</span>
+<span class="badge">Back Office</span>
+<span class="badge">Fresher</span>
+
+<p>
+Back office, documentation और office
+administration से संबंधित jobs खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Back Office Jobs →
+</a>
+
+</div>
+
+
+<!-- IT -->
+
+<div class="job searchable"
+data-search="IT software computer technology developer private jobs fresher">
+
+<h3>💻 IT & Computer Jobs</h3>
+
+<span class="badge">IT</span>
+<span class="badge">Computer</span>
+
+<p>
+Software, IT support, computer और technology
+से जुड़ी private opportunities खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 IT Jobs →
+</a>
+
+</div>
+
+
+<!-- DELIVERY -->
+
+<div class="job searchable"
+data-search="delivery delivery boy logistics warehouse private jobs">
+
+<h3>🛵 Delivery & Logistics Jobs</h3>
+
+<span class="badge">Private</span>
+<span class="badge">Delivery</span>
+<span class="badge">Logistics</span>
+
+<p>
+Delivery, warehouse और logistics sector की
+private opportunities खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Jobs खोजें →
+</a>
+
+</div>
+
+
+<!-- RETAIL -->
+
+<div class="job searchable"
+data-search="retail shop store sales associate cashier private jobs">
+
+<h3>🛍️ Retail & Store Jobs</h3>
+
+<span class="badge">Retail</span>
+<span class="badge">Store</span>
+
+<p>
+Store assistant, sales associate, cashier और
+retail sector की vacancies खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Retail Jobs →
+</a>
+
+</div>
+
+
+<!-- WORK FROM HOME -->
+
+<div class="job searchable"
+data-search="work from home WFH remote private home based jobs">
 
 <h3>🏠 Work From Home Jobs</h3>
 
-<span class="badge">
-Remote
-</span>
+<span class="badge">WFH</span>
+<span class="badge">Remote</span>
 
 <p>
-घर से काम करने वाली private opportunities
-देखने के लिए Work From Home section खोलें।
+घर से काम करने वाली private और remote
+opportunities के लिए अलग section देखें।
 </p>
 
-<a class="apply" href="work-from-home.html">
-WFH Jobs →
+<a
+class="apply"
+href="work-from-home.html"
+>
+🏠 WFH Jobs →
 </a>
+
+</div>
+
+
+<!-- FRESHER -->
+
+<div class="job searchable"
+data-search="fresher jobs 10th 12th graduate private entry level">
+
+<h3>🎓 Fresher Jobs</h3>
+
+<span class="badge">Fresher</span>
+<span class="badge">Entry Level</span>
+
+<p>
+बिना ज्यादा experience वाले candidates के लिए
+entry-level private opportunities खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Fresher Jobs →
+</a>
+
+</div>
+
+
+<!-- NCS -->
+
+<div class="job searchable"
+data-search="NCS National Career Service private jobs all india government verified">
+
+<h3>🇮🇳 NCS – All India Private Jobs</h3>
+
+<span class="badge">Government Portal</span>
+<span class="badge">All India</span>
+<span class="badge">Private</span>
+
+<p>
+भारत सरकार के National Career Service पर
+पूरे भारत की private vacancies search करें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 NCS पर Jobs देखें →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div id="noResult" class="noresult">
+
+<h3>😔 कोई Job नहीं मिली</h3>
+
+<p>
+दूसरा keyword try करें।
+</p>
 
 </div>
 
 
 <div class="warning">
 
-<b>⚠️ Scam से सावधान रहें</b>
+<b>🚨 Private Job Scam से सावधान!</b>
 
 <p>
-Private job के नाम पर registration fee,
-security deposit, OTP, password या bank details
-माँगने वालों से सावधान रहें। Apply करने से पहले
-company और job की authenticity verify करें।
+Job देने के नाम पर registration fee,
+security deposit या पहले पैसे माँगने वालों
+से सावधान रहें।
 </p>
+
+<p>
+<strong>
+OTP, UPI PIN, ATM PIN या password किसी को न दें।
+</strong>
+</p>
+
+</div>
+
+
+<div class="notice">
+
+<b>⚠️ जरूरी सूचना</b>
+
+<p>
+किसी भी vacancy की salary, eligibility,
+location और company details को apply करने
+से पहले official source पर verify करें।
+</p>
+
+<p>
+National Career Service के अनुसार उसकी
+employment services free हैं और jobseekers से
+registration या job application के लिए fee नहीं
+ली जाती।
+</p>
+
+</div>
+
+
+<div style="text-align:center;padding:20px">
+
+<a
+class="apply"
+href="work-from-home.html"
+>
+🏠 Work From Home →
+</a>
+
+<a
+class="apply"
+href="index.html"
+>
+🏠 Home →
+</a>
 
 </div>
 
@@ -268,9 +603,13 @@ company और job की authenticity verify करें।
 
 <footer>
 
-<p><b>© 2026 Rozgar Sathi</b></p>
+<p>
+<b>© 2026 Rozgar Sathi</b>
+</p>
 
-<p>Jobs • Career • Employment</p>
+<p>
+Jobs • Career • Employment
+</p>
 
 <p>
 
@@ -293,6 +632,71 @@ Disclaimer
 </p>
 
 </footer>
+
+
+<script>
+
+function searchJobs(){
+
+let input =
+document.getElementById("jobSearch")
+.value
+.toLowerCase()
+.trim();
+
+let jobs =
+document.querySelectorAll(".searchable");
+
+let found = 0;
+
+jobs.forEach(function(job){
+
+let text =
+(
+job.innerText +
+" " +
+(job.dataset.search || "")
+)
+.toLowerCase();
+
+if(
+input === "" ||
+text.includes(input)
+){
+
+job.style.display = "block";
+
+found++;
+
+}else{
+
+job.style.display = "none";
+
+}
+
+});
+
+if(
+input !== "" &&
+found === 0
+){
+
+document.getElementById(
+"noResult"
+).style.display = "block";
+
+}else{
+
+document.getElementById(
+"noResult"
+).style.display = "none";
+
+}
+
+}
+
+</script>
+
 
 </body>
     </html>
