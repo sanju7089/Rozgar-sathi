@@ -1,0 +1,53 @@
+name: Rozgar Sathi - Automatic Job Update
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+
+  automatic-job-update:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Website
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Job Update System
+        run: |
+          python scripts/update_jobs.py
+
+      - name: Check Changes
+        run: |
+          git status --short
+
+      - name: Save Automatic Updates
+        run: |
+
+          git config user.name "Rozgar Sathi Bot"
+
+          git config user.email "actions@github.com"
+
+          git add jobs-data.js
+
+          git add closed-jobs-data.js
+
+          git add job-sources.json
+
+          git add scripts/update_jobs.py
+
+          git diff --cached --quiet || git commit -m "Automatic job database update"
+
+          git push
