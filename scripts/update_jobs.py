@@ -2,7 +2,12 @@ import os
 import sys
 import importlib
 from datetime import datetime
-
+sys.path.insert(
+    0,
+    os.path.join(
+        os.path.dirname(__file__)
+    )
+)
 
 JOBS_FILE = "jobs-data.js"
 CLOSED_FILE = "closed-jobs-data.js"
