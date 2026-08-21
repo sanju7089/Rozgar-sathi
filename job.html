@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Job Details | Rozgar Sathi</title>
+
+<meta name="description"
+content="Rozgar Sathi पर सरकारी और निजी नौकरी की पूरी जानकारी।">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f6f8;
+color:#222;
+}
+
+header{
+background:linear-gradient(135deg,#075e54,#0b806f);
+color:white;
+text-align:center;
+padding:25px 15px;
+}
+
+header h1{
+margin:0;
+font-size:28px;
+}
+
+header p{
+margin:7px 0 0;
+}
+
+nav{
+background:white;
+padding:10px;
+text-align:center;
+overflow-x:auto;
+white-space:nowrap;
+box-shadow:0 2px 7px #ddd;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+nav a{
+display:inline-block;
+margin:3px;
+padding:9px 12px;
+text-decoration:none;
+color:#075e54;
+font-weight:bold;
+border-radius:7px;
+}
+
+nav a:hover{
+background:#e8f5f3;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:15px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:15px;
+background:#075e54;
+color:white;
+padding:10px 16px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 10px #ddd;
+margin-bottom:18px;
+}
+
+.card h2{
+color:#075e54;
+margin-top:0;
+}
+
+.badge{
+display:inline-block;
+background:#e8f5f3;
+color:#075e54;
+padding:6px 10px;
+border-radius:15px;
+font-size:13px;
+font-weight:bold;
+margin:3px;
+}
+
+.info{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:18px;
+}
+
+.info div{
+background:#f4f6f8;
+padding:13px;
+border-radius:8px;
+}
+
+.last{
+color:#c62828;
+font-weight:bold;
+}
+
+.section{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 8px #ddd;
+margin-top:15px;
+}
+
+.section h3{
+color:#075e54;
+margin-top:0;
+border-bottom:2px solid #e8f5f3;
+padding-bottom:8px;
+}
+
+.apply{
+display:block;
+text-align:center;
+background:#075e54;
+color:white;
+padding:14px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+font-size:17px;
+margin-top:15px;
+}
+
+.apply:hover{
+background:#064c44;
+}
+
+.warning{
+background:#fff3f3;
+border-left:5px solid #d32f2f;
+padding:15px;
+border-radius:7px;
+margin-top:20px;
+}
+
+.not-found{
+background:white;
+padding:30px 20px;
+border-radius:12px;
+box-shadow:0 2px 8px #ddd;
+text-align:center;
+}
+
+.home-btn{
+display:inline-block;
+background:#075e54;
+color:white;
+padding:11px 18px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+}
+
+footer{
+margin-top:30px;
+background:#222;
+color:white;
+text-align:center;
+padding:25px 15px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+@media(max-width:600px){
+
+header h1{
+font-size:24px;
+}
+
+.info{
+grid-template-columns:1fr;
+}
+
+.card,
+.section{
+padding:16px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🇮🇳 Rozgar Sathi</h1>
+
+<p>Job की पूरी A2Z जानकारी</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="government.html">🏛️ Government</a>
+
+<a href="private.html">🏢 Private</a>
+
+<a href="10th-pass.html">🎓 10th</a>
+
+<a href="12th-pass.html">🎓 12th</a>
+
+<a href="graduate-jobs.html">🎓 Graduate</a>
+
+<a href="work-from-home.html">🏠 WFH</a>
+
+</nav>
+
+
+<div class="container">
+
+<a class="back" href="index.html">
+← वापस Jobs पर जाएँ
+</a>
+
+
+<div id="jobPage"></div>
+
+
+</div>
+
+
+<footer>
+
+<p>
+<b>© 2026 Rozgar Sathi</b>
+</p>
+
+<p>
+Jobs • Career • Employment
+</p>
+
+<p>
+
+<a href="about.html">
+About Us
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="contact.html">
+Contact Us
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="disclaimer.html">
+Disclaimer
+</a>
+
+</p>
+
+</footer>
+
+
+<script>
+
+/* ==========================================
+   JOB DATABASE
+   ========================================== */
+
+const jobs = [
+
+{
+id:"sbi-junior-associate-2026",
+
+title:"🏦 SBI Junior Associates 2026",
+
+category:"Banking / Government Bank",
+
+qualification:"Graduation",
+
+post:"Junior Associate",
+
+lastDate:"31 August 2026",
+
+location:"All India",
+
+description:
+"SBI Junior Associates Customer Support & Sales recruitment की जानकारी।",
+
+official:
+"https://ibpsreg.ibps.in/sbijajul26/",
+
+extra:
+"SBI में Junior Associate पद के लिए आवेदन करने से पहले official notification में eligibility, age limit, fee, selection process और अन्य सभी conditions जरूर देखें।"
+
+},
+
+
+{
+id:"ibps-csa-2026",
+
+title:"🏦 IBPS Customer Service Associate XVI",
+
+category:"Banking",
+
+qualification:"Graduation",
+
+post:"Customer Service Associate",
+
+lastDate:"21 August 2026",
+
+location:"Participating Banks",
+
+description:
+"Public Sector Banks में Customer Service Associate recruitment की जानकारी।",
+
+official:
+"https://ibpsreg.ibps.in/csaxvijul26/",
+
+extra:
+"आवेदन करने से पहले IBPS की official information में eligibility, age limit, examination और application requirements verify करें।"
+
+},
+
+
+{
+id:"isro-lpsc-2026",
+
+title:"🚀 ISRO LPSC Recruitment 2026",
+
+category:"Government / ISRO",
+
+qualification:"Post के अनुसार",
+
+post:
+"Technical Assistant / Technician B / Draughtsman / Fireman आदि",
+
+lastDate:"04 September 2026",
+
+location:"LPSC / Bengaluru",
+
+description:
+"ISRO Liquid Propulsion Systems Centre में विभिन्न posts की recruitment information।",
+
+official:
+"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html",
+
+extra:
+"हर post की qualification अलग हो सकती है। आवेदन से पहले ISRO की official notification जरूर पढ़ें।"
+
+},
+
+
+{
+id:"isro-hsfc-2026",
+
+title:"🚀 ISRO HSFC Scientist/Engineer",
+
+category:"Government / ISRO",
+
+qualification:"Engineering / Relevant Qualification",
+
+post:"Scientist/Engineer-SD",
+
+lastDate:"30 August 2026",
+
+location:"India",
+
+description:
+"Human Space Flight Centre में Scientist/Engineer opportunity।",
+
+official:
+"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html",
+
+extra:
+"Relevant engineering qualification और अन्य eligibility conditions official notification से verify करें।"
+
+},
+
+
+{
+id:"isro-ursc-apprentice-2026",
+
+title:"🚀 ISRO URSC Apprentice 2026",
+
+category:"Apprentice / ISRO",
+
+qualification:"Graduate / Diploma",
+
+post:"Apprentice Trainee",
+
+lastDate:"28 August 2026",
+
+location:"India",
+
+description:
+"ISRO URSC में Graduate और Diploma Apprentice opportunities।",
+
+official:
+"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html",
+
+extra:
+"Apprenticeship की eligibility, stipend, duration और selection process official information से verify करें।"
+
+},
+
+
+{
+id:"isro-nrsc-2026",
+
+title:"🛰️ ISRO NRSC Recruitment 2026",
+
+category:"Government / ISRO",
+
+qualification:"Post के अनुसार",
+
+post:"Temporary Research Personnel",
+
+lastDate:"21 August 2026",
+
+location:"Hyderabad",
+
+description:
+"National Remote Sensing Centre में Temporary Research Personnel opportunity।",
+
+official:
+"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html",
+
+extra:
+"Post-specific qualification और application conditions official notification से verify करें।"
+
+},
+
+
+{
+id:"isro-prl-2026",
+
+title:"🛰️ ISRO PRL Officer Recruitment",
+
+category:"Government / ISRO",
+
+qualification:"Relevant Qualification",
+
+post:
+"Administrative / Accounts / Purchase & Stores",
+
+lastDate:"24 August 2026",
+
+location:"Ahmedabad",
+
+description:
+"Physical Research Laboratory में officer-level recruitment opportunity।",
+
+official:
+"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html",
+
+extra:
+"Officer-level posts की detailed eligibility official notification में check करें।"
+
+},
+
+
+{
+id:"trai-associate-consultant-2026",
+
+title:"📡 TRAI Associate Consultant",
+
+category:"Government / TRAI",
+
+qualification:"Post के अनुसार",
+
+post:"Associate Consultant",
+
+lastDate:"27 August 2026",
+
+location:"New Delhi",
+
+description:
+"Telecom Regulatory Authority of India में Associate Consultant opportunity।",
+
+official:
+"https://trai.gov.in/vacancies",
+
+extra:
+"TRAI की official vacancy notice में eligibility और application procedure verify करें।"
+
+},
+
+
+{
+id:"trai-consultant-2026",
+
+title:"📡 TRAI Consultant Recruitment",
+
+category:"Government / TRAI",
+
+qualification:"Post के अनुसार",
+
+post:"Consultant",
+
+lastDate:"24 August 2026",
+
+location:"New Delhi",
+
+description:
+"TRAI Headquarters में Consultant on Contract basis opportunity।",
+
+official:
+"https://trai.gov.in/vacancies",
+
+extra:
+"Contract duration, qualification और अन्य conditions official vacancy notice से verify करें।"
+
+},
+
+
+{
+id:"ncs-all-india",
+
+title:"🇮🇳 National Career Service – All India Jobs",
+
+category:"Government + Private + WFH",
+
+qualification:"Job के अनुसार",
+
+post:"विभिन्न Posts",
+
+lastDate:"Official Portal पर देखें",
+
+location:"All India",
+
+description:
+"भारत सरकार के National Career Service portal पर Government, Private और अन्य jobs खोजें।",
+
+official:
+"https://www.ncs.gov.in/",
+
+extra:
+"NCS portal पर उपलब्ध vacancy की details संबंधित employer और official listing से verify करें।"
+
+}
+
+];
+
+
+/* ==========================================
+   URL से JOB ID लेना
+   ========================================== */
+
+const params =
+new URLSearchParams(window.location.search);
+
+const id =
+params.get("id");
+
+
+/* ==========================================
+   JOB FIND करना
+   ========================================== */
+
+const job =
+jobs.find(function(item){
+
+return item.id === id;
+
+});
+
+
+/* ==========================================
+   PAGE बनाना
+   ========================================== */
+
+const box =
+document.getElementById("jobPage");
+
+
+if(!job){
+
+box.innerHTML = `
+
+<div class="not-found">
+
+<h2>😔 Job नहीं मिली</h2>
+
+<p>
+यह vacancy उपलब्ध नहीं है या link गलत है।
+</p>
+
+<a class="home-btn" href="index.html">
+🏠 सभी Jobs देखें
+</a>
+
+</div>
+
+`;
+
+}else{
+
+
+box.innerHTML = `
+
+<div class="card">
+
+<h2>${job.title}</h2>
+
+<span class="badge">
+${job.category}
+</span>
+
+<div class="info">
+
+<div>
+🎓 <b>Qualification</b><br>
+${job.qualification}
+</div>
+
+<div>
+💼 <b>Post</b><br>
+${job.post}
+</div>
+
+<div>
+📅 <b>Last Date</b><br>
+<span class="last">
+${job.lastDate}
+</span>
+</div>
+
+<div>
+🇮🇳 <b>Location</b><br>
+${job.location}
+</div>
+
+</div>
+
+<a
+class="apply"
+href="${job.official}"
+target="_blank"
+rel="noopener noreferrer">
+
+🔎 Official Website / Apply →
+
+</a>
+
+</div>
+
+
+<div class="section">
+
+<h3>📋 Job Overview</h3>
+
+<p>
+${job.description}
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h3>🎓 Qualification</h3>
+
+<p>
+${job.qualification}
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h3>💼 Post Details</h3>
+
+<p>
+${job.post}
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h3>📅 Important Date</h3>
+
+<p>
+<b>Last Date:</b>
+<span class="last">
+${job.lastDate}
+</span>
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h3>📍 Job Location</h3>
+
+<p>
+${job.location}
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h3>📝 Important Information</h3>
+
+<p>
+${job.extra}
+</p>
+
+</div>
+
+
+<div class="warning">
+
+<b>🚨 जरूरी सावधानी</b>
+
+<p>
+Rozgar Sathi केवल information उपलब्ध कराता है।
+Qualification, age limit, vacancy, salary, fee,
+selection process और last date को official notification
+से जरूर verify करें।
+</p>
+
+<p>
+किसी को OTP, UPI PIN, ATM PIN, password या
+अनजान व्यक्ति को पैसे न दें।
+</p>
+
+</div>
+
+
+<div class="section">
+
+<h3>🔗 Official Application</h3>
+
+<p>
+नीचे दिए गए button से संबंधित official website खोलें।
+</p>
+
+<a
+class="apply"
+href="${job.official}"
+target="_blank"
+rel="noopener noreferrer">
+
+🚀 Official Website खोलें
+
+</a>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+  </html>
