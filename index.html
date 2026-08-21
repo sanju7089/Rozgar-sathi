@@ -528,6 +528,29 @@ document.getElementById("noResult").style.display="none";
 }
 
 </script>
+<script>
+function checkJobExpiry(){
 
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    document.querySelectorAll(".job[data-last-date]").forEach(function(job){
+
+        const lastDate = new Date(job.dataset.lastDate);
+        lastDate.setHours(23,59,59,999);
+
+        if(lastDate < today){
+
+            job.style.display = "none";
+            job.classList.add("expired-job");
+
+        }
+
+    });
+
+}
+
+checkJobExpiry();
+</script>
 </body>
     </html>
