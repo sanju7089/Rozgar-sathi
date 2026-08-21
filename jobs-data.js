@@ -99,5 +99,123 @@ const jobs = [
     lastDate: "2026-08-31",
     page: "graduate-jobs.html"
   }
+{
+    id: "isro-dos-director-2026",
+    title: "ISRO Department of Space Director (Technical & Strategy)",
+    category: "government",
+    qualification: "Relevant qualification",
+    posts: "1",
+    lastDate: "2026-09-12",
+    page: "government.html"
+  },
 
+  {
+    id: "ncdc-lab-technician-2026",
+    title: "NCDC Junior Laboratory Technician Grade II",
+    category: "government",
+    qualification: "Relevant Laboratory qualification",
+    posts: "2",
+    lastDate: "2026-12-31",
+    page: "government.html"
+  },
+
+  {
+    id: "ncdc-field-worker-2026",
+    title: "NCDC Field Worker",
+    category: "government",
+    qualification: "Relevant qualification",
+    posts: "1",
+    lastDate: "2026-12-31",
+    page: "government.html"
+  },
+
+  {
+    id: "ongc-graduate-trainee-2026",
+    title: "ONGC Graduate Trainee (E1 Level)",
+    category: "government",
+    qualification: "Graduate Degree / discipline-wise eligibility",
+    posts: "52",
+    lastDate: "2026-08-31",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "mprdc-manager-technical-2026",
+    title: "MPRDC Manager (Technical)",
+    category: "government",
+    qualification: "B.E. / B.Tech as per notification",
+    posts: "18",
+    lastDate: "2026-08-31",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "nba-senior-manager-2026",
+    title: "National Board of Accreditation Senior Director / Manager / Deputy Manager",
+    category: "government",
+    qualification: "Post-wise qualification",
+    posts: "7",
+    lastDate: "2026-08-31",
+    page: "graduate-jobs.html"
+  },
+
+  {
+    id: "income-tax-canteen-mp-2026",
+    title: "Income Tax Canteen Attendant",
+    category: "government",
+    qualification: "10th Pass",
+    posts: "7",
+    lastDate: "2026-08-31",
+    page: "10th-pass.html"
+  },
+
+  {
+    id: "iocl-apprentice-2026",
+    title: "IOCL Trade & Technician Apprentice",
+    category: "government",
+    qualification: "10th / ITI / Diploma as per trade",
+    posts: "1883",
+    lastDate: "2026-08-31",
+    page: "10th-pass.html"
+  },
+
+  {
+    id: "telecaller-aeil-wfh-2026",
+    title: "Telecaller / Telecalling Executive - AEIL",
+    category: "work-from-home",
+    qualification: "10th / 12th Pass / Graduate",
+    posts: "Multiple",
+    lastDate: "2026-09-30",
+    page: "work-from-home.html"
+  },
+
+  {
+    id: "sales-marketing-assistant-wfh-2026",
+    title: "Sales / Marketing Assistant - BUILD YOUR DREAM",
+    category: "work-from-home",
+    qualification: "12th / Graduate",
+    posts: "Multiple",
+    lastDate: "2026-09-30",
+    page: "work-from-home.html"
+  },
+
+  {
+    id: "telecaller-magnusorbit-wfh-2026",
+    title: "Telecaller - MagnusOrbit",
+    category: "work-from-home",
+    qualification: "12th Pass / Graduate",
+    posts: "Multiple",
+    lastDate: "2026-09-30",
+    page: "work-from-home.html"
+  },
+
+  {
+    id: "hr-intern-edivionx-2026",
+    title: "HR Intern - edivionX",
+    category: "work-from-home",
+    qualification: "12th Pass / Students / Graduates",
+    posts: "Multiple",
+    lastDate: "2026-09-30",
+    page: "work-from-home.html"
+      }
 ];
