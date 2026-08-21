@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "name": "DRDO",
+      "url": "https://drdo.gov.in/drdo/en/offerings/vacancies",
+      "category": "Government • Defence"
+    },
+    {
+      "name": "India Post",
+      "url": "https://www.indiapost.gov.in/vacancies",
+      "category": "Government • India Post"
+    },
+    {
+      "name": "SBI",
+      "url": "https://sbi.co.in/web/careers",
+      "category": "Bank • All India"
+    },
+    {
+      "name": "Bank of Baroda",
+      "url": "https://www.bankofbaroda.in/career/current-openings",
+      "category": "Bank • All India"
+    },
+    {
+      "name": "IOCL",
+      "url": "https://iocl.com/pages/careers-overview",
+      "category": "PSU • All India"
+    },
+    {
+      "name": "AAI",
+      "url": "https://www.aai.aero/en/careers/recruitment",
+      "category": "Airport / PSU • All India"
+    },
+    {
+      "name": "AIIMS",
+      "url": "https://www.aiims.edu/index.php/en/notices/recruitment",
+      "category": "Central Government • All India"
+    },
+    {
+      "name": "TRAI",
+      "url": "https://trai.gov.in/vacancies",
+      "category": "Government • Delhi"
+    },
+    {
+      "name": "SAMEER",
+      "url": "https://sameer.gov.in/index.php/recruitment",
+      "category": "Apprentice • India"
+    },
+    {
+      "name": "PSSSB",
+      "url": "https://sssb.punjab.gov.in/",
+      "category": "Government • Punjab"
+    }
+  ]
+}
