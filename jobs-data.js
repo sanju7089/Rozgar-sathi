@@ -21,6 +21,16 @@ const jobs = [
 },
 
 {
+  id:"trai-consultant-2026",
+  title:"TRAI Consultant Recruitment 2026",
+  category:"Government • Delhi",
+  qualification:"Relevant Qualification",
+  posts:"Multiple",
+  lastDate:"2026-08-31",
+  page:"https://trai.gov.in/vacancies"
+},
+
+{
   id:"iifcl-agm-2026",
   title:"IIFCL AGM Grade C Officer Recruitment 2026",
   category:"Bank / Finance • All India",
