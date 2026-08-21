@@ -5,9 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Private Jobs | Rozgar Sathi</title>
+<title>Private Jobs 2026 | Rozgar Sathi</title>
 
-<meta name="description" content="Private Jobs, Fresher Jobs, Customer Support, Sales, Data Entry और Remote Jobs की जानकारी।">
+<meta name="description"
+content="Private Jobs 2026, Fresher Jobs, Sales, Customer Support, Data Entry, Back Office, IT, Retail, Delivery और Work From Home Jobs।">
 
 <style>
 
@@ -15,54 +16,89 @@
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:Arial,Helvetica,sans-serif;
-background:#f4f6f8;
+background:#f3f6f8;
 color:#222;
 }
 
+/* HEADER */
+
 header{
-background:linear-gradient(135deg,#075e54,#0b806f);
+background:linear-gradient(135deg,#063f3a,#075e54,#0b806f);
 color:white;
 text-align:center;
-padding:28px 15px;
+padding:25px 15px;
 }
 
 header h1{
 margin:0;
-font-size:28px;
+font-size:30px;
 }
 
 header p{
-margin:7px 0 0;
+margin:7px 0 18px;
 }
+
+.stats{
+max-width:850px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+}
+
+.stat{
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.25);
+border-radius:10px;
+padding:10px;
+}
+
+.stat b{
+display:block;
+font-size:22px;
+}
+
+.stat span{
+font-size:12px;
+}
+
+/* NAV */
 
 nav{
 background:white;
-padding:10px;
+padding:9px;
 text-align:center;
 overflow-x:auto;
 white-space:nowrap;
-box-shadow:0 2px 7px #ddd;
+box-shadow:0 2px 8px #ddd;
 position:sticky;
 top:0;
-z-index:10;
+z-index:100;
 }
 
 nav a{
 display:inline-block;
-margin:3px;
 padding:9px 12px;
+margin:2px;
 text-decoration:none;
 color:#075e54;
 font-weight:bold;
 border-radius:7px;
+font-size:14px;
 }
 
 nav a:hover{
 background:#e8f5f3;
 }
+
+/* CONTAINER */
 
 .container{
 max-width:900px;
@@ -70,103 +106,227 @@ margin:auto;
 padding:15px;
 }
 
+/* INTRO */
+
 .intro{
 background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 2px 8px #ddd;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .intro h2{
-color:#075e54;
 margin-top:0;
+color:#075e54;
 }
 
-.search{
+.intro p{
+line-height:1.6;
+}
+
+/* SEARCH */
+
+.search-box{
 background:white;
 padding:15px;
 border-radius:12px;
 box-shadow:0 2px 8px #ddd;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
-.search input{
+.search-box input{
 width:100%;
-padding:14px;
-border:1px solid #ddd;
-border-radius:8px;
+padding:15px;
+border:2px solid #075e54;
+border-radius:9px;
 font-size:16px;
 outline:none;
 }
 
+.search-box input:focus{
+box-shadow:0 0 0 3px rgba(7,94,84,.12);
+}
+
+/* FILTERS */
+
+.filters{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+margin-top:10px;
+}
+
+.filters select{
+width:100%;
+padding:11px;
+border:1px solid #ddd;
+border-radius:8px;
+background:white;
+font-size:14px;
+}
+
+/* CATEGORY */
+
+.section-title{
+color:#075e54;
+border-left:5px solid #075e54;
+padding-left:10px;
+margin:25px 0 12px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:8px;
+}
+
+.category{
+background:white;
+padding:13px 5px;
+text-align:center;
+border-radius:9px;
+box-shadow:0 2px 7px #ddd;
+text-decoration:none;
+color:#222;
+font-weight:bold;
+font-size:13px;
+}
+
+.category:hover{
+color:#075e54;
+transform:translateY(-2px);
+}
+
+/* JOB CARD */
+
 .job{
 background:white;
 padding:18px;
-margin-bottom:15px;
-border-radius:10px;
+margin:14px 0;
+border-radius:11px;
 box-shadow:0 2px 8px #ddd;
 border-left:5px solid #075e54;
 }
 
 .job h3{
+margin:0 0 8px;
 color:#075e54;
-margin-top:0;
+font-size:19px;
 }
 
 .badge{
 display:inline-block;
+padding:5px 9px;
+margin:2px;
+border-radius:15px;
 background:#e8f5f3;
 color:#075e54;
-padding:5px 9px;
-border-radius:15px;
-font-size:13px;
+font-size:12px;
 font-weight:bold;
-margin:2px;
 }
+
+.active{
+background:#e8f7ea;
+color:#16802c;
+}
+
+.remote{
+background:#e8f0ff;
+color:#1857a5;
+}
+
+.salary{
+background:#fff5dc;
+color:#9a6500;
+}
+
+/* JOB INFO */
+
+.job-info{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+margin:13px 0;
+}
+
+.info{
+background:#f5f7f8;
+padding:10px;
+border-radius:7px;
+font-size:13px;
+line-height:1.5;
+}
+
+.job p{
+line-height:1.55;
+}
+
+/* BUTTON */
 
 .apply{
 display:inline-block;
-margin-top:10px;
 background:#075e54;
 color:white;
-padding:10px 18px;
-border-radius:6px;
+padding:11px 17px;
+border-radius:7px;
 text-decoration:none;
 font-weight:bold;
+margin-top:7px;
+}
+
+.apply:hover{
+background:#064c44;
+}
+
+/* RESULT */
+
+.result{
+background:#e8f5f3;
+color:#075e54;
+padding:10px;
+border-radius:8px;
+font-weight:bold;
+margin-bottom:10px;
 }
 
 .noresult{
 display:none;
 background:white;
 padding:20px;
-border-radius:10px;
 text-align:center;
+border-radius:10px;
 box-shadow:0 2px 8px #ddd;
+}
+
+/* NOTICE */
+
+.notice{
+background:#fff8dc;
+border-left:5px solid #e0b100;
+padding:15px;
+border-radius:8px;
+margin-top:20px;
+line-height:1.6;
 }
 
 .warning{
 background:#fff3f3;
 border-left:5px solid #d32f2f;
-padding:14px;
-border-radius:7px;
-margin-top:20px;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+line-height:1.6;
 }
 
-.notice{
-background:#fff8dc;
-border-left:5px solid #e0b100;
-padding:14px;
-border-radius:7px;
-margin-top:15px;
-}
+/* FOOTER */
 
 footer{
 margin-top:30px;
-background:#222;
+background:#202526;
 color:white;
 text-align:center;
-padding:25px 15px;
+padding:28px 15px;
 }
 
 footer a{
@@ -174,10 +334,36 @@ color:white;
 text-decoration:none;
 }
 
-@media(max-width:600px){
+/* MOBILE */
+
+@media(max-width:700px){
 
 header h1{
-font-size:25px;
+font-size:26px;
+}
+
+.stats{
+grid-template-columns:repeat(3,1fr);
+}
+
+.stat b{
+font-size:17px;
+}
+
+.stat span{
+font-size:10px;
+}
+
+.categories{
+grid-template-columns:1fr 1fr;
+}
+
+.filters{
+grid-template-columns:1fr;
+}
+
+.job-info{
+grid-template-columns:1fr;
 }
 
 }
@@ -187,31 +373,47 @@ font-size:25px;
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<h1>🏢 Private Jobs</h1>
+<h1>🏢 Rozgar Sathi</h1>
 
-<p>Private • Fresher • Remote • All India</p>
+<p>Private Jobs • Fresher • Remote • All India</p>
+
+<div class="stats">
+
+<div class="stat">
+<b>🔥</b>
+<span>Latest Jobs</span>
+</div>
+
+<div class="stat">
+<b>🆕</b>
+<span>Fresher Jobs</span>
+</div>
+
+<div class="stat">
+<b>🏠</b>
+<span>Remote Jobs</span>
+</div>
+
+</div>
 
 </header>
 
 
+<!-- NAV -->
+
 <nav>
 
 <a href="index.html">🏠 Home</a>
-
 <a href="government.html">🏛️ Government</a>
-
 <a href="private.html">🏢 Private</a>
-
 <a href="10th-pass.html">🎓 10th</a>
-
 <a href="12th-pass.html">🎓 12th</a>
-
 <a href="graduate-jobs.html">🎓 Graduate</a>
-
 <a href="work-from-home.html">🏠 WFH</a>
-
 <a href="closed-jobs.html">📁 Closed</a>
 
 </nav>
@@ -220,53 +422,178 @@ font-size:25px;
 <div class="container">
 
 
+<!-- INTRO -->
+
 <div class="intro">
 
-<h2>🏢 Private Job Opportunities</h2>
+<h2>🏢 Private Jobs 2026</h2>
 
 <p>
-भारत में Private और Fresher jobs खोजने के लिए
-नीचे अलग-अलग job categories दी गई हैं।
+Private sector में नौकरी खोजने वाले candidates के लिए
+Sales, Customer Support, Data Entry, Back Office,
+IT, Retail, Delivery और Work From Home जैसी categories
+एक ही जगह उपलब्ध हैं।
 </p>
 
 <p>
-यहाँ Customer Support, Sales, Data Entry,
-Back Office, IT, Delivery और Work From Home
-जैसी opportunities खोज सकते हैं।
+🔎 नीचे search करके अपनी पसंद की job category खोजें।
 </p>
 
 </div>
 
 
-<div class="search">
+<!-- SEARCH -->
+
+<div class="search-box">
 
 <input
-type="text"
+type="search"
 id="jobSearch"
-placeholder="🔎 Private Job खोजें... जैसे Sales, Data Entry, IT"
-onkeyup="searchJobs()"
+placeholder="🔎 Search करें — Sales, Data Entry, IT, WFH..."
+autocomplete="off"
 >
+
+<div class="filters">
+
+<select id="typeFilter">
+
+<option value="">💼 सभी Job Types</option>
+<option value="fresher">Fresher</option>
+<option value="experienced">Experienced</option>
+<option value="remote">Remote / WFH</option>
+<option value="field">Field Job</option>
+
+</select>
+
+
+<select id="educationFilter">
+
+<option value="">🎓 सभी Qualification</option>
+<option value="10th">10th Pass</option>
+<option value="12th">12th Pass</option>
+<option value="graduate">Graduate</option>
+<option value="any">Any Qualification</option>
+
+</select>
+
+
+<select id="modeFilter">
+
+<option value="">📍 सभी Work Modes</option>
+<option value="remote">Work From Home</option>
+<option value="office">Office</option>
+<option value="field">Field</option>
+
+</select>
 
 </div>
 
+</div>
+
+
+<div id="result" class="result">
+
+सभी Private Jobs दिख रही हैं
+
+</div>
+
+
+<!-- CATEGORIES -->
+
+<h2 class="section-title">
+🔥 Popular Private Job Categories
+</h2>
+
+<div class="categories">
+
+<a class="category" href="#customer">
+📞<br>Customer Support
+</a>
+
+<a class="category" href="#sales">
+💰<br>Sales
+</a>
+
+<a class="category" href="#data">
+⌨️<br>Data Entry
+</a>
+
+<a class="category" href="#backoffice">
+🗂️<br>Back Office
+</a>
+
+<a class="category" href="#it">
+💻<br>IT Jobs
+</a>
+
+<a class="category" href="#delivery">
+🛵<br>Delivery
+</a>
+
+<a class="category" href="#retail">
+🛍️<br>Retail
+</a>
+
+<a class="category" href="#wfh">
+🏠<br>WFH
+</a>
+
+</div>
+
+
+<!-- JOB LIST -->
+
+<h2 class="section-title">
+🔥 Private Job Opportunities
+</h2>
 
 <div id="jobList">
 
 
-<!-- CUSTOMER SUPPORT -->
+<!-- CUSTOMER -->
 
-<div class="job searchable"
-data-search="customer support customer care private fresher call center remote">
+<div
+class="job searchable"
+id="customer"
+data-search="customer support customer care call center fresher private office remote"
+data-type="fresher"
+data-education="any"
+data-mode="office remote"
+>
 
 <h3>📞 Customer Support Jobs</h3>
 
 <span class="badge">Private</span>
-<span class="badge">Fresher</span>
+<span class="badge active">Fresher Friendly</span>
 <span class="badge">Customer Support</span>
 
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Fresher / Experienced
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Office / Remote
+</div>
+
+<div class="info">
+💰 <b>Salary</b><br>
+Company के अनुसार
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+Post के अनुसार
+</div>
+
+</div>
+
 <p>
-Customer care, customer support और call support
-से जुड़ी private vacancies खोजें।
+Customer care, call center और customer support
+से जुड़ी private opportunities खोजें।
 </p>
 
 <a
@@ -283,18 +610,48 @@ rel="noopener"
 
 <!-- SALES -->
 
-<div class="job searchable"
-data-search="sales sales executive business development private fresher commission incentive">
+<div
+class="job searchable"
+id="sales"
+data-search="sales sales executive business development field inside sales commission incentive fresher"
+data-type="fresher field"
+data-education="any 12th graduate"
+data-mode="field office"
+>
 
 <h3>💰 Sales Executive Jobs</h3>
 
-<span class="badge">Private</span>
 <span class="badge">Sales</span>
-<span class="badge">Fresher</span>
+<span class="badge active">Fresher</span>
+<span class="badge salary">Incentive</span>
+
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Fresher / Experienced
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Field / Office
+</div>
+
+<div class="info">
+💰 <b>Salary</b><br>
+Fixed + Incentive
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+12th / Graduate
+</div>
+
+</div>
 
 <p>
 Sales Executive, Business Development और
-field/inside sales की opportunities खोजें।
+inside sales जैसी private opportunities।
 </p>
 
 <a
@@ -311,17 +668,47 @@ rel="noopener"
 
 <!-- DATA ENTRY -->
 
-<div class="job searchable"
-data-search="data entry typing computer operator private fresher">
+<div
+class="job searchable"
+id="data"
+data-search="data entry typing computer operator computer work private fresher"
+data-type="fresher"
+data-education="12th graduate"
+data-mode="office remote"
+>
 
 <h3>⌨️ Data Entry Jobs</h3>
 
-<span class="badge">Private</span>
 <span class="badge">Data Entry</span>
+<span class="badge active">Fresher</span>
+
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Entry Level
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Office / Remote
+</div>
+
+<div class="info">
+💰 <b>Salary</b><br>
+Company के अनुसार
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+12th / Graduate
+</div>
+
+</div>
 
 <p>
-Data entry, computer operator और typing से
-जुड़ी private jobs खोजें।
+Typing, computer operator और data entry से जुड़ी
+private jobs खोजें।
 </p>
 
 <a
@@ -338,18 +725,47 @@ rel="noopener"
 
 <!-- BACK OFFICE -->
 
-<div class="job searchable"
-data-search="back office office assistant administration private fresher">
+<div
+class="job searchable"
+id="backoffice"
+data-search="back office office assistant documentation administration computer private fresher"
+data-type="fresher"
+data-education="12th graduate"
+data-mode="office"
+>
 
 <h3>🗂️ Back Office Jobs</h3>
 
-<span class="badge">Private</span>
 <span class="badge">Back Office</span>
-<span class="badge">Fresher</span>
+<span class="badge active">Fresher</span>
+
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Fresher / Experienced
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Office
+</div>
+
+<div class="info">
+💰 <b>Salary</b><br>
+Company के अनुसार
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+12th / Graduate
+</div>
+
+</div>
 
 <p>
-Back office, documentation और office
-administration से संबंधित jobs खोजें।
+Documentation, office assistant और administration
+से संबंधित private jobs।
 </p>
 
 <a
@@ -366,17 +782,47 @@ rel="noopener"
 
 <!-- IT -->
 
-<div class="job searchable"
-data-search="IT software computer technology developer private jobs fresher">
+<div
+class="job searchable"
+id="it"
+data-search="IT software computer technology developer programmer technical support private jobs"
+data-type="experienced"
+data-education="graduate"
+data-mode="office remote"
+>
 
 <h3>💻 IT & Computer Jobs</h3>
 
 <span class="badge">IT</span>
 <span class="badge">Computer</span>
 
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Fresher / Experienced
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Office / Remote
+</div>
+
+<div class="info">
+💰 <b>Salary</b><br>
+Company के अनुसार
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+Relevant Qualification
+</div>
+
+</div>
+
 <p>
-Software, IT support, computer और technology
-से जुड़ी private opportunities खोजें।
+Software, IT support, programming और computer
+technology से जुड़ी opportunities।
 </p>
 
 <a
@@ -393,18 +839,47 @@ rel="noopener"
 
 <!-- DELIVERY -->
 
-<div class="job searchable"
-data-search="delivery delivery boy logistics warehouse private jobs">
+<div
+class="job searchable"
+id="delivery"
+data-search="delivery delivery boy logistics warehouse rider private jobs"
+data-type="field"
+data-education="10th 12th any"
+data-mode="field"
+>
 
 <h3>🛵 Delivery & Logistics Jobs</h3>
 
-<span class="badge">Private</span>
 <span class="badge">Delivery</span>
 <span class="badge">Logistics</span>
 
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Fresher / Experienced
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Field
+</div>
+
+<div class="info">
+💰 <b>Income</b><br>
+Company के अनुसार
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+Post के अनुसार
+</div>
+
+</div>
+
 <p>
-Delivery, warehouse और logistics sector की
-private opportunities खोजें।
+Delivery, warehouse और logistics sector में
+नौकरी खोजें।
 </p>
 
 <a
@@ -413,7 +888,7 @@ href="https://www.ncs.gov.in/"
 target="_blank"
 rel="noopener"
 >
-🔎 Jobs खोजें →
+🔎 Delivery Jobs →
 </a>
 
 </div>
@@ -421,17 +896,47 @@ rel="noopener"
 
 <!-- RETAIL -->
 
-<div class="job searchable"
-data-search="retail shop store sales associate cashier private jobs">
+<div
+class="job searchable"
+id="retail"
+data-search="retail store cashier sales associate shop private job"
+data-type="fresher"
+data-education="10th 12th graduate"
+data-mode="office field"
+>
 
 <h3>🛍️ Retail & Store Jobs</h3>
 
 <span class="badge">Retail</span>
-<span class="badge">Store</span>
+<span class="badge active">Fresher</span>
+
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Fresher / Experienced
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Store / Field
+</div>
+
+<div class="info">
+💰 <b>Salary</b><br>
+Company के अनुसार
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+10th / 12th / Graduate
+</div>
+
+</div>
 
 <p>
-Store assistant, sales associate, cashier और
-retail sector की vacancies खोजें।
+Store assistant, cashier और sales associate
+की private opportunities।
 </p>
 
 <a
@@ -446,19 +951,50 @@ rel="noopener"
 </div>
 
 
-<!-- WORK FROM HOME -->
+<!-- WFH -->
 
-<div class="job searchable"
-data-search="work from home WFH remote private home based jobs">
+<div
+class="job searchable"
+id="wfh"
+data-search="work from home WFH remote home based online private customer support data entry"
+data-type="remote fresher"
+data-education="12th graduate"
+data-mode="remote"
+>
 
 <h3>🏠 Work From Home Jobs</h3>
 
-<span class="badge">WFH</span>
-<span class="badge">Remote</span>
+<span class="badge remote">WFH</span>
+<span class="badge remote">Remote</span>
+<span class="badge active">Fresher Friendly</span>
+
+<div class="job-info">
+
+<div class="info">
+💼 <b>Job Type</b><br>
+Private / Remote
+</div>
+
+<div class="info">
+📍 <b>Work Mode</b><br>
+Work From Home
+</div>
+
+<div class="info">
+💰 <b>Salary</b><br>
+Company के अनुसार
+</div>
+
+<div class="info">
+🎓 <b>Qualification</b><br>
+Post के अनुसार
+</div>
+
+</div>
 
 <p>
-घर से काम करने वाली private और remote
-opportunities के लिए अलग section देखें।
+घर से काम करने वाली genuine opportunities के लिए
+अलग WFH section देखें।
 </p>
 
 <a
@@ -473,17 +1009,22 @@ href="work-from-home.html"
 
 <!-- FRESHER -->
 
-<div class="job searchable"
-data-search="fresher jobs 10th 12th graduate private entry level">
+<div
+class="job searchable"
+data-search="fresher entry level private jobs 10th 12th graduate"
+data-type="fresher"
+data-education="10th 12th graduate"
+data-mode="office field remote"
+>
 
 <h3>🎓 Fresher Jobs</h3>
 
-<span class="badge">Fresher</span>
+<span class="badge active">Fresher</span>
 <span class="badge">Entry Level</span>
 
 <p>
 बिना ज्यादा experience वाले candidates के लिए
-entry-level private opportunities खोजें।
+entry-level private opportunities।
 </p>
 
 <a
@@ -500,18 +1041,22 @@ rel="noopener"
 
 <!-- NCS -->
 
-<div class="job searchable"
-data-search="NCS National Career Service private jobs all india government verified">
+<div
+class="job searchable"
+data-search="NCS National Career Service private jobs all india employment"
+data-type="fresher"
+data-education="any"
+data-mode="office remote field"
+>
 
 <h3>🇮🇳 NCS – All India Private Jobs</h3>
 
 <span class="badge">Government Portal</span>
 <span class="badge">All India</span>
-<span class="badge">Private</span>
 
 <p>
-भारत सरकार के National Career Service पर
-पूरे भारत की private vacancies search करें।
+भारत सरकार के National Career Service portal पर
+private employment opportunities खोजें।
 </p>
 
 <a
@@ -520,7 +1065,7 @@ href="https://www.ncs.gov.in/"
 target="_blank"
 rel="noopener"
 >
-🔎 NCS पर Jobs देखें →
+🔎 NCS Jobs देखें →
 </a>
 
 </div>
@@ -534,46 +1079,43 @@ rel="noopener"
 <h3>😔 कोई Job नहीं मिली</h3>
 
 <p>
-दूसरा keyword try करें।
+Search keyword या filter बदलकर फिर कोशिश करें।
 </p>
 
 </div>
 
 
-<div class="warning">
-
-<b>🚨 Private Job Scam से सावधान!</b>
-
-<p>
-Job देने के नाम पर registration fee,
-security deposit या पहले पैसे माँगने वालों
-से सावधान रहें।
-</p>
-
-<p>
-<strong>
-OTP, UPI PIN, ATM PIN या password किसी को न दें।
-</strong>
-</p>
-
-</div>
-
+<!-- NOTICE -->
 
 <div class="notice">
 
 <b>⚠️ जरूरी सूचना</b>
 
 <p>
-किसी भी vacancy की salary, eligibility,
-location और company details को apply करने
-से पहले official source पर verify करें।
+Rozgar Sathi केवल job information उपलब्ध कराता है।
+Salary, eligibility, location, selection process और
+company details को apply करने से पहले official source
+से जरूर verify करें।
+</p>
+
+</div>
+
+
+<!-- SCAM -->
+
+<div class="warning">
+
+<b>🚨 Private Job Scam से सावधान रहें</b>
+
+<p>
+Job देने के नाम पर registration fee, security deposit,
+OTP, UPI PIN, ATM PIN या password माँगने वालों से सावधान रहें।
 </p>
 
 <p>
-National Career Service के अनुसार उसकी
-employment services free हैं और jobseekers से
-registration या job application के लिए fee नहीं
-ली जाती।
+<strong>
+किसी भी company को पैसे भेजने से पहले उसकी authenticity verify करें।
+</strong>
 </p>
 
 </div>
@@ -581,53 +1123,38 @@ registration या job application के लिए fee नहीं
 
 <div style="text-align:center;padding:20px">
 
-<a
-class="apply"
-href="work-from-home.html"
->
-🏠 Work From Home →
+<a class="apply" href="work-from-home.html">
+🏠 WFH Jobs
 </a>
 
-<a
-class="apply"
-href="index.html"
->
-🏠 Home →
+<a class="apply" href="government.html">
+🏛️ Government Jobs
+</a>
+
+<a class="apply" href="index.html">
+🏠 Home
 </a>
 
 </div>
 
-
 </div>
 
+
+<!-- FOOTER -->
 
 <footer>
 
-<p>
-<b>© 2026 Rozgar Sathi</b>
-</p>
+<p><b>© 2026 Rozgar Sathi</b></p>
 
-<p>
-Jobs • Career • Employment
-</p>
+<p>Jobs • Career • Employment</p>
 
 <p>
 
-<a href="about.html">
-About Us
-</a>
-
+<a href="about.html">About Us</a>
 &nbsp; | &nbsp;
-
-<a href="contact.html">
-Contact
-</a>
-
+<a href="contact.html">Contact</a>
 &nbsp; | &nbsp;
-
-<a href="disclaimer.html">
-Disclaimer
-</a>
+<a href="disclaimer.html">Disclaimer</a>
 
 </p>
 
@@ -636,22 +1163,57 @@ Disclaimer
 
 <script>
 
+/* =========================
+   SEARCH SYSTEM
+========================= */
+
+const searchInput =
+document.getElementById("jobSearch");
+
+const typeFilter =
+document.getElementById("typeFilter");
+
+const educationFilter =
+document.getElementById("educationFilter");
+
+const modeFilter =
+document.getElementById("modeFilter");
+
+const resultBox =
+document.getElementById("result");
+
+const noResult =
+document.getElementById("noResult");
+
+
 function searchJobs(){
 
-let input =
-document.getElementById("jobSearch")
-.value
+const search =
+searchInput.value
 .toLowerCase()
 .trim();
 
-let jobs =
+const type =
+typeFilter.value
+.toLowerCase();
+
+const education =
+educationFilter.value
+.toLowerCase();
+
+const mode =
+modeFilter.value
+.toLowerCase();
+
+const jobs =
 document.querySelectorAll(".searchable");
 
-let found = 0;
+let found=0;
+
 
 jobs.forEach(function(job){
 
-let text =
+const text =
 (
 job.innerText +
 " " +
@@ -659,44 +1221,111 @@ job.innerText +
 )
 .toLowerCase();
 
+const jobType =
+(job.dataset.type || "")
+.toLowerCase();
+
+const jobEducation =
+(job.dataset.education || "")
+.toLowerCase();
+
+const jobMode =
+(job.dataset.mode || "")
+.toLowerCase();
+
+
+const searchMatch =
+!search ||
+text.includes(search);
+
+const typeMatch =
+!type ||
+jobType.includes(type);
+
+const educationMatch =
+!education ||
+jobEducation.includes(education);
+
+const modeMatch =
+!mode ||
+jobMode.includes(mode);
+
+
 if(
-input === "" ||
-text.includes(input)
+searchMatch &&
+typeMatch &&
+educationMatch &&
+modeMatch
 ){
 
-job.style.display = "block";
+job.style.display="block";
 
 found++;
 
 }else{
 
-job.style.display = "none";
+job.style.display="none";
 
 }
 
 });
 
+
 if(
-input !== "" &&
-found === 0
+!search &&
+!type &&
+!education &&
+!mode
 ){
 
-document.getElementById(
-"noResult"
-).style.display = "block";
+resultBox.innerHTML =
+"📋 सभी Private Jobs दिख रही हैं";
 
 }else{
 
-document.getElementById(
-"noResult"
-).style.display = "none";
+resultBox.innerHTML =
+"🔎 <b>"+found+
+"</b> Jobs मिलीं";
+
+}
+
+
+if(found===0){
+
+noResult.style.display="block";
+
+}else{
+
+noResult.style.display="none";
 
 }
 
 }
+
+
+/* EVENTS */
+
+searchInput.addEventListener(
+"input",
+searchJobs
+);
+
+typeFilter.addEventListener(
+"change",
+searchJobs
+);
+
+educationFilter.addEventListener(
+"change",
+searchJobs
+);
+
+modeFilter.addEventListener(
+"change",
+searchJobs
+);
 
 </script>
-
 
 </body>
     </html>
