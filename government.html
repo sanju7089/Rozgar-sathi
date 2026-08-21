@@ -1,42 +1,90 @@
-<!DOCTYPE html><html lang="hi">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Government Jobs 2026 | Rozgar Sathi</title><meta name="description" content="भारत की Government Jobs 2026 की जानकारी, qualification, vacancy, last date और official apply links।"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Government Jobs 2026 | Rozgar Sathi</title>
+<meta name="description" content="Rozgar Sathi पर Government Jobs 2026, SSC, Railway, India Post और अन्य सरकारी नौकरियों की जानकारी।">
+
+<style>
 *{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
 
 body{
 margin:0;
 font-family:Arial,Helvetica,sans-serif;
-background:#f4f6f8;
+background:#eef2f5;
 color:#222;
 }
 
+/* HEADER */
 header{
-background:linear-gradient(135deg,#075e54,#0b806f);
+background:linear-gradient(135deg,#063f39,#08796a);
 color:white;
+padding:20px 15px 18px;
 text-align:center;
-padding:28px 15px;
+border-bottom:4px solid #f2b400;
 }
 
 header h1{
 margin:0;
 font-size:29px;
+font-weight:800;
 }
 
 header p{
-margin:8px 0 0;
+margin:7px 0 0;
+font-size:15px;
 }
 
+/* MOVING NOTICE */
+.ticker{
+background:#111;
+color:white;
+display:flex;
+align-items:center;
+overflow:hidden;
+height:38px;
+}
+
+.ticker-label{
+background:#d71920;
+font-weight:bold;
+padding:10px 15px;
+white-space:nowrap;
+z-index:2;
+}
+
+.ticker-track{
+overflow:hidden;
+flex:1;
+}
+
+.ticker-text{
+display:inline-block;
+white-space:nowrap;
+padding-left:100%;
+animation:ticker 22s linear infinite;
+}
+
+@keyframes ticker{
+0%{transform:translateX(0)}
+100%{transform:translateX(-100%)}
+}
+
+/* NAV */
 nav{
 background:white;
-padding:10px;
+padding:9px;
 text-align:center;
 overflow-x:auto;
 white-space:nowrap;
-box-shadow:0 2px 7px #ddd;
+box-shadow:0 2px 8px #ccc;
 position:sticky;
 top:0;
-z-index:10;
+z-index:100;
 }
 
 nav a{
@@ -46,44 +94,161 @@ padding:9px 12px;
 text-decoration:none;
 color:#075e54;
 font-weight:bold;
-border-radius:7px;
+border-radius:6px;
 }
 
-nav a:hover{
-background:#e8f5f3;
+nav a:hover,
+nav a.active{
+background:#075e54;
+color:white;
 }
 
+/* MAIN */
 .container{
-max-width:900px;
+max-width:1050px;
 margin:auto;
 padding:15px;
 }
 
+/* TOP STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+margin:10px 0 18px;
+}
+
+.stat{
+background:white;
+border-radius:10px;
+padding:16px 10px;
+text-align:center;
+box-shadow:0 2px 8px #d3d7da;
+border-top:4px solid #075e54;
+}
+
+.stat-number{
+font-size:27px;
+font-weight:900;
+color:#075e54;
+}
+
+.stat-label{
+font-size:13px;
+margin-top:5px;
+font-weight:bold;
+color:#555;
+}
+
+/* GLOWING NUMBER */
+.glow{
+animation:glow 1.6s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 2px #0b806f;
+}
+to{
+text-shadow:0 0 12px #00a98f,0 0 20px #00a98f;
+}
+}
+
+/* INTRO */
 .intro{
 background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
-margin-bottom:20px;
+padding:18px;
+border-radius:10px;
+box-shadow:0 2px 8px #d3d7da;
+margin-bottom:18px;
+border-left:5px solid #075e54;
 }
 
 .intro h2{
+margin:0 0 8px;
 color:#075e54;
-margin-top:0;
 }
 
+/* SEARCH */
+.search-area{
+background:#fff;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 8px #d3d7da;
+margin-bottom:18px;
+}
+
+.search-area h3{
+margin:0 0 10px;
+color:#075e54;
+}
+
+.search-row{
+display:flex;
+gap:8px;
+}
+
+.search-row input,
+.search-row select{
+width:100%;
+padding:12px;
+border:1px solid #bbb;
+border-radius:7px;
+font-size:15px;
+outline:none;
+}
+
+.search-row input:focus,
+.search-row select:focus{
+border-color:#075e54;
+}
+
+.search-row button{
+background:#075e54;
+color:white;
+border:0;
+padding:12px 18px;
+border-radius:7px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.search-row button:hover{
+background:#064c44;
+}
+
+/* SECTION TITLE */
+.section-title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:20px 0 12px;
+}
+
+.section-title h2{
+color:#075e54;
+margin:0;
+}
+
+/* JOB CARD */
 .job{
 background:white;
 padding:18px;
-margin-bottom:16px;
-border-radius:12px;
-box-shadow:0 2px 9px #ddd;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 9px #d1d5d8;
 border-left:5px solid #075e54;
+position:relative;
+}
+
+.job:hover{
+box-shadow:0 4px 14px #c3c8cb;
 }
 
 .job h3{
 color:#075e54;
-margin-top:0;
+margin:0 0 9px;
+font-size:19px;
 }
 
 .badge{
@@ -92,23 +257,38 @@ background:#e8f5f3;
 color:#075e54;
 padding:5px 9px;
 border-radius:15px;
-font-size:13px;
+font-size:12px;
 font-weight:bold;
 margin:2px;
 }
 
+.active-badge{
+background:#e7f7ed;
+color:#16803c;
+}
+
+.soon-badge{
+background:#fff0f0;
+color:#d32f2f;
+animation:blink 1.3s infinite;
+}
+
+@keyframes blink{
+50%{opacity:.45}
+}
+
 .info{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(4,1fr);
 gap:8px;
-margin:12px 0;
+margin:13px 0;
 }
 
 .info div{
 background:#f4f6f8;
 padding:10px;
 border-radius:7px;
-font-size:14px;
+font-size:13px;
 }
 
 .last{
@@ -116,28 +296,60 @@ color:#c62828;
 font-weight:bold;
 }
 
-.apply{
+.apply,
+.official{
 display:inline-block;
-margin-top:10px;
-background:#075e54;
-color:white;
-padding:11px 18px;
-border-radius:7px;
+margin-top:8px;
+padding:10px 15px;
+border-radius:6px;
 text-decoration:none;
 font-weight:bold;
+font-size:14px;
+}
+
+.apply{
+background:#075e54;
+color:white;
+}
+
+.apply:hover{
+background:#064c44;
 }
 
 .official{
-display:inline-block;
-margin-top:10px;
 background:#1565c0;
 color:white;
-padding:11px 18px;
-border-radius:7px;
-text-decoration:none;
-font-weight:bold;
+margin-left:5px;
 }
 
+.official:hover{
+background:#0d47a1;
+}
+
+/* QUICK LINKS */
+.quick{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin:18px 0;
+}
+
+.quick a{
+background:white;
+padding:15px 8px;
+text-align:center;
+border-radius:8px;
+text-decoration:none;
+color:#075e54;
+font-weight:bold;
+box-shadow:0 2px 7px #d5d8da;
+}
+
+.quick a:hover{
+background:#e8f5f3;
+}
+
+/* NOTICE */
 .notice{
 background:#fff8dc;
 border-left:5px solid #e0b100;
@@ -146,6 +358,26 @@ border-radius:7px;
 margin-top:20px;
 }
 
+.warning{
+background:#fff3f3;
+border-left:5px solid #d32f2f;
+padding:14px;
+border-radius:7px;
+margin-top:15px;
+}
+
+/* NO RESULT */
+#noResult{
+display:none;
+background:white;
+padding:25px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 2px 8px #ddd;
+margin:15px 0;
+}
+
+/* FOOTER */
 footer{
 margin-top:30px;
 background:#222;
@@ -159,121 +391,694 @@ color:white;
 text-decoration:none;
 }
 
-@media(max-width:600px){
+/* MOBILE */
+@media(max-width:700px){
 
 header h1{
-font-size:25px;
+font-size:24px;
 }
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+.info{
+grid-template-columns:1fr 1fr;
+}
+
+.quick{
+grid-template-columns:1fr 1fr;
+}
+
+.search-row{
+flex-direction:column;
+}
+
+.official{
+margin-left:0;
+}
+
+}
+
+@media(max-width:430px){
 
 .info{
 grid-template-columns:1fr;
 }
 
 }
-</style></head><body><header><h1>🇮🇳 Government Jobs 2026</h1><p>सरकारी नौकरी की जानकारी एक जगह</p></header><nav><a href="index.html">🏠 Home</a>
+</style>
+</head>
 
-<a href="government.html">🏛️ Government</a>
+<body>
 
+<header>
+<h1>🇮🇳 Rozgar Sathi</h1>
+<p>Government Jobs • SSC • Railway • India Post • Career</p>
+</header>
+
+<!-- MOVING NEWS -->
+<div class="ticker">
+<div class="ticker-label">📢 LATEST</div>
+<div class="ticker-track">
+<div class="ticker-text">
+सरकारी नौकरी की नई जानकारी • SSC Recruitment • Railway Recruitment • India Post Jobs • Apply करने से पहले Official Notification जरूर पढ़ें •
+</div>
+</div>
+</div>
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="government.html" class="active">🏛️ Government</a>
 <a href="private.html">🏢 Private</a>
-
 <a href="10th-pass.html">🎓 10th</a>
-
 <a href="12th-pass.html">🎓 12th</a>
-
 <a href="graduate-jobs.html">🎓 Graduate</a>
-
 <a href="work-from-home.html">🏠 WFH</a>
-
 <a href="closed-jobs.html">📁 Closed</a>
+</nav>
 
-</nav><div class="container"><div class="intro"><h2>🔥 Latest Government Jobs</h2><p>
-नीचे उपलब्ध सरकारी भर्ती की जानकारी दी गई है।
-Apply करने से पहले official notification जरूर पढ़ें।
-</p></div><!-- NRLM --><div class="job"><h3>🏛️ NRLM Recruitment 2026</h3><span class="badge">Government</span>
+<div class="container">
+
+<!-- NUMBER BOXES -->
+<div class="stats">
+
+<div class="stat">
+<div class="stat-number glow" id="activeCount">0</div>
+<div class="stat-label">🟢 Active Jobs</div>
+</div>
+
+<div class="stat">
+<div class="stat-number glow" id="closingCount">0</div>
+<div class="stat-label">🔴 Closing Soon</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">24×7</div>
+<div class="stat-label">📢 Job Updates</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">100%</div>
+<div class="stat-label">🔎 Official Verification</div>
+</div>
+
+</div>
+
+<!-- INTRO -->
+<div class="intro">
+
+<h2>🏛️ Latest Government Jobs 2026</h2>
+
+<p>
+भारत की सरकारी नौकरियों की जानकारी एक जगह।
+SSC, Railway, India Post और अन्य Government Recruitment
+की जानकारी यहाँ देखें।
+</p>
+
+<p>
+<strong>⚠️ महत्वपूर्ण:</strong>
+Apply करने से पहले संबंधित विभाग की official notification जरूर verify करें।
+</p>
+
+</div>
+
+<!-- SEARCH -->
+<div class="search-area">
+
+<h3>🔎 Government Jobs खोजें</h3>
+
+<div class="search-row">
+
+<input
+type="search"
+id="jobSearch"
+placeholder="SSC, Railway, Post, 10th, 12th, Graduate..."
+autocomplete="off">
+
+<select id="jobFilter">
+<option value="all">सभी Jobs</option>
+<option value="10th">10th</option>
+<option value="12th">12th</option>
+<option value="graduate">Graduate</option>
+<option value="ssc">SSC</option>
+<option value="railway">Railway</option>
+<option value="post">India Post</option>
+</select>
+
+<button onclick="filterJobs()">🔎 Search</button>
+
+</div>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="quick">
+
+<a href="https://ssc.gov.in/home/notice-board" target="_blank">
+📋 SSC<br>Notifications
+</a>
+
+<a href="https://rrb.indianrailways.gov.in/" target="_blank">
+🚆 Railway<br>Recruitment
+</a>
+
+<a href="https://indiapostgdsonline.gov.in/" target="_blank">
+📮 India Post<br>Recruitment
+</a>
+
+<a href="index.html">
+🔥 Latest<br>All Jobs
+</a>
+
+</div>
+
+<div class="section-title">
+<h2>🔥 Latest Government Jobs</h2>
+</div>
+
+<div id="noResult">
+<h3>😔 कोई Job नहीं मिली</h3>
+<p>SSC, Railway, Post, 10th, 12th या Graduate try करें।</p>
+</div>
+
+<div id="jobList">
+
+<!-- NRLM -->
+<div class="job searchable"
+data-category="government"
+data-search="nrlm government contract 2026 202 jobs rural livelihood">
+
+<h3>🏛️ NRLM Recruitment 2026</h3>
+
+<span class="badge active-badge">🟢 ACTIVE</span>
+<span class="badge">Government</span>
 <span class="badge">Contract</span>
-<span class="badge">All India?*</span>
 
-<div class="info"><div>
-🎓 <b>Posts:</b><br>
+<div class="info">
+
+<div>
+🎓 <b>Posts</b><br>
 202 Posts
-</div><div>
-📋 <b>Vacancies:</b><br>
+</div>
+
+<div>
+📋 <b>Vacancies</b><br>
 33 प्रकार के पद
-</div><div>
-📅 <b>Last Date:</b><br>
+</div>
+
+<div>
+📅 <b>Last Date</b><br>
 <span class="last">17 September 2026</span>
-</div><div>
-🏷️ <b>Department:</b><br>
+</div>
+
+<div>
+🏷️ <b>Department</b><br>
 NRLM
-</div></div><p>
+</div>
+
+</div>
+
+<p>
 National Rural Livelihood Mission (NRLM) के अंतर्गत
-33 प्रकार के कुल 202 पदों पर संविदा भर्ती का
-official vacancy notice उपलब्ध है।
-</p><p>
-<strong>⚠️ ध्यान दें:</strong>
-पदवार qualification, age limit, salary, selection
-process और आवेदन की शर्तें official advertisement
-में जरूर देखें।
-</p><a class="official"
+33 प्रकार के कुल 202 पदों पर संविदा भर्ती की जानकारी।
+</p>
+
+<a class="official"
 href="https://erojgar.cg.gov.in/LandingSite/en/Vacancies.aspx"
 target="_blank"
 rel="noopener">
-🔗 Official Vacancy देखें →
+🔗 Official Vacancy
 </a>
 
-</div><!-- SSC --><div class="job"><h3>📋 SSC Government Recruitment</h3><span class="badge">Central Government</span>
+</div>
+
+
+<!-- SSC -->
+<div class="job searchable"
+data-category="ssc graduate"
+data-search="ssc staff selection commission government graduate central">
+
+<h3>📋 SSC Government Recruitment 2026</h3>
+
+<span class="badge active-badge">🟢 ACTIVE UPDATES</span>
 <span class="badge">SSC</span>
+<span class="badge">Central Government</span>
+
+<div class="info">
+
+<div>
+🏛️ <b>Department</b><br>
+SSC
+</div>
+
+<div>
+🎓 <b>Qualification</b><br>
+Post के अनुसार
+</div>
+
+<div>
+📢 <b>Status</b><br>
+Latest Notices
+</div>
+
+<div>
+🇮🇳 <b>Level</b><br>
+Central Govt.
+</div>
+
+</div>
 
 <p>
-Staff Selection Commission की नई और ongoing
-recruitment notifications official website पर देखें।
-</p><a class="official"
+Staff Selection Commission की नई और ongoing recruitment
+notifications official notice board पर देखें।
+</p>
+
+<a class="official"
 href="https://ssc.gov.in/home/notice-board"
 target="_blank"
 rel="noopener">
-🔗 SSC Official Notice Board →
+📋 SSC Official Notice Board
 </a>
 
-</div><!-- RAILWAY --><div class="job"><h3>🚆 Railway Recruitment</h3><span class="badge">Indian Railways</span>
+</div>
+
+
+<!-- RAILWAY -->
+<div class="job searchable"
+data-category="railway"
+data-search="railway rrb indian railway government 10th 12th graduate">
+
+<h3>🚆 Railway Recruitment 2026</h3>
+
+<span class="badge active-badge">🟢 LATEST UPDATES</span>
+<span class="badge">Railway</span>
 <span class="badge">Central Government</span>
 
+<div class="info">
+
+<div>
+🚆 <b>Department</b><br>
+Indian Railways
+</div>
+
+<div>
+🎓 <b>Qualification</b><br>
+Post के अनुसार
+</div>
+
+<div>
+📢 <b>Status</b><br>
+Recruitment Updates
+</div>
+
+<div>
+🇮🇳 <b>Level</b><br>
+Central Govt.
+</div>
+
+</div>
+
 <p>
-Railway Recruitment Board की latest employment
-notifications और application updates official
-Railway website से verify करें।
-</p><a class="official"
-href="https://rrbsecunderabad.gov.in/"
+Railway Recruitment Board की latest employment notifications
+और application updates official Railway portal से verify करें।
+</p>
+
+<a class="official"
+href="https://rrb.indianrailways.gov.in/"
 target="_blank"
 rel="noopener">
-🔗 Railway Official Website →
+🚆 Railway Official Website
 </a>
 
-</div><!-- INDIA POST --><div class="job"><h3>📮 India Post Recruitment</h3><span class="badge">India Post</span>
+</div>
+
+
+<!-- INDIA POST -->
+<div class="job searchable"
+data-category="post 10th 12th"
+data-search="india post postal gds government 10th 12th post office">
+
+<h3>📮 India Post Recruitment 2026</h3>
+
+<span class="badge active-badge">🟢 UPDATES</span>
+<span class="badge">India Post</span>
 <span class="badge">Government</span>
 
+<div class="info">
+
+<div>
+📮 <b>Department</b><br>
+India Post
+</div>
+
+<div>
+🎓 <b>Qualification</b><br>
+Post के अनुसार
+</div>
+
+<div>
+📢 <b>Type</b><br>
+Recruitment / GDS
+</div>
+
+<div>
+🇮🇳 <b>Level</b><br>
+Central Govt.
+</div>
+
+</div>
+
 <p>
-India Post की recruitment और GDS related
-official information यहाँ से check करें।
-</p><a class="official"
+India Post और GDS से संबंधित recruitment की official
+information यहाँ से check करें।
+</p>
+
+<a class="official"
 href="https://indiapostgdsonline.gov.in/"
 target="_blank"
 rel="noopener">
-🔗 India Post Official Portal →
+📮 India Post Official Portal
 </a>
 
-</div><div class="notice"><b>⚠️ जरूरी सूचना</b>
+</div>
+
+
+<!-- SSC CGL -->
+<div class="job searchable"
+data-category="ssc graduate"
+data-search="ssc cgl combined graduate level graduate government 2026">
+
+<h3>📊 SSC CGL 2026</h3>
+
+<span class="badge">SSC</span>
+<span class="badge">Graduate</span>
+<span class="badge">Central Government</span>
+
+<div class="info">
+
+<div>
+🎓 <b>Qualification</b><br>
+Graduation
+</div>
+
+<div>
+💼 <b>Exam</b><br>
+Combined Graduate Level
+</div>
+
+<div>
+🏛️ <b>Department</b><br>
+SSC
+</div>
+
+<div>
+🇮🇳 <b>Level</b><br>
+Central Govt.
+</div>
+
+</div>
+
+<p>
+SSC Combined Graduate Level Examination 2026 की
+official notification और updates SSC portal पर verify करें।
+</p>
+
+<a class="official"
+href="https://ssc.gov.in/home/notice-board"
+target="_blank"
+rel="noopener">
+📋 Official SSC Details
+</a>
+
+</div>
+
+
+<!-- SSC STENO -->
+<div class="job searchable"
+data-category="ssc 12th"
+data-search="ssc stenographer grade c d 12th government 2026">
+
+<h3>⌨️ SSC Stenographer Grade C & D 2026</h3>
+
+<span class="badge">SSC</span>
+<span class="badge">12th</span>
+<span class="badge">Central Government</span>
+
+<div class="info">
+
+<div>
+🎓 <b>Qualification</b><br>
+12th Pass
+</div>
+
+<div>
+💼 <b>Post</b><br>
+Stenographer C/D
+</div>
+
+<div>
+🏛️ <b>Department</b><br>
+SSC
+</div>
+
+<div>
+🇮🇳 <b>Level</b><br>
+Central Govt.
+</div>
+
+</div>
+
+<p>
+SSC Stenographer Grade C और Grade D examination
+की official information और notification यहाँ verify करें।
+</p>
+
+<a class="official"
+href="https://ssc.gov.in/home/notice-board"
+target="_blank"
+rel="noopener">
+📋 Official Notification
+</a>
+
+</div>
+
+</div>
+
+
+<!-- NOTICE -->
+<div class="notice">
+
+<b>⚠️ जरूरी सूचना</b>
 
 <p>
 Rozgar Sathi केवल job information उपलब्ध कराता है।
-Vacancy, qualification, age limit, salary, application
-fee, selection process और last date में बदलाव हो
-सकता है। आवेदन करने से पहले संबंधित department
-की official notification जरूर verify करें।
-</p></div></div><footer><p><b>© 2026 Rozgar Sathi</b></p><p>Jobs • Career • Employment</p><p><a href="about.html">About Us</a>
-  |  
-<a href="contact.html">Contact</a>
-  |  
-<a href="disclaimer.html">Disclaimer</a>
+Vacancy, qualification, age limit, salary, application fee,
+selection process और last date में बदलाव हो सकता है।
+Apply करने से पहले संबंधित department की official notification
+जरूर verify करें।
+</p>
 
-</p></footer></body>
+</div>
+
+<!-- SCAM WARNING -->
+<div class="warning">
+
+<b>🚨 Job Scam से सावधान रहें</b>
+
+<p>
+किसी भी नौकरी के लिए OTP, UPI PIN, ATM PIN, password
+या अनजान व्यक्ति को पैसे न दें। Application हमेशा
+official website से verify करें।
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p><b>© 2026 Rozgar Sathi</b></p>
+
+<p>Jobs • Career • Employment</p>
+
+<p>
+<a href="about.html">About Us</a>
+&nbsp; | &nbsp;
+<a href="contact.html">Contact</a>
+&nbsp; | &nbsp;
+<a href="disclaimer.html">Disclaimer</a>
+</p>
+
+</footer>
+
+
+<script>
+
+/* ================================
+   ANIMATED NUMBER
+================================ */
+
+function animateNumber(element,target){
+
+let current=0;
+let duration=900;
+let start=performance.now();
+
+function update(time){
+
+let progress=Math.min((time-start)/duration,1);
+
+current=Math.floor(progress*target);
+
+element.textContent=current;
+
+if(progress<1){
+requestAnimationFrame(update);
+}else{
+element.textContent=target;
+}
+
+}
+
+requestAnimationFrame(update);
+}
+
+
+/* ================================
+   COUNT JOBS
+================================ */
+
+function updateCounts(){
+
+let jobs=document.querySelectorAll(".job");
+
+let active=0;
+let closing=0;
+
+jobs.forEach(function(job){
+
+if(job.style.display!=="none"){
+
+active++;
+
+if(
+job.innerText.toLowerCase().includes("closing") ||
+job.innerText.toLowerCase().includes("soon")
+){
+closing++;
+}
+
+}
+
+});
+
+animateNumber(
+document.getElementById("activeCount"),
+active
+);
+
+animateNumber(
+document.getElementById("closingCount"),
+closing
+);
+
+}
+
+updateCounts();
+
+
+/* ================================
+   SEARCH + FILTER
+================================ */
+
+function filterJobs(){
+
+let search=
+document.getElementById("jobSearch")
+.value
+.toLowerCase()
+.trim();
+
+let filter=
+document.getElementById("jobFilter")
+.value;
+
+let jobs=
+document.querySelectorAll(".searchable");
+
+let found=0;
+
+jobs.forEach(function(job){
+
+let text=(
+job.innerText+" "+
+job.dataset.search+" "+
+job.dataset.category
+).toLowerCase();
+
+let searchMatch=
+!search || text.includes(search);
+
+let filterMatch=
+filter==="all" ||
+text.includes(filter);
+
+if(searchMatch && filterMatch){
+
+job.style.display="block";
+found++;
+
+}else{
+
+job.style.display="none";
+
+}
+
+});
+
+document.getElementById("noResult").style.display=
+found===0 ? "block" : "none";
+
+updateCounts();
+
+}
+
+
+/* ENTER KEY */
+
+document
+.getElementById("jobSearch")
+.addEventListener("keydown",function(event){
+
+if(event.key==="Enter"){
+filterJobs();
+}
+
+});
+
+
+/* LIVE SEARCH */
+
+document
+.getElementById("jobSearch")
+.addEventListener("input",function(){
+
+filterJobs();
+
+});
+
+
+/* RESET WHEN PAGE LOADS */
+
+document
+.getElementById("jobFilter")
+.addEventListener("change",function(){
+
+filterJobs();
+
+});
+
+</script>
+
+</body>
     </html>
