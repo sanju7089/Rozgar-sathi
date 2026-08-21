@@ -1,186 +1,365 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Work From Home Jobs | Rozgar Sathi</title>
+<title>Work From Home Jobs 2026 | Rozgar Sathi</title>
 
-<meta name="description" content="Work From Home, Remote, Customer Support, Telecalling, Sales और घर से काम करने वाली jobs।">
+<meta name="description" content="Work From Home और Remote Jobs 2026 - Customer Support, Telecalling, Data Entry, Sales और अन्य घर बैठे रोजगार की जानकारी।">
 
 <style>
-
-*{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f6f8;
-color:#222
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
+    color:#202124;
+    line-height:1.6;
+}
+
+/* HEADER */
 header{
-background:linear-gradient(135deg,#075e54,#0b806f);
-color:white;
-text-align:center;
-padding:28px 15px
+    background:linear-gradient(135deg,#075e54,#0b806f,#11998e);
+    color:white;
+    padding:30px 15px 35px;
+    text-align:center;
+}
+
+.logo{
+    font-size:14px;
+    font-weight:bold;
+    opacity:.9;
+    margin-bottom:8px;
 }
 
 header h1{
-margin:0;
-font-size:28px
+    font-size:30px;
+    margin-bottom:8px;
 }
 
 header p{
-margin:7px 0 0
+    font-size:15px;
+    opacity:.95;
 }
 
+/* NAVIGATION */
 nav{
-background:white;
-padding:10px;
-text-align:center;
-overflow-x:auto;
-white-space:nowrap;
-box-shadow:0 2px 7px #ddd;
-position:sticky;
-top:0;
-z-index:10
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    padding:10px;
+    overflow-x:auto;
+    white-space:nowrap;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 nav a{
-display:inline-block;
-margin:3px;
-padding:9px 12px;
-text-decoration:none;
-color:#075e54;
-font-weight:bold;
-border-radius:7px
+    text-decoration:none;
+    color:#075e54;
+    font-weight:bold;
+    padding:9px 13px;
+    border-radius:8px;
+    font-size:14px;
 }
 
-nav a:hover{
-background:#e8f5f3
+nav a:hover,
+nav a.active{
+    background:#e7f6f3;
 }
 
+/* CONTAINER */
 .container{
-max-width:900px;
-margin:auto;
-padding:15px
+    max-width:1050px;
+    margin:auto;
+    padding:18px;
 }
 
-.intro,
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#ffffff,#eaf8f5);
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+    border:1px solid #e4eeee;
+}
+
+.hero h2{
+    color:#075e54;
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.hero p{
+    color:#555;
+}
+
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin:20px 0;
+}
+
+.stat{
+    background:white;
+    border-radius:14px;
+    padding:18px 10px;
+    text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+
+.stat strong{
+    display:block;
+    color:#075e54;
+    font-size:23px;
+}
+
+.stat span{
+    font-size:13px;
+    color:#666;
+}
+
+/* SEARCH */
+.search-box{
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    margin-bottom:20px;
+}
+
+.search-title{
+    color:#075e54;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.search-input{
+    width:100%;
+    padding:15px 16px;
+    border:2px solid #e1e5e8;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+.search-input:focus{
+    border-color:#0b806f;
+}
+
+/* SECTION TITLE */
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:25px 0 14px;
+}
+
+.section-title h2{
+    color:#075e54;
+    font-size:21px;
+}
+
+/* JOB GRID */
+.job-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
 .job{
-background:white;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    border:1px solid #e9eeee;
+    transition:.2s;
 }
 
-.intro{
-padding:20px;
-margin-bottom:20px
+.job:hover{
+    transform:translateY(-2px);
+    box-shadow:0 7px 20px rgba(0,0,0,.1);
 }
 
-.intro h2,
 .job h3{
-color:#075e54
+    color:#075e54;
+    font-size:19px;
+    margin-bottom:9px;
 }
 
-.search{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
-margin-bottom:20px
-}
-
-.search input{
-width:100%;
-padding:14px;
-border:1px solid #ddd;
-border-radius:8px;
-font-size:16px;
-outline:none
-}
-
-.job{
-padding:18px;
-margin-bottom:15px;
-border-left:5px solid #075e54
+.job p{
+    color:#555;
+    font-size:14px;
+    margin:8px 0;
 }
 
 .badge{
-display:inline-block;
-background:#e8f5f3;
-color:#075e54;
-padding:5px 9px;
-border-radius:15px;
-font-size:13px;
-font-weight:bold;
-margin:2px
-}
-
-.apply{
-display:inline-block;
-margin-top:10px;
-background:#075e54;
-color:white;
-padding:10px 18px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold
+    display:inline-block;
+    background:#e8f6f3;
+    color:#075e54;
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    margin:2px;
 }
 
 .salary{
-color:#075e54;
-font-weight:bold
+    color:#075e54;
+    font-weight:bold;
+}
+
+/* BUTTON */
+.apply{
+    display:inline-block;
+    background:#075e54;
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:8px;
+    font-size:14px;
+}
+
+.apply:hover{
+    background:#064c44;
+}
+
+/* NO RESULT */
+.noresult{
+    display:none;
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    margin-top:15px;
+}
+
+/* INFO BOXES */
+.info-box{
+    margin-top:22px;
+    padding:18px;
+    border-radius:13px;
 }
 
 .warning{
-background:#fff3f3;
-border-left:5px solid #d32f2f;
-padding:14px;
-border-radius:7px;
-margin-top:15px
+    background:#fff3f3;
+    border-left:5px solid #d32f2f;
 }
 
 .notice{
-background:#fff8dc;
-border-left:5px solid #e0b100;
-padding:14px;
-border-radius:7px;
-margin-top:15px
+    background:#fff9df;
+    border-left:5px solid #e0b100;
 }
 
-.noresult{
-display:none;
-background:white;
-padding:20px;
-text-align:center;
-border-radius:10px;
-box-shadow:0 2px 8px #ddd
+.info-box h3{
+    margin-bottom:7px;
 }
 
+/* QUICK LINKS */
+.quick-links{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:15px;
+}
+
+.quick-link{
+    background:white;
+    padding:18px;
+    text-align:center;
+    border-radius:13px;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);
+    text-decoration:none;
+    color:#075e54;
+    font-weight:bold;
+}
+
+.quick-link:hover{
+    background:#eaf8f5;
+}
+
+/* FOOTER */
 footer{
-margin-top:30px;
-background:#222;
-color:white;
-text-align:center;
-padding:25px 15px
+    background:#202124;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+    margin-top:30px;
+}
+
+footer p{
+    margin:6px 0;
+    color:#ddd;
 }
 
 footer a{
-color:white;
-text-decoration:none
+    color:#fff;
+    text-decoration:none;
 }
 
-@media(max-width:600px){
+/* MOBILE */
+@media(max-width:700px){
 
-header h1{
-font-size:25px
+    header h1{
+        font-size:25px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .job-list{
+        grid-template-columns:1fr;
+    }
+
+    .quick-links{
+        grid-template-columns:1fr 1fr;
+    }
+
 }
 
-}
+@media(max-width:450px){
 
+    .container{
+        padding:12px;
+    }
+
+    .stats{
+        gap:7px;
+    }
+
+    .stat{
+        padding:13px 5px;
+    }
+
+    .stat strong{
+        font-size:19px;
+    }
+
+    .stat span{
+        font-size:11px;
+    }
+
+    .quick-links{
+        grid-template-columns:1fr;
+    }
+
+}
 </style>
 </head>
 
@@ -188,11 +367,14 @@ font-size:25px
 
 <header>
 
+<div class="logo">ROZGAR SATHI</div>
+
 <h1>🏠 Work From Home Jobs</h1>
 
-<p>घर बैठे काम • Remote Jobs • All India</p>
+<p>घर बैठे नौकरी • Remote Jobs • Fresher Jobs • All India</p>
 
 </header>
+
 
 <nav>
 
@@ -208,264 +390,322 @@ font-size:25px
 
 <a href="graduate-jobs.html">🎓 Graduate</a>
 
-<a href="work-from-home.html">🏠 WFH</a>
+<a href="work-from-home.html" class="active">🏠 WFH</a>
 
 <a href="closed-jobs.html">📁 Closed</a>
 
 </nav>
 
-<div class="container">
 
-<div class="intro">
+<main class="container">
 
-<h2>🏠 घर से काम करने वाली Jobs</h2>
 
-<p>
-यहाँ Work From Home और Remote काम की
-opportunities खोजने के लिए useful categories और
-official job portals दिए गए हैं।
-</p>
+<section class="hero">
+
+<h2>🏠 घर बैठे Job खोजें</h2>
 
 <p>
-<strong>⚠️ किसी भी नौकरी के लिए पैसे देने से पहले
-official company source जरूर check करें।</strong>
+Work From Home और Remote Jobs की अलग-अलग categories
+यहाँ आसानी से खोजें। Customer Support, Telecalling,
+Sales, Data Entry, Content और अन्य opportunities उपलब्ध हैं।
 </p>
 
+</section>
+
+
+<section class="stats">
+
+<div class="stat">
+<strong>🏠 WFH</strong>
+<span>Remote Jobs</span>
 </div>
 
-<div class="search">
+<div class="stat">
+<strong>🎓 Fresher</strong>
+<span>Entry Level</span>
+</div>
+
+<div class="stat">
+<strong>🇮🇳 India</strong>
+<span>All India</span>
+</div>
+
+</section>
+
+
+<section class="search-box">
+
+<div class="search-title">
+🔎 Work From Home Job खोजें
+</div>
 
 <input
+class="search-input"
 type="text"
 id="jobSearch"
-placeholder="🔎 WFH Job खोजें... जैसे Data Entry, Customer Support, Sales"
+placeholder="जैसे Data Entry, Sales, Customer Support..."
 onkeyup="searchJobs()"
 >
 
+</section>
+
+
+<div class="section-title">
+
+<h2>🔥 Popular WFH Jobs</h2>
+
 </div>
 
-<div id="jobList">
 
-<!-- CUSTOMER SUPPORT -->
+<div class="job-list" id="jobList">
+
 
 <div class="job searchable"
-data-search="customer support work from home remote wfh customer care">
+data-search="customer support customer care remote wfh work from home fresher">
 
-<h3>📞 Customer Support – Work From Home</h3>
+<h3>📞 Customer Support</h3>
 
 <span class="badge">WFH</span>
-<span class="badge">Customer Support</span>
+<span class="badge">Fresher</span>
 <span class="badge">Remote</span>
 
 <p>
-घर से customer support और customer service
-से जुड़ी opportunities खोजें।
+Customer care, chat support और customer service
+से जुड़ी work-from-home opportunities।
 </p>
 
-<p>
-<strong>काम:</strong> Customer queries, calls/chat support आदि।
-</p>
+<p class="salary">💼 Customer Service / Support</p>
 
-<a
-class="apply"
+<a class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 NCS पर Jobs देखें →
+rel="noopener">
+🔎 Jobs देखें →
 </a>
 
 </div>
 
 
-<!-- TELECALLING -->
-
 <div class="job searchable"
-data-search="telecaller telecalling work from home wfh calling remote">
+data-search="telecaller telecalling calling wfh remote work from home">
 
-<h3>📱 Telecaller / Telecalling – WFH</h3>
+<h3>📱 Telecaller / Telecalling</h3>
 
-<span class="badge">Work From Home</span>
+<span class="badge">WFH</span>
 <span class="badge">Telecalling</span>
 
 <p>
-घर से telephone/telecalling से जुड़ी
-private opportunities खोजें।
+घर से calling और telecalling से जुड़ी private
+job opportunities खोजें।
 </p>
 
-<a
-class="apply"
+<p class="salary">💼 Calling / Customer Handling</p>
+
+<a class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 Jobs खोजें →
+rel="noopener">
+🔎 Jobs देखें →
 </a>
 
 </div>
 
 
-<!-- SALES -->
-
 <div class="job searchable"
-data-search="sales work from home remote sales executive commission incentive">
+data-search="sales sales executive remote wfh commission incentive work from home">
 
-<h3>💰 Sales Executive – Remote</h3>
+<h3>💰 Sales Executive</h3>
 
 <span class="badge">Remote</span>
 <span class="badge">Sales</span>
-<span class="badge">Commission</span>
+<span class="badge">Incentive</span>
 
 <p>
 कुछ companies में fixed salary के साथ
-sales incentive/commission भी मिल सकता है।
-Salary और commission company से verify करें।
+sales incentive/commission भी हो सकता है।
 </p>
 
-<a
-class="apply"
+<p class="salary">💰 Salary + Incentive संभव</p>
+
+<a class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 Sales Jobs देखें →
+rel="noopener">
+🔎 Sales Jobs →
 </a>
 
 </div>
 
 
-<!-- DATA ENTRY -->
-
 <div class="job searchable"
-data-search="data entry work from home typing computer remote wfh">
+data-search="data entry typing computer operator wfh remote work from home">
 
-<h3>⌨️ Data Entry – Work From Home</h3>
+<h3>⌨️ Data Entry</h3>
 
 <span class="badge">WFH</span>
 <span class="badge">Data Entry</span>
 
 <p>
-Data entry, computer operator और typing से
-सम्बंधित remote opportunities खोजें।
+Typing, data entry और computer-related
+remote opportunities खोजें।
 </p>
 
-<a
-class="apply"
+<p class="salary">💻 Computer / Typing Work</p>
+
+<a class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 Data Entry Jobs देखें →
+rel="noopener">
+🔎 Data Entry →
 </a>
 
 </div>
 
 
-<!-- ONLINE SALES -->
-
 <div class="job searchable"
-data-search="online sales ecommerce work from home remote sales">
+data-search="online sales ecommerce wfh remote work from home">
 
-<h3>🛒 Online Sales / E-Commerce – WFH</h3>
+<h3>🛒 Online Sales / E-Commerce</h3>
 
 <span class="badge">WFH</span>
-<span class="badge">Online Sales</span>
+<span class="badge">Online</span>
 
 <p>
-Online sales और e-commerce से जुड़ी
-work-from-home opportunities खोजें।
+Online selling और e-commerce sector में
+remote opportunities खोजें।
 </p>
 
-<a
-class="apply"
+<p class="salary">🛒 Online Sales</p>
+
+<a class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 Opportunities देखें →
+rel="noopener">
+🔎 Opportunities →
 </a>
 
 </div>
 
 
-<!-- CONTENT -->
-
 <div class="job searchable"
-data-search="content writing social media work from home remote writer">
+data-search="content writing writer social media digital marketing remote wfh">
 
-<h3>✍️ Content / Social Media – Remote</h3>
+<h3>✍️ Content & Social Media</h3>
 
 <span class="badge">Remote</span>
 <span class="badge">Content</span>
 
 <p>
-Content writing, social media और digital work
-से जुड़ी remote vacancies खोजें।
+Content writing, social media और digital
+work से जुड़ी remote jobs खोजें।
 </p>
 
-<a
-class="apply"
+<p class="salary">💻 Digital Work</p>
+
+<a class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 🔎 Jobs खोजें →
 </a>
 
 </div>
 
 
-<!-- NCS -->
-
 <div class="job searchable"
-data-search="national career service ncs government private work from home all india">
+data-search="back office wfh office assistant remote administration">
 
-<h3>🇮🇳 National Career Service – All India</h3>
+<h3>🗂️ Back Office – Remote</h3>
 
-<span class="badge">Government Portal</span>
-<span class="badge">All India</span>
-<span class="badge">Private + WFH</span>
+<span class="badge">WFH</span>
+<span class="badge">Back Office</span>
 
 <p>
-भारत सरकार के National Career Service पर
-Private, Government और अन्य employment
-opportunities खोज सकते हैं।
+Documentation, office support और
+administrative work की opportunities।
 </p>
 
-<a
-class="apply"
+<p class="salary">🗂️ Office Support</p>
+
+<a class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 NCS पर Jobs खोजें →
+rel="noopener">
+🔎 Jobs खोजें →
 </a>
 
 </div>
 
 
-<!-- APPRENTICESHIP -->
+<div class="job searchable"
+data-search="fresher entry level wfh remote 10th 12th graduate">
+
+<h3>🎓 Fresher WFH Jobs</h3>
+
+<span class="badge">Fresher</span>
+<span class="badge">Entry Level</span>
+<span class="badge">WFH</span>
+
+<p>
+बिना ज्यादा experience वाले candidates के लिए
+entry-level opportunities खोजें।
+</p>
+
+<p class="salary">🎯 Fresher Friendly</p>
+
+<a class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener">
+🔎 Fresher Jobs →
+</a>
+
+</div>
+
 
 <div class="job searchable"
-data-search="apprenticeship india apprentice work training all india">
+data-search="national career service ncs government portal all india private wfh">
 
-<h3>🎓 Apprenticeship India – Opportunities</h3>
+<h3>🇮🇳 National Career Service</h3>
 
-<span class="badge">Apprenticeship</span>
+<span class="badge">Government Portal</span>
 <span class="badge">All India</span>
 
 <p>
-Apprenticeship India portal पर available
-apprenticeship opportunities देखें।
+National Career Service पर available employment
+opportunities को search करें।
 </p>
 
-<a
-class="apply"
+<p class="salary">🇮🇳 Official Employment Portal</p>
+
+<a class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener">
+🔎 NCS पर देखें →
+</a>
+
+</div>
+
+
+<div class="job searchable"
+data-search="apprenticeship apprentice training india jobs">
+
+<h3>🎓 Apprenticeship India</h3>
+
+<span class="badge">Apprenticeship</span>
+<span class="badge">Training</span>
+
+<p>
+Apprenticeship और training opportunities के
+लिए official portal देखें।
+</p>
+
+<a class="apply"
 href="https://www.apprenticeshipindia.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 Apprenticeship देखें →
+rel="noopener">
+🔎 Opportunities →
 </a>
 
 </div>
@@ -478,94 +718,93 @@ rel="noopener"
 
 <h3>😔 कोई Job नहीं मिली</h3>
 
-<p>
-दूसरा keyword try करें।
-</p>
+<p>दूसरा keyword डालकर फिर से search करें।</p>
 
 </div>
 
 
-<div class="warning">
+<section class="info-box warning">
 
-<b>🚨 WFH Job Scam से सावधान!</b>
+<h3>🚨 WFH Job Scam से सावधान!</h3>
 
 <p>
-कोई व्यक्ति अगर नौकरी देने के नाम पर
-registration fee, security deposit, OTP,
-UPI PIN, ATM PIN या password माँगे तो
-सावधान रहें।
+Job देने के नाम पर registration fee, security deposit
+या पहले पैसे माँगने वालों से सावधान रहें।
 </p>
 
 <p>
-<strong>नौकरी पाने के लिए पहले पैसे भेजने से बचें।</strong>
+<strong>
+OTP, UPI PIN, ATM PIN, CVV या password किसी को न दें।
+</strong>
 </p>
+
+</section>
+
+
+<section class="info-box notice">
+
+<h3>⚠️ जरूरी सूचना</h3>
+
+<p>
+Salary, eligibility, working hours और job location
+हर company में अलग हो सकती है। Apply करने से पहले
+official company/job portal पर जानकारी verify करें।
+</p>
+
+</section>
+
+
+<div class="section-title">
+
+<h2>⚡ Quick Links</h2>
 
 </div>
 
 
-<div class="notice">
+<div class="quick-links">
 
-<b>⚠️ जरूरी सूचना</b>
-
-<p>
-Work From Home में salary, working hours,
-eligibility और location company के अनुसार
-अलग हो सकती है। Apply करने से पहले official
-company/job portal पर details verify करें।
-</p>
-
-</div>
-
-
-<div style="text-align:center;padding:20px">
-
-<a
-class="apply"
-href="private.html"
->
-🏢 सभी Private Jobs →
+<a class="quick-link" href="private.html">
+🏢 Private Jobs
 </a>
 
-<a
-class="apply"
-href="index.html"
->
-🏠 Home →
+<a class="quick-link" href="government.html">
+🏛️ Government Jobs
+</a>
+
+<a class="quick-link" href="10th-pass.html">
+🎓 10th Pass
+</a>
+
+<a class="quick-link" href="12th-pass.html">
+🎓 12th Pass
+</a>
+
+<a class="quick-link" href="graduate-jobs.html">
+🎓 Graduate
+</a>
+
+<a class="quick-link" href="index.html">
+🏠 Home
 </a>
 
 </div>
 
-</div>
+
+</main>
 
 
 <footer>
 
-<p>
-<b>© 2026 Rozgar Sathi</b>
-</p>
+<p><b>© 2026 Rozgar Sathi</b></p>
+
+<p>Jobs • Career • Employment</p>
 
 <p>
-Jobs • Career • Employment
-</p>
-
-<p>
-
-<a href="about.html">
-About Us
-</a>
-
+<a href="about.html">About Us</a>
 &nbsp; | &nbsp;
-
-<a href="contact.html">
-Contact
-</a>
-
+<a href="contact.html">Contact</a>
 &nbsp; | &nbsp;
-
-<a href="disclaimer.html">
-Disclaimer
-</a>
-
+<a href="disclaimer.html">Disclaimer</a>
 </p>
 
 </footer>
@@ -575,60 +814,51 @@ Disclaimer
 
 function searchJobs(){
 
-let input =
-document.getElementById("jobSearch")
-.value
-.toLowerCase()
-.trim();
+    const input =
+    document.getElementById("jobSearch")
+    .value
+    .toLowerCase()
+    .trim();
 
-let jobs =
-document.querySelectorAll(".searchable");
+    const jobs =
+    document.querySelectorAll(".searchable");
 
-let found = 0;
+    let found = 0;
 
-jobs.forEach(function(job){
+    jobs.forEach(function(job){
 
-let text =
-(
-job.innerText +
-" " +
-(job.dataset.search || "")
-)
-.toLowerCase();
+        const text =
+        (
+            job.innerText +
+            " " +
+            (job.dataset.search || "")
+        ).toLowerCase();
 
-if(
-input === "" ||
-text.includes(input)
-){
+        if(input === "" || text.includes(input)){
 
-job.style.display = "block";
+            job.style.display = "block";
+            found++;
 
-found++;
+        }else{
 
-}else{
+            job.style.display = "none";
 
-job.style.display = "none";
+        }
 
-}
+    });
 
-});
+    const noResult =
+    document.getElementById("noResult");
 
-if(
-input !== "" &&
-found === 0
-){
+    if(input !== "" && found === 0){
 
-document.getElementById(
-"noResult"
-).style.display = "block";
+        noResult.style.display = "block";
 
-}else{
+    }else{
 
-document.getElementById(
-"noResult"
-).style.display = "none";
+        noResult.style.display = "none";
 
-}
+    }
 
 }
 
