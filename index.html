@@ -21,8 +21,6 @@ background:#f4f6f8;
 color:#222;
 }
 
-/* HEADER */
-
 header{
 background:linear-gradient(135deg,#075e54,#0b806f);
 color:white;
@@ -38,8 +36,6 @@ font-size:30px;
 header p{
 margin:8px 0 0;
 }
-
-/* NAVIGATION */
 
 nav{
 background:white;
@@ -67,8 +63,6 @@ nav a:hover{
 background:#e8f5f3;
 }
 
-/* SEARCH */
-
 .search{
 background:white;
 padding:15px;
@@ -85,8 +79,6 @@ font-size:16px;
 outline:none;
 }
 
-/* CONTAINER */
-
 .container{
 max-width:900px;
 margin:auto;
@@ -96,8 +88,6 @@ padding:15px;
 h2{
 color:#075e54;
 }
-
-/* CATEGORIES */
 
 .categories{
 display:grid;
@@ -119,8 +109,6 @@ box-shadow:0 2px 8px #ddd;
 .category:hover{
 transform:translateY(-2px);
 }
-
-/* NEW JOB CARD */
 
 .job-card-new{
 background:#fff;
@@ -156,7 +144,8 @@ color:#c62828;
 font-weight:bold;
 }
 
-.job-btn{
+.job-btn,
+.apply{
 display:inline-block;
 background:#075e54;
 color:white;
@@ -166,8 +155,6 @@ text-decoration:none;
 font-weight:bold;
 margin-top:8px;
 }
-
-/* OLD JOB CARDS */
 
 .job{
 background:white;
@@ -193,19 +180,6 @@ font-weight:bold;
 margin:2px;
 }
 
-.apply{
-display:inline-block;
-margin-top:10px;
-background:#075e54;
-color:white;
-padding:10px 18px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* NOTICE */
-
 .notice{
 background:#fff8dc;
 border-left:5px solid #e0b100;
@@ -213,8 +187,6 @@ padding:14px;
 border-radius:7px;
 margin-top:20px;
 }
-
-/* NO RESULT */
 
 #noResult{
 display:none;
@@ -225,8 +197,6 @@ border-radius:10px;
 text-align:center;
 box-shadow:0 2px 8px #ddd;
 }
-
-/* FOOTER */
 
 footer{
 margin-top:30px;
@@ -240,8 +210,6 @@ footer a{
 color:white;
 text-decoration:none;
 }
-
-/* MOBILE */
 
 @media(max-width:600px){
 
@@ -272,8 +240,6 @@ padding:15px;
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
 <h1>🇮🇳 Rozgar Sathi</h1>
@@ -281,9 +247,6 @@ padding:15px;
 <p>हर दिन नई नौकरी की जानकारी</p>
 
 </header>
-
-
-<!-- NAVIGATION -->
 
 <nav>
 
@@ -305,9 +268,6 @@ padding:15px;
 
 </nav>
 
-
-<!-- SEARCH -->
-
 <div class="search">
 
 <input
@@ -319,11 +279,7 @@ onkeyup="searchJobs()"
 
 </div>
 
-
 <div class="container">
-
-
-<!-- CATEGORIES -->
 
 <h2>📂 Job Categories</h2>
 
@@ -367,13 +323,41 @@ Work From Home
 
 </div>
 
-
-<!-- LATEST JOBS -->
-
 <h2>🔥 Latest Jobs</h2>
 
 <div id="latestJobs"></div>
 
+<!-- NCS OFFICIAL JOB PORTAL -->
+
+<div class="job searchable"
+data-search="NCS National Career Service all india private government work from home jobs">
+
+<h3>🇮🇳 National Career Service – All India Jobs</h3>
+
+<span class="badge">
+Government Portal
+</span>
+
+<span class="badge">
+Private + WFH
+</span>
+
+<p>
+भारत सरकार के National Career Service (NCS) पर
+पूरे भारत की Government, Private और Work From Home
+job opportunities खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 Jobs खोजें →
+</a>
+
+</div>
 
 <!-- OLD IMPORTANT JOBS -->
 
@@ -408,7 +392,6 @@ A2Z Details →
 
 </div>
 
-
 <div class="job searchable"
 data-job-id="ssc-chsl"
 data-search="ssc chsl staff selection commission 12th government central">
@@ -433,7 +416,6 @@ A2Z Details →
 
 </div>
 
-
 <div class="job searchable"
 data-search="10th tenth दसवीं government private">
 
@@ -448,7 +430,6 @@ View Jobs →
 </a>
 
 </div>
-
 
 <div class="job searchable"
 data-search="12th twelfth बारहवीं government private">
@@ -465,7 +446,6 @@ View Jobs →
 
 </div>
 
-
 <div class="job searchable"
 data-search="graduate graduation degree government private">
 
@@ -480,7 +460,6 @@ View Jobs →
 </a>
 
 </div>
-
 
 <div class="job searchable"
 data-search="work from home wfh ghar se remote private">
@@ -499,9 +478,6 @@ View Jobs →
 
 </div>
 
-
-<!-- NO SEARCH RESULT -->
-
 <div id="noResult">
 
 <h3>😔 कोई Job नहीं मिली</h3>
@@ -511,9 +487,6 @@ View Jobs →
 </p>
 
 </div>
-
-
-<!-- NOTICE -->
 
 <div class="notice">
 
@@ -527,9 +500,6 @@ official notification से जरूर verify करें।
 
 </div>
 
-
-<!-- CLOSED JOBS -->
-
 <div style="text-align:center;padding:20px;">
 
 <a
@@ -541,11 +511,7 @@ style="text-decoration:none;color:#075e54;font-weight:bold;"
 
 </div>
 
-
 </div>
-
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -579,15 +545,9 @@ Disclaimer
 
 </footer>
 
-
-<!-- JOB DATABASE -->
-
 <script src="jobs-data.js"></script>
 
-
 <script>
-
-/* SHOW LATEST JOBS */
 
 function showLatestJobs(){
 
@@ -609,13 +569,9 @@ new Date(job.lastDate);
 
 lastDate.setHours(23,59,59,999);
 
-/* EXPIRED JOB HIDE */
-
 if(lastDate < today){
 return;
 }
-
-/* SEARCH DATA */
 
 const searchText = (
 job.title + " " +
@@ -623,8 +579,6 @@ job.category + " " +
 job.qualification + " " +
 job.posts
 ).toLowerCase();
-
-/* JOB CARD */
 
 container.innerHTML += `
 
@@ -667,6 +621,8 @@ ${job.category}
 <a
 class="job-btn"
 href="${job.page}"
+target="_blank"
+rel="noopener"
 >
 A2Z Details →
 </a>
@@ -679,12 +635,7 @@ A2Z Details →
 
 }
 
-/* FIRST LOAD */
-
 showLatestJobs();
-
-
-/* SEARCH */
 
 function searchJobs(){
 
@@ -726,7 +677,6 @@ job.style.display = "none";
 
 });
 
-
 if(
 input !== "" &&
 found === 0
@@ -746,50 +696,7 @@ document.getElementById(
 
 }
 
-
-/* AUTOMATIC EXPIRY */
-
-function checkJobExpiry(){
-
-const today = new Date();
-
-today.setHours(0,0,0,0);
-
-document
-.querySelectorAll(".job-card-new")
-.forEach(function(card){
-
-const id =
-card.dataset.jobId;
-
-const job =
-jobs.find(function(item){
-
-return item.id === id;
-
-});
-
-if(!job) return;
-
-const lastDate =
-new Date(job.lastDate);
-
-lastDate.setHours(23,59,59,999);
-
-if(lastDate < today){
-
-card.style.display="none";
-
-}
-
-});
-
-}
-
-checkJobExpiry();
-
 </script>
-
 
 </body>
     </html>
