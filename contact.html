@@ -3,68 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us - Rozgar Sathi</title>
-
+<title>Contact Us | Rozgar Sathi</title>
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f6f8;
-    color:#222;
-}
-header{
-    background:#075e54;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-}
-.container{
-    max-width:850px;
-    margin:auto;
-    padding:15px;
-}
-.card{
-    background:white;
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
-    box-shadow:0 2px 8px #ddd;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#222}
+header{background:linear-gradient(135deg,#075e54,#0b806f);color:white;text-align:center;padding:28px 15px}
+nav{background:white;padding:10px;text-align:center;overflow-x:auto;white-space:nowrap;box-shadow:0 2px 7px #ddd}
+nav a{display:inline-block;margin:3px;padding:9px 12px;text-decoration:none;color:#075e54;font-weight:bold}
+.container{max-width:700px;margin:auto;padding:15px}
+.card{background:white;padding:20px;margin-top:15px;border-radius:12px;box-shadow:0 2px 8px #ddd}
 h2{color:#075e54}
-input,textarea{
-    width:100%;
-    padding:12px;
-    margin:8px 0;
-    border:1px solid #ccc;
-    border-radius:7px;
-    box-sizing:border-box;
-}
-button{
-    width:100%;
-    padding:13px;
-    background:#075e54;
-    color:white;
-    border:0;
-    border-radius:7px;
-    font-size:16px;
-}
-.back{
-    display:block;
-    text-align:center;
-    margin:20px 0;
-    color:#075e54;
-    font-weight:bold;
-    text-decoration:none;
-}
+input,textarea{width:100%;padding:12px;margin-top:7px;margin-bottom:12px;border:1px solid #ddd;border-radius:7px;font-size:15px}
+button{background:#075e54;color:white;border:0;padding:12px 20px;border-radius:7px;font-weight:bold}
+footer{margin-top:30px;background:#222;color:white;text-align:center;padding:25px}
+footer a{color:white;text-decoration:none}
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>📞 Contact Us</h1>
-<p>Rozgar Sathi</p>
+<h1>📩 Contact Us</h1>
+<p>Rozgar Sathi से संपर्क करें</p>
 </header>
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="government.html">🏛️ Government</a>
+<a href="private.html">🏢 Private</a>
+<a href="10th-pass.html">🎓 10th</a>
+<a href="12th-pass.html">🎓 12th</a>
+<a href="graduate-jobs.html">🎓 Graduate</a>
+<a href="work-from-home.html">🏠 WFH</a>
+</nav>
 
 <div class="container">
 
@@ -72,27 +42,55 @@ button{
 <h2>📩 हमसे संपर्क करें</h2>
 
 <p>
-अगर आपको किसी job की जानकारी में कोई गलती दिखाई दे,
-या किसी link के बारे में बताना हो, तो आप हमें message भेज सकते हैं।
+Website से संबंधित सुझाव, correction या किसी समस्या
+की जानकारी देने के लिए contact करें।
 </p>
 
-<form action="mailto:YOUR-EMAIL@example.com" method="post" enctype="text/plain">
+<form onsubmit="sendMessage(event)">
 
-<input type="text" name="name" placeholder="आपका नाम" required>
+<label>नाम</label>
+<input type="text" id="name" required>
 
-<input type="email" name="email" placeholder="आपका Email" required>
+<label>Email</label>
+<input type="email" id="email" required>
 
-<textarea name="message" rows="6" placeholder="आपका संदेश" required></textarea>
+<label>Message</label>
+<textarea id="message" rows="6" required></textarea>
 
 <button type="submit">Message भेजें</button>
 
 </form>
+</div>
 
 </div>
 
-<a class="back" href="index.html">🏠 Home पर वापस जाएँ</a>
+<footer>
+<p><b>© 2026 Rozgar Sathi</b></p>
+<p>
+<a href="about.html">About Us</a> |
+<a href="disclaimer.html">Disclaimer</a>
+</p>
+</footer>
 
-</div>
+<script>
+function sendMessage(event){
+event.preventDefault();
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let message=document.getElementById("message").value;
+
+let subject=encodeURIComponent("Rozgar Sathi Contact");
+let body=encodeURIComponent(
+"Name: "+name+
+"\nEmail: "+email+
+"\n\nMessage:\n"+message
+);
+
+window.location.href=
+"mailto:YOUR-EMAIL@example.com?subject="+subject+"&body="+body;
+}
+</script>
 
 </body>
-</html>
+    </html>
