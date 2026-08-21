@@ -289,8 +289,8 @@ Work From Home
 
 
 <div class="job searchable"
-data-search="nrlm government sarkari rural livelihood 2026"
-data-last-date="2026-09-17">
+data-job-id="nrlm-2026"
+data-search="nrlm government sarkari rural livelihood 2026">
 
 <h3>🏛️ NRLM Recruitment 2026</h3>
 
@@ -319,7 +319,8 @@ A2Z Details →
 
 
 <div class="job searchable"
-data-search="ssc chsl government sarkari 12th central">
+data-job-id="ssc-chsl"
+data-search="ssc chsl staff selection commission 12th government central">
 
 <h3>📋 SSC CHSL</h3>
 
@@ -551,6 +552,39 @@ function checkJobExpiry(){
 }
 
 checkJobExpiry();
+</script>
+    <script src="jobs-data.js"></script>
+
+<script>
+function updateJobExpiry(){
+
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    document.querySelectorAll(".job[data-job-id]").forEach(function(card){
+
+        const id = card.dataset.jobId;
+
+        const job = jobs.find(function(item){
+            return item.id === id;
+        });
+
+        if(!job) return;
+
+        const lastDate = new Date(job.lastDate);
+        lastDate.setHours(23,59,59,999);
+
+        if(lastDate < today){
+            card.style.display = "none";
+        }else{
+            card.style.display = "block";
+        }
+
+    });
+
+}
+
+updateJobExpiry();
 </script>
 </body>
     </html>
