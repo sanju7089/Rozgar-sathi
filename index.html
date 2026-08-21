@@ -9,2395 +9,1618 @@
 <meta name="description" content="Rozgar Sathi पर Government Jobs, Private Jobs, SSC, Railway, Banking, 10th Pass, 12th Pass, Graduate और Work From Home Jobs की जानकारी।">
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f3f6f9;
-  color:#222;
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f3f6f9;
+color:#222;
 }
 
-/* =========================
-   TOP HEADER
-========================= */
-
 header{
-  background:linear-gradient(135deg,#063f3a,#075e54 55%,#0b806f);
-  color:white;
-  text-align:center;
-  padding:22px 15px 18px;
+background:linear-gradient(135deg,#063f3a,#075e54 55%,#0b806f);
+color:white;
+text-align:center;
+padding:24px 15px 20px;
 }
 
 header h1{
-  margin:0;
-  font-size:32px;
-  letter-spacing:.3px;
+margin:0;
+font-size:32px;
 }
 
 header p{
-  margin:7px 0 18px;
-  font-size:15px;
+margin:7px 0 18px;
 }
 
-/* =========================
-   ANIMATED STAT BOXES
-========================= */
-
 .portal-stats{
-  max-width:900px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
 }
 
 .stat-box{
-  background:rgba(255,255,255,.11);
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:10px;
-  padding:11px 6px;
-  backdrop-filter:blur(5px);
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.25);
+border-radius:10px;
+padding:11px 5px;
 }
 
 .stat-number{
-  display:block;
-  font-size:25px;
-  font-weight:900;
-  text-shadow:0 0 5px rgba(255,255,255,.5);
-  animation:numberGlow 2s infinite alternate;
+display:block;
+font-size:24px;
+font-weight:bold;
 }
 
 .stat-label{
-  display:block;
-  margin-top:3px;
-  font-size:12px;
+font-size:12px;
 }
-
-@keyframes numberGlow{
-  from{
-    text-shadow:0 0 3px rgba(255,255,255,.3);
-  }
-  to{
-    text-shadow:0 0 15px rgba(255,255,255,1);
-  }
-}
-
-/* =========================
-   LIVE TICKER
-========================= */
 
 .notice-ticker{
-  background:white;
-  min-height:42px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  border-bottom:1px solid #ddd;
-  box-shadow:0 2px 5px rgba(0,0,0,.08);
+background:white;
+height:42px;
+display:flex;
+align-items:center;
+overflow:hidden;
+border-bottom:1px solid #ddd;
+box-shadow:0 2px 5px #ddd;
 }
 
 .ticker-label{
-  flex:0 0 auto;
-  background:#b71c1c;
-  color:white;
-  height:42px;
-  display:flex;
-  align-items:center;
-  padding:0 13px;
-  font-weight:bold;
-  z-index:2;
+background:#b71c1c;
+color:white;
+height:42px;
+display:flex;
+align-items:center;
+padding:0 12px;
+font-weight:bold;
+z-index:2;
 }
 
 .live-dot{
-  width:8px;
-  height:8px;
-  background:#fff;
-  border-radius:50%;
-  display:inline-block;
-  margin-right:6px;
-  animation:liveBlink 1s infinite;
+width:8px;
+height:8px;
+background:white;
+border-radius:50%;
+margin-right:6px;
+animation:blink 1s infinite;
 }
 
-@keyframes liveBlink{
-  0%,100%{
-    opacity:1;
-  }
-  50%{
-    opacity:.2;
-  }
+@keyframes blink{
+50%{opacity:.2}
 }
 
 .ticker-window{
-  overflow:hidden;
-  white-space:nowrap;
-  flex:1;
+overflow:hidden;
+white-space:nowrap;
+flex:1;
 }
 
 .ticker-text{
-  display:inline-block;
-  padding-left:100%;
-  animation:tickerMove 25s linear infinite;
-  color:#075e54;
-  font-weight:bold;
+display:inline-block;
+padding-left:100%;
+animation:ticker 28s linear infinite;
+color:#075e54;
+font-weight:bold;
 }
 
-@keyframes tickerMove{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-100%);
-  }
+@keyframes ticker{
+from{transform:translateX(0)}
+to{transform:translateX(-100%)}
 }
-
-/* =========================
-   NAVIGATION
-========================= */
 
 nav{
-  background:#fff;
-  padding:9px 8px;
-  text-align:center;
-  overflow-x:auto;
-  white-space:nowrap;
-  box-shadow:0 2px 8px #d9dfe2;
-  position:sticky;
-  top:0;
-  z-index:100;
+background:white;
+padding:9px 7px;
+text-align:center;
+overflow-x:auto;
+white-space:nowrap;
+box-shadow:0 2px 8px #ddd;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 nav a{
-  display:inline-block;
-  margin:2px;
-  padding:9px 12px;
-  text-decoration:none;
-  color:#075e54;
-  font-weight:bold;
-  border-radius:6px;
-  font-size:14px;
+display:inline-block;
+margin:2px;
+padding:9px 11px;
+text-decoration:none;
+color:#075e54;
+font-weight:bold;
+border-radius:6px;
+font-size:14px;
 }
 
 nav a:hover{
-  background:#e5f3f1;
+background:#e8f5f3;
 }
 
-/* =========================
-   SEARCH
-========================= */
-
 .search{
-  background:white;
-  padding:15px;
-  max-width:900px;
-  margin:auto;
-  position:sticky;
-  top:53px;
-  z-index:90;
-  box-shadow:0 2px 8px #ddd;
+background:white;
+padding:14px;
+max-width:900px;
+margin:auto;
+position:sticky;
+top:51px;
+z-index:90;
+box-shadow:0 2px 8px #ddd;
 }
 
 .search-box{
-  position:relative;
+position:relative;
 }
 
 .search input{
-  width:100%;
-  padding:15px 50px 15px 16px;
-  border:2px solid #075e54;
-  border-radius:10px;
-  font-size:17px;
-  outline:none;
-}
-
-.search input:focus{
-  border-color:#0b806f;
-  box-shadow:0 0 0 3px rgba(11,128,111,.1);
+width:100%;
+padding:14px 45px 14px 15px;
+border:2px solid #075e54;
+border-radius:10px;
+font-size:16px;
+outline:none;
 }
 
 .clear-btn{
-  position:absolute;
-  right:9px;
-  top:8px;
-  border:0;
-  background:#eee;
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  font-size:22px;
-  cursor:pointer;
-  display:none;
-}
-
-.clear-btn:hover{
-  background:#ddd;
+position:absolute;
+right:8px;
+top:7px;
+border:0;
+background:#eee;
+width:36px;
+height:36px;
+border-radius:50%;
+font-size:21px;
+cursor:pointer;
+display:none;
 }
 
 .search-status{
-  font-size:13px;
-  color:#555;
-  margin-top:8px;
+font-size:13px;
+color:#555;
+margin-top:8px;
 }
 
 #suggestions{
-  display:none;
-  background:white;
-  border:1px solid #ddd;
-  border-radius:10px;
-  margin-top:5px;
-  box-shadow:0 3px 10px #ddd;
-  overflow:hidden;
+display:none;
+background:white;
+border:1px solid #ddd;
+border-radius:9px;
+margin-top:5px;
+overflow:hidden;
 }
 
 .suggestion{
-  padding:12px 15px;
-  cursor:pointer;
-  border-bottom:1px solid #eee;
+padding:11px 14px;
+cursor:pointer;
+border-bottom:1px solid #eee;
 }
 
 .suggestion:hover{
-  background:#e8f5f3;
+background:#e8f5f3;
 }
 
 #searchResults{
-  display:none;
-  background:#f4f6f8;
-  padding:10px 0 5px;
-  margin-top:10px;
-}
-
-.search-result-title{
-  font-size:18px;
-  font-weight:bold;
-  color:#075e54;
-  margin:5px 0 10px;
+display:none;
+margin-top:10px;
 }
 
 .search-result-card{
-  background:white;
-  border-radius:10px;
-  padding:15px;
-  margin:10px 0;
-  box-shadow:0 2px 8px #ddd;
-  border-left:5px solid #075e54;
+background:#f8fafb;
+border-left:4px solid #075e54;
+border-radius:8px;
+padding:12px;
+margin:8px 0;
 }
 
 .search-result-card h3{
-  margin:0 0 8px;
-  color:#075e54;
-  font-size:18px;
-}
-
-.search-result-card p{
-  margin:7px 0;
-  font-size:14px;
+margin:0 0 6px;
+color:#075e54;
+font-size:17px;
 }
 
 .result-button{
-  display:inline-block;
-  margin-top:8px;
-  background:#075e54;
-  color:white;
-  padding:10px 16px;
-  border-radius:7px;
-  border:0;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.result-button:hover{
-  background:#064c44;
+background:#075e54;
+color:white;
+border:0;
+padding:9px 13px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
 }
 
 #noResult{
-  display:none;
-  background:white;
-  padding:20px;
-  margin-top:10px;
-  border-radius:10px;
-  text-align:center;
-  box-shadow:0 2px 8px #ddd;
+display:none;
+background:white;
+padding:18px;
+margin-top:10px;
+border-radius:10px;
+text-align:center;
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
-
 .container{
-  max-width:900px;
-  margin:auto;
-  padding:15px;
+max-width:900px;
+margin:auto;
+padding:15px;
 }
 
 .section-title{
-  color:#075e54;
-  margin:25px 0 12px;
-  font-size:22px;
-  border-left:5px solid #075e54;
-  padding-left:10px;
+color:#075e54;
+margin:25px 0 12px;
+font-size:22px;
+border-left:5px solid #075e54;
+padding-left:10px;
 }
 
-/* =========================
-   CATEGORIES
-========================= */
-
 .categories{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
 }
 
 .category{
-  background:white;
-  padding:18px 8px;
-  border-radius:10px;
-  text-align:center;
-  text-decoration:none;
-  color:#222;
-  font-weight:bold;
-  box-shadow:0 2px 8px #ddd;
-  border-top:3px solid #075e54;
-  transition:.2s;
+background:white;
+padding:17px 7px;
+border-radius:10px;
+text-align:center;
+text-decoration:none;
+color:#222;
+font-weight:bold;
+box-shadow:0 2px 8px #ddd;
+border-top:3px solid #075e54;
+transition:.2s;
 }
 
 .category:hover{
-  transform:translateY(-3px);
-  box-shadow:0 5px 14px #ccc;
-  color:#075e54;
+transform:translateY(-3px);
+color:#075e54;
 }
 
-/* =========================
-   PORTAL QUICK LINKS
-========================= */
-
 .quick-links{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:8px;
-  margin:12px 0 20px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:8px;
 }
 
 .quick-link{
-  background:#075e54;
-  color:white;
-  text-align:center;
-  padding:11px 5px;
-  border-radius:7px;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:bold;
+background:#075e54;
+color:white;
+text-align:center;
+padding:11px 5px;
+border-radius:7px;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
 }
-
-.quick-link:hover{
-  background:#064c44;
-}
-
-/* =========================
-   JOB CARD
-========================= */
 
 .job{
-  background:white;
-  padding:18px;
-  margin:15px 0;
-  border-radius:10px;
-  box-shadow:0 2px 8px #ddd;
-  border-left:5px solid #075e54;
-  scroll-margin-top:160px;
+background:white;
+padding:18px;
+margin:15px 0;
+border-radius:10px;
+box-shadow:0 2px 8px #ddd;
+border-left:5px solid #075e54;
+scroll-margin-top:160px;
 }
 
 .job h3{
-  color:#075e54;
-  margin:0 0 9px;
-  font-size:19px;
+color:#075e54;
+margin:0 0 8px;
+font-size:19px;
 }
 
 .badge{
-  display:inline-block;
-  background:#e8f5f3;
-  color:#075e54;
-  padding:5px 9px;
-  border-radius:15px;
-  font-size:12px;
-  font-weight:bold;
-  margin:2px;
+display:inline-block;
+background:#e8f5f3;
+color:#075e54;
+padding:5px 9px;
+border-radius:15px;
+font-size:12px;
+font-weight:bold;
+margin:2px;
 }
 
-.active-badge{
-  background:#e7f6e9;
-  color:#16802c;
+.new-badge{
+background:#e3f2fd;
+color:#1565c0;
 }
 
-.closing-badge{
-  background:#fff1f1;
-  color:#c62828;
+.featured-badge{
+background:#fff4d6;
+color:#9a6a00;
+}
+
+.status-badge{
+display:inline-block;
+padding:5px 9px;
+border-radius:15px;
+font-size:12px;
+font-weight:bold;
+margin:2px;
+}
+
+.status-active{
+background:#e7f6e9;
+color:#16802c;
+}
+
+.status-closing{
+background:#fff1df;
+color:#e65100;
+}
+
+.status-closed{
+background:#eee;
+color:#666;
 }
 
 .job-info{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  margin:13px 0;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+margin:13px 0;
 }
 
 .job-info div{
-  background:#f5f7f8;
-  padding:10px;
-  border-radius:7px;
-  font-size:14px;
+background:#f5f7f8;
+padding:10px;
+border-radius:7px;
+font-size:14px;
 }
 
 .last-date{
-  color:#c62828;
-  font-weight:bold;
+color:#c62828;
+font-weight:bold;
+}
+
+.countdown{
+margin-top:10px;
+padding:10px;
+background:#f0f8f6;
+border-radius:8px;
+font-weight:bold;
+color:#075e54;
+}
+
+.countdown.closed{
+background:#fff1f1;
+color:#c62828;
 }
 
 .apply{
-  display:inline-block;
-  margin-top:10px;
-  background:#075e54;
-  color:white;
-  padding:11px 18px;
-  border-radius:7px;
-  text-decoration:none;
-  font-weight:bold;
+display:inline-block;
+margin-top:10px;
+background:#075e54;
+color:white;
+padding:11px 18px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .apply:hover{
-  background:#064c44;
+background:#064c44;
 }
 
 .job p{
-  line-height:1.55;
+line-height:1.55;
 }
 
-/* =========================
-   NOTICE
-========================= */
-
 .notice{
-  background:#fff8dc;
-  border-left:5px solid #e0b100;
-  padding:14px;
-  border-radius:7px;
-  margin-top:20px;
+background:#fff8dc;
+border-left:5px solid #e0b100;
+padding:14px;
+border-radius:7px;
+margin-top:20px;
 }
 
 .warning{
-  background:#fff3f3;
-  border-left:5px solid #d32f2f;
-  padding:14px;
-  border-radius:7px;
-  margin-top:20px;
+background:#fff3f3;
+border-left:5px solid #d32f2f;
+padding:14px;
+border-radius:7px;
+margin-top:20px;
 }
 
-mark{
-  background:#fff176;
-  padding:1px 2px;
-  border-radius:3px;
+.featured{
+border:2px solid #e0b100;
+border-left:6px solid #e0b100;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
 footer{
-  margin-top:30px;
-  background:#202526;
-  color:white;
-  text-align:center;
-  padding:28px 15px;
+margin-top:30px;
+background:#202526;
+color:white;
+text-align:center;
+padding:28px 15px;
 }
 
 footer a{
-  color:white;
-  text-decoration:none;
+color:white;
+text-decoration:none;
 }
-
-footer a:hover{
-  text-decoration:underline;
-}
-
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:700px){
 
-  header h1{
-    font-size:26px;
-  }
+header h1{font-size:26px}
 
-  .portal-stats{
-    grid-template-columns:repeat(3,1fr);
-    gap:6px;
-  }
+.portal-stats{
+grid-template-columns:repeat(3,1fr);
+gap:6px;
+}
 
-  .stat-number{
-    font-size:18px;
-  }
+.stat-number{font-size:18px}
+.stat-label{font-size:10px}
 
-  .stat-label{
-    font-size:10px;
-  }
+.categories{
+grid-template-columns:1fr 1fr;
+}
 
-  .categories{
-    grid-template-columns:1fr 1fr;
-  }
+.quick-links{
+grid-template-columns:1fr 1fr;
+}
 
-  .quick-links{
-    grid-template-columns:1fr 1fr;
-  }
+.job-info{
+grid-template-columns:1fr;
+}
 
-  .job-info{
-    grid-template-columns:1fr;
-  }
+.search{
+top:51px;
+}
 
-  .search{
-    top:51px;
-  }
+.ticker-label{
+padding:0 8px;
+font-size:12px;
+}
 
-  .search input{
-    font-size:16px;
-  }
-
-  .ticker-label{
-    padding:0 9px;
-    font-size:12px;
-  }
 }
 
 @media(max-width:400px){
 
-  .categories{
-    grid-template-columns:1fr 1fr;
-  }
+.categories{
+grid-template-columns:1fr 1fr;
+}
 
-  .stat-number{
-    font-size:16px;
-  }
-
-  .quick-links{
-    grid-template-columns:1fr 1fr;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
-  <h1>🇮🇳 Rozgar Sathi</h1>
+<h1>🇮🇳 Rozgar Sathi</h1>
 
-  <p>
-    सरकारी नौकरी • Private Jobs • Career Updates
-  </p>
+<p>सरकारी नौकरी • Private Jobs • Career Updates</p>
 
-  <div class="portal-stats">
+<div class="portal-stats">
 
-    <div class="stat-box">
-      <span class="stat-number" data-target="1250">0+</span>
-      <span class="stat-label">Active Jobs</span>
-    </div>
+<div class="stat-box">
+<span class="stat-number">1250+</span>
+<span class="stat-label">Jobs Listed</span>
+</div>
 
-    <div class="stat-box">
-      <span class="stat-number" data-target="85">0+</span>
-      <span class="stat-label">New Jobs</span>
-    </div>
+<div class="stat-box">
+<span class="stat-number">85+</span>
+<span class="stat-label">New Jobs</span>
+</div>
 
-    <div class="stat-box">
-      <span class="stat-number" data-target="32450">0+</span>
-      <span class="stat-label">Job Seekers</span>
-    </div>
+<div class="stat-box">
+<span class="stat-number">24×7</span>
+<span class="stat-label">Job Updates</span>
+</div>
 
-  </div>
+</div>
 
 </header>
 
-<!-- =========================
-     LIVE UPDATE
-========================= -->
-
 <div class="notice-ticker">
 
-  <div class="ticker-label">
-    <span class="live-dot"></span> LIVE
-  </div>
+<div class="ticker-label">
+<span class="live-dot"></span> LIVE
+</div>
 
-  <div class="ticker-window">
+<div class="ticker-window">
 
-    <div class="ticker-text">
-      📢 Latest Update: SSC • Railway • Banking • ISRO • Government Jobs • Private Jobs • 10th Pass • 12th Pass • Graduate Jobs • Work From Home Jobs
-    </div>
-
-  </div>
+<div class="ticker-text">
+📢 Latest Updates: SSC • Railway • Banking • ISRO • Government Jobs • Private Jobs • 10th Pass • 12th Pass • Graduate Jobs • Work From Home
+</div>
 
 </div>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+</div>
 
 <nav>
 
-  <a href="index.html">🏠 Home</a>
-
-  <a href="government.html">🏛️ Government</a>
-
-  <a href="private.html">🏢 Private</a>
-
-  <a href="10th-pass.html">🎓 10th</a>
-
-  <a href="12th-pass.html">🎓 12th</a>
-
-  <a href="graduate-jobs.html">🎓 Graduate</a>
-
-  <a href="work-from-home.html">🏠 WFH</a>
-
-  <a href="closed-jobs.html">📁 Closed</a>
+<a href="index.html">🏠 Home</a>
+<a href="government.html">🏛️ Government</a>
+<a href="private.html">🏢 Private</a>
+<a href="10th-pass.html">🎓 10th</a>
+<a href="12th-pass.html">🎓 12th</a>
+<a href="graduate-jobs.html">🎓 Graduate</a>
+<a href="work-from-home.html">🏠 WFH</a>
+<a href="closed-jobs.html">📁 Closed</a>
 
 </nav>
 
-<!-- =========================
-     SEARCH
-========================= -->
-
 <div class="search">
 
-  <div class="search-box">
+<div class="search-box">
 
-    <input
-      type="search"
-      id="jobSearch"
-      placeholder="🔎 Search करें — SSC, Railway, SBI, Bank, 10th, 12th, WFH..."
-      autocomplete="off"
-    >
+<input
+type="search"
+id="jobSearch"
+placeholder="🔎 Search करें — SSC, Railway, SBI, Bank, 10th, 12th, WFH..."
+autocomplete="off"
+>
 
-    <button
-      id="clearSearch"
-      class="clear-btn"
-      type="button"
-      onclick="clearSearch()"
-    >
-      ×
-    </button>
-
-  </div>
-
-  <div id="suggestions"></div>
-
-  <div id="searchStatus" class="search-status">
-    सभी उपलब्ध jobs में तुरंत खोजें
-  </div>
-
-  <div id="searchResults">
-
-    <div class="search-result-title">
-      🔎 Search Results
-    </div>
-
-    <div id="resultList"></div>
-
-  </div>
-
-  <div id="noResult">
-
-    <h3>😔 कोई Job नहीं मिली</h3>
-
-    <p>
-      दूसरा keyword try करें जैसे SBI, Railway, SSC, 10th, 12th या WFH।
-    </p>
-
-  </div>
+<button
+id="clearSearch"
+class="clear-btn"
+type="button"
+onclick="clearSearch()"
+>×</button>
 
 </div>
 
-<!-- =========================
-     MAIN
-========================= -->
+<div id="suggestions"></div>
+
+<div id="searchStatus" class="search-status">
+सभी उपलब्ध jobs में तुरंत खोजें
+</div>
+
+<div id="searchResults">
+
+<div style="font-weight:bold;color:#075e54;margin:8px 0">
+🔎 Search Results
+</div>
+
+<div id="resultList"></div>
+
+</div>
+
+<div id="noResult">
+
+<h3>😔 कोई Job नहीं मिली</h3>
+
+<p>दूसरा keyword try करें जैसे SBI, Railway, SSC, 10th, 12th या WFH।</p>
+
+</div>
+
+</div>
 
 <div class="container">
 
-  <h2 class="section-title">
-    📂 Job Categories
-  </h2>
+<h2 class="section-title">📂 Job Categories</h2>
 
-  <div class="categories">
+<div class="categories">
 
-    <a class="category" href="government.html">
-      🏛️<br>
-      Government Jobs
-    </a>
+<a class="category" href="government.html">🏛️<br>Government Jobs</a>
 
-    <a class="category" href="private.html">
-      🏢<br>
-      Private Jobs
-    </a>
+<a class="category" href="private.html">🏢<br>Private Jobs</a>
 
-    <a class="category" href="10th-pass.html">
-      🎓<br>
-      10th Pass
-    </a>
+<a class="category" href="10th-pass.html">🎓<br>10th Pass</a>
 
-    <a class="category" href="12th-pass.html">
-      🎓<br>
-      12th Pass
-    </a>
+<a class="category" href="12th-pass.html">🎓<br>12th Pass</a>
 
-    <a class="category" href="graduate-jobs.html">
-      🎓<br>
-      Graduate Jobs
-    </a>
+<a class="category" href="graduate-jobs.html">🎓<br>Graduate Jobs</a>
 
-    <a class="category" href="work-from-home.html">
-      🏠<br>
-      Work From Home
-    </a>
-
-  </div>
-
-  <h2 class="section-title">
-    ⚡ Quick Job Links
-  </h2>
-
-  <div class="quick-links">
-
-    <a class="quick-link" href="government.html">
-      🏛️ Govt Jobs
-    </a>
-
-    <a class="quick-link" href="10th-pass.html">
-      🎓 10th Jobs
-    </a>
-
-    <a class="quick-link" href="12th-pass.html">
-      🎓 12th Jobs
-    </a>
-
-    <a class="quick-link" href="work-from-home.html">
-      🏠 WFH Jobs
-    </a>
-
-  </div>
-
-  <h2 class="section-title">
-    🔥 Latest Jobs
-  </h2>
-
-  <div id="jobList">
-
-    <!-- SBI -->
-
-    <div
-      class="job searchable"
-      id="sbi-junior-associates"
-      data-search="SBI Junior Associates Customer Support Sales bank clerk banking 2026 12th graduate government bank all india"
-    >
-
-      <h3>🏦 SBI Junior Associates 2026</h3>
-
-      <span class="badge">SBI</span>
-      <span class="badge">Banking</span>
-      <span class="badge">Government Bank</span>
-      <span class="badge active-badge">Active</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Graduation
-        </div>
-
-        <div>
-          💼 <b>Post</b><br>
-          Junior Associate
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">31 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          All India
-        </div>
-
-      </div>
-
-      <p>
-        SBI Junior Associates Customer Support & Sales recruitment की official application information।
-      </p>
-
-      <a
-        class="apply"
-        href="https://ibpsreg.ibps.in/sbijajul26/"
-        target="_blank"
-        rel="noopener"
-      >
-        🔎 Official Details →
-      </a>
-
-    </div>
-
-    <!-- IBPS -->
-
-    <div
-      class="job searchable"
-      id="ibps-csa"
-      data-search="IBPS CSA XVI Customer Service Associate banking bank 2026 graduate central government"
-    >
-
-      <h3>🏦 IBPS Customer Service Associate XVI</h3>
-
-      <span class="badge">Banking</span>
-      <span class="badge">IBPS</span>
-      <span class="badge">Central</span>
-      <span class="badge closing-badge">Closing Soon</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Graduation
-        </div>
-
-        <div>
-          💼 <b>Post</b><br>
-          Customer Service Associate
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">21 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          Participating Banks
-        </div>
-
-      </div>
-
-      <p>
-        Public Sector Banks में Customer Service Associate recruitment की official information।
-      </p>
-
-      <a
-        class="apply"
-        href="https://ibpsreg.ibps.in/csaxvijul26/"
-        target="_blank"
-        rel="noopener"
-      >
-        🔎 Official Details →
-      </a>
-
-    </div>
-
-    <!-- ISRO LPSC -->
-
-    <div
-      class="job searchable"
-      id="isro-lpsc"
-      data-search="ISRO LPSC Technical Assistant Technician B Draughtsman Fireman 10th tenth ITI diploma government 2026"
-    >
-
-      <h3>🚀 ISRO LPSC Recruitment 2026</h3>
-
-      <span class="badge">ISRO</span>
-      <span class="badge">Government</span>
-      <span class="badge">10th / ITI / Diploma</span>
-      <span class="badge active-badge">Active</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Post के अनुसार
-        </div>
-
-        <div>
-          💼 <b>Posts</b><br>
-          Technical Assistant / Technician B / Fireman आदि
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">04 September 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          LPSC / Bengaluru
-        </div>
-
-      </div>
-
-      <p>
-        ISRO Liquid Propulsion Systems Centre में Technical Assistant,
-        Technician B, Draughtsman B और Fireman A posts की recruitment।
-      </p>
-
-      <a
-        class="apply"
-        href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-        target="_blank"
-        rel="noopener"
-      >
-        🚀 Official Details →
-      </a>
-
-    </div>
-
-    <!-- ISRO HSFC -->
-
-    <div
-      class="job searchable"
-      id="isro-hsfc"
-      data-search="ISRO HSFC Scientist Engineer SD engineering graduate government space 2026"
-    >
-
-      <h3>🚀 ISRO HSFC Scientist/Engineer</h3>
-
-      <span class="badge">ISRO</span>
-      <span class="badge">Government</span>
-      <span class="badge">Engineering</span>
-      <span class="badge active-badge">Active</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Engineering / Relevant Qualification
-        </div>
-
-        <div>
-          💼 <b>Post</b><br>
-          Scientist/Engineer-SD
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">30 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          India
-        </div>
-
-      </div>
-
-      <p>
-        Human Space Flight Centre में Scientist/Engineer recruitment की current opportunity।
-      </p>
-
-      <a
-        class="apply"
-        href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-        target="_blank"
-        rel="noopener"
-      >
-        🚀 Official Details →
-      </a>
-
-    </div>
-
-    <!-- ISRO URSC -->
-
-    <div
-      class="job searchable"
-      id="isro-ursc"
-      data-search="ISRO URSC Graduate Apprentice Diploma Apprentice 2026 graduate diploma apprentice trainee"
-    >
-
-      <h3>🚀 ISRO URSC Apprentice 2026</h3>
-
-      <span class="badge">ISRO</span>
-      <span class="badge">Apprentice</span>
-      <span class="badge">Graduate / Diploma</span>
-      <span class="badge active-badge">Active</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Graduate / Diploma
-        </div>
-
-        <div>
-          💼 <b>Post</b><br>
-          Apprentice Trainee
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">28 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          India
-        </div>
-
-      </div>
-
-      <p>
-        ISRO URSC में Graduate Apprentice और Diploma Apprentice Trainee opportunities।
-      </p>
-
-      <a
-        class="apply"
-        href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-        target="_blank"
-        rel="noopener"
-      >
-        🚀 Official Details →
-      </a>
-
-    </div>
-
-    <!-- ISRO NRSC -->
-
-    <div
-      class="job searchable"
-      id="isro-nrsc"
-      data-search="ISRO NRSC Temporary Research Personnel 2026 graduate government Hyderabad"
-    >
-
-      <h3>🛰️ ISRO NRSC Recruitment 2026</h3>
-
-      <span class="badge">ISRO</span>
-      <span class="badge">Government</span>
-      <span class="badge closing-badge">Closing Soon</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Post के अनुसार
-        </div>
-
-        <div>
-          💼 <b>Post</b><br>
-          Temporary Research Personnel
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">21 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          Hyderabad
-        </div>
-
-      </div>
-
-      <p>
-        National Remote Sensing Centre में Temporary Research Personnel opportunity।
-      </p>
-
-      <a
-        class="apply"
-        href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-        target="_blank"
-        rel="noopener"
-      >
-        🛰️ Official Details →
-      </a>
-
-    </div>
-
-    <!-- ISRO PRL -->
-
-    <div
-      class="job searchable"
-      id="isro-prl"
-      data-search="ISRO PRL Administrative Officer Accounts Purchase Stores Officer 2026 graduate Ahmedabad"
-    >
-
-      <h3>🛰️ ISRO PRL Officer Recruitment</h3>
-
-      <span class="badge">ISRO</span>
-      <span class="badge">Government</span>
-      <span class="badge">Graduate</span>
-      <span class="badge active-badge">Active</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Relevant Qualification
-        </div>
-
-        <div>
-          💼 <b>Posts</b><br>
-          Administrative / Accounts / Purchase & Stores
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">24 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          Ahmedabad
-        </div>
-
-      </div>
-
-      <p>
-        Physical Research Laboratory में officer-level recruitment opportunity।
-      </p>
-
-      <a
-        class="apply"
-        href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-        target="_blank"
-        rel="noopener"
-      >
-        🛰️ Official Details →
-      </a>
-
-    </div>
-
-    <!-- TRAI ASSOCIATE -->
-
-    <div
-      class="job searchable"
-      id="trai-associate"
-      data-search="TRAI Associate Consultant Consultant government telecom 2026 graduate New Delhi"
-    >
-
-      <h3>📡 TRAI Associate Consultant</h3>
-
-      <span class="badge">TRAI</span>
-      <span class="badge">Government</span>
-      <span class="badge">Consultant</span>
-      <span class="badge active-badge">Active</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Post के अनुसार
-        </div>
-
-        <div>
-          💼 <b>Post</b><br>
-          Associate Consultant
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">27 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          New Delhi
-        </div>
-
-      </div>
-
-      <p>
-        Telecom Regulatory Authority of India में Associate Consultant opportunity।
-      </p>
-
-      <a
-        class="apply"
-        href="https://trai.gov.in/vacancies"
-        target="_blank"
-        rel="noopener"
-      >
-        📡 Official Details →
-      </a>
-
-    </div>
-
-    <!-- TRAI CONSULTANT -->
-
-    <div
-      class="job searchable"
-      id="trai-consultant"
-      data-search="TRAI Consultant contract government 2026 graduate New Delhi"
-    >
-
-      <h3>📡 TRAI Consultant Recruitment</h3>
-
-      <span class="badge">TRAI</span>
-      <span class="badge">Government</span>
-      <span class="badge active-badge">Active</span>
-
-      <div class="job-info">
-
-        <div>
-          🎓 <b>Qualification</b><br>
-          Post के अनुसार
-        </div>
-
-        <div>
-          💼 <b>Post</b><br>
-          Consultant
-        </div>
-
-        <div>
-          📅 <b>Last Date</b><br>
-          <span class="last-date">24 August 2026</span>
-        </div>
-
-        <div>
-          🇮🇳 <b>Location</b><br>
-          New Delhi
-        </div>
-
-      </div>
-
-      <p>
-        TRAI Headquarters में Consultant(s) on Contract basis opportunity।
-      </p>
-
-      <a
-        class="apply"
-        href="https://trai.gov.in/vacancies"
-        target="_blank"
-        rel="noopener"
-      >
-        📡 Official Details →
-      </a>
-
-    </div>
-
-    <!-- NCS -->
-
-    <div
-      class="job searchable"
-      id="ncs-jobs"
-      data-search="NCS National Career Service all India government private jobs work from home WFH remote"
-    >
-
-      <h3>🇮🇳 National Career Service – All India Jobs</h3>
-
-      <span class="badge">All India</span>
-      <span class="badge">Government Portal</span>
-      <span class="badge">Private + WFH</span>
-
-      <p>
-        भारत सरकार के National Career Service portal पर पूरे भारत की
-        Government, Private और अन्य jobs खोज सकते हैं।
-      </p>
-
-      <a
-        class="apply"
-        href="https://www.ncs.gov.in/"
-        target="_blank"
-        rel="noopener"
-      >
-        🔎 All India Jobs →
-      </a>
-
-    </div>
-
-    <!-- 10TH -->
-
-    <div
-      class="job searchable"
-      id="10th-jobs"
-      data-search="10th tenth दसवीं दसवी matric government private jobs नौकरी"
-    >
-
-      <h3>🎓 10th Pass Jobs</h3>
-
-      <span class="badge">10th Pass</span>
-
-      <p>
-        10वीं पास candidates के लिए Government और Private jobs देखें।
-      </p>
-
-      <a class="apply" href="10th-pass.html">
-        10th Jobs →
-      </a>
-
-    </div>
-
-    <!-- 12TH -->
-
-    <div
-      class="job searchable"
-      id="12th-jobs"
-      data-search="12th twelfth बारहवीं बारहवी इंटर इंटरमीडिएट government private jobs"
-    >
-
-      <h3>🎓 12th Pass Jobs</h3>
-
-      <span class="badge">12th Pass</span>
-
-      <p>
-        12वीं पास candidates के लिए Government और Private jobs देखें।
-      </p>
-
-      <a class="apply" href="12th-pass.html">
-        12th Jobs →
-      </a>
-
-    </div>
-
-    <!-- GRADUATE -->
-
-    <div
-      class="job searchable"
-      id="graduate-jobs"
-      data-search="graduate graduation degree स्नातक graduate jobs government private"
-    >
-
-      <h3>🎓 Graduate Jobs</h3>
-
-      <span class="badge">Graduate</span>
-
-      <p>
-        Graduates के लिए Government और Private opportunities देखें।
-      </p>
-
-      <a class="apply" href="graduate-jobs.html">
-        Graduate Jobs →
-      </a>
-
-    </div>
-
-    <!-- WFH -->
-
-    <div
-      class="job searchable"
-      id="wfh-jobs"
-      data-search="work from home WFH remote घर से काम घर बैठे online job private"
-    >
-
-      <h3>🏠 Work From Home Jobs</h3>
-
-      <span class="badge">WFH</span>
-      <span class="badge">Remote</span>
-
-      <p>
-        घर से काम करने वाली opportunities देखने के लिए
-        Work From Home section खोलें।
-      </p>
-
-      <a class="apply" href="work-from-home.html">
-        WFH Jobs →
-      </a>
-
-    </div>
-
-  </div>
-
-  <!-- =========================
-       IMPORTANT NOTICE
-  ========================= -->
-
-  <div class="notice">
-
-    <b>⚠️ जरूरी सूचना</b>
-
-    <p>
-      Rozgar Sathi केवल job information उपलब्ध कराता है।
-      Apply करने से पहले qualification, age limit, vacancy, salary,
-      fee, selection process और last date को संबंधित official
-      notification से जरूर verify करें।
-    </p>
-
-  </div>
-
-  <!-- =========================
-       SCAM WARNING
-  ========================= -->
-
-  <div class="warning">
-
-    <b>🚨 Job Scam से सावधान रहें</b>
-
-    <p>
-      किसी भी job के लिए OTP, UPI PIN, ATM PIN, password या
-      अनजान व्यक्ति को पैसे न दें। Application हमेशा official
-      website से verify करें।
-    </p>
-
-  </div>
-
-  <div style="text-align:center;padding:20px;">
-
-    <a
-      href="closed-jobs.html"
-      style="text-decoration:none;color:#075e54;font-weight:bold;"
-    >
-      📁 Closed Jobs देखें →
-    </a>
-
-  </div>
+<a class="category" href="work-from-home.html">🏠<br>Work From Home</a>
 
 </div>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<h2 class="section-title">⚡ Quick Job Links</h2>
+
+<div class="quick-links">
+
+<a class="quick-link" href="government.html">🏛️ Govt Jobs</a>
+
+<a class="quick-link" href="10th-pass.html">🎓 10th Jobs</a>
+
+<a class="quick-link" href="12th-pass.html">🎓 12th Jobs</a>
+
+<a class="quick-link" href="work-from-home.html">🏠 WFH Jobs</a>
+
+</div>
+
+<h2 class="section-title">⭐ Featured Jobs</h2>
+
+<div id="jobList">
+
+<!-- SBI -->
+
+<div
+class="job searchable featured"
+data-search="SBI Junior Associates Customer Support Sales bank clerk banking 2026 graduate government bank all india"
+data-lastdate="31 August 2026"
+>
+
+<h3>🏦 SBI Junior Associates 2026</h3>
+
+<span class="badge featured-badge">⭐ Featured</span>
+<span class="badge new-badge">🆕 New</span>
+<span class="badge">SBI</span>
+<span class="badge">Banking</span>
+<span class="status-badge">Checking...</span>
+
+<div class="job-info">
+
+<div>🎓 <b>Qualification</b><br>Graduation</div>
+
+<div>💼 <b>Post</b><br>Junior Associate</div>
+
+<div>📅 <b>Last Date</b><br>
+<span class="last-date">31 August 2026</span>
+</div>
+
+<div>🇮🇳 <b>Location</b><br>All India</div>
+
+</div>
+
+<p>
+SBI Junior Associates Customer Support & Sales recruitment की information।
+Apply करने से पहले official notification जरूर पढ़ें।
+</p>
+
+<div class="countdown">⏳ Status check हो रहा है...</div>
+
+<a
+class="apply"
+href="https://sbi.co.in/web/careers/current-openings"
+target="_blank"
+rel="noopener"
+>
+🔎 Official Details →
+</a>
+
+</div>
+
+
+<!-- IBPS CSA -->
+
+<div
+class="job searchable featured"
+data-search="IBPS CSA XVI Customer Service Associate banking bank 2026 graduate central government"
+data-lastdate="21 August 2026"
+>
+
+<h3>🏦 IBPS Customer Service Associate XVI</h3>
+
+<span class="badge featured-badge">⭐ Featured</span>
+<span class="badge">Banking</span>
+<span class="badge">IBPS</span>
+<span class="status-badge">Checking...</span>
+
+<div class="job-info">
+
+<div>🎓 <b>Qualification</b><br>Graduation</div>
+
+<div>💼 <b>Post</b><br>Customer Service Associate</div>
+
+<div>📅 <b>Last Date</b><br>
+<span class="last-date">21 August 2026</span>
+</div>
+
+<div>🇮🇳 <b>Location</b><br>Participating Banks</div>
+
+</div>
+
+<p>
+Public Sector Banks में Customer Service Associate recruitment की information।
+</p>
+
+<div class="countdown">⏳ Status check हो रहा है...</div>
+
+<a
+class="apply"
+href="https://ibpsreg.ibps.in/csaxvijul26/"
+target="_blank"
+rel="noopener"
+>
+🔎 Official Details →
+</a>
+
+</div>
+
+
+<!-- ISRO LPSC -->
+
+<div
+class="job searchable"
+data-search="ISRO LPSC Technical Assistant Technician B Draughtsman Fireman 10th tenth ITI diploma government 2026"
+data-lastdate="04 September 2026"
+>
+
+<h3>🚀 ISRO LPSC Recruitment 2026</h3>
+
+<span class="badge new-badge">🆕 New</span>
+<span class="badge">ISRO</span>
+<span class="badge">Government</span>
+<span class="badge">10th / ITI / Diploma</span>
+<span class="status-badge">Checking...</span>
+
+<div class="job-info">
+
+<div>🎓 <b>Qualification</b><br>Post के अनुसार</div>
+
+<div>💼 <b>Posts</b><br>Technical Assistant / Technician B / Fireman आदि</div>
+
+<div>📅 <b>Last Date</b><br>
+<span class="last-date">04 September 2026</span>
+</div>
+
+<div>🇮🇳 <b>Location</b><br>LPSC / Bengaluru</div>
+
+</div>
+
+<p>
+ISRO Liquid Propulsion Systems Centre में विभिन्न posts की recruitment।
+</p>
+
+<div class="countdown">⏳ Status check हो रहा है...</div>
+
+<a
+class="apply"
+href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+target="_blank"
+rel="noopener"
+>
+🚀 Official Details →
+</a>
+
+</div>
+
+
+<!-- ISRO HSFC -->
+
+<div
+class="job searchable"
+data-search="ISRO HSFC Scientist Engineer SD engineering graduate government space 2026"
+data-lastdate="30 August 2026"
+>
+
+<h3>🚀 ISRO HSFC Scientist/Engineer</h3>
+
+<span class="badge">ISRO</span>
+<span class="badge">Government</span>
+<span class="badge">Engineering</span>
+<span class="status-badge">Checking...</span>
+
+<div class="job-info">
+
+<div>🎓 <b>Qualification</b><br>Engineering / Relevant</div>
+
+<div>💼 <b>Post</b><br>Scientist/Engineer-SD</div>
+
+<div>📅 <b>Last Date</b><br>
+<span class="last-date">30 August 2026</span>
+</div>
+
+<div>🇮🇳 <b>Location</b><br>India</div>
+
+</div>
+
+<p>
+Human Space Flight Centre recruitment information।
+</p>
+
+<div class="countdown">⏳ Status check हो रहा है...</div>
+
+<a
+class="apply"
+href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+target="_blank"
+rel="noopener"
+>
+🚀 Official Details →
+</a>
+
+</div>
+
+
+<!-- ISRO URSC -->
+
+<div
+class="job searchable"
+data-search="ISRO URSC Graduate Apprentice Diploma Apprentice 2026 graduate diploma apprentice trainee"
+data-lastdate="28 August 2026"
+>
+
+<h3>🚀 ISRO URSC Apprentice 2026</h3>
+
+<span class="badge new-badge">🆕 New</span>
+<span class="badge">ISRO</span>
+<span class="badge">Apprentice</span>
+<span class="badge">Graduate / Diploma</span>
+<span class="status-badge">Checking...</span>
+
+<div class="job-info">
+
+<div>🎓 <b>Qualification</b><br>Graduate / Diploma</div>
+
+<div>💼 <b>Post</b><br>Apprentice Trainee</div>
+
+<div>📅 <b>Last Date</b><br>
+<span class="last-date">28 August 2026</span>
+</div>
+
+<div>🇮🇳 <b>Location</b><br>India</div>
+
+</div>
+
+<p>
+ISRO URSC में Graduate Apprentice और Diploma Apprentice opportunities।
+</p>
+
+<div class="countdown">⏳ Status check हो रहा है...</div>
+
+<a
+class="apply"
+href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+target="_blank"
+rel="noopener"
+>
+🚀 Official Details →
+</a>
+
+</div>
+
+
+<!-- TRAI -->
+
+<div
+class="job searchable"
+data-search="TRAI Associate Consultant Consultant government telecom 2026 graduate New Delhi"
+data-lastdate="27 August 2026"
+>
+
+<h3>📡 TRAI Associate Consultant</h3>
+
+<span class="badge">TRAI</span>
+<span class="badge">Government</span>
+<span class="badge">Consultant</span>
+<span class="status-badge">Checking...</span>
+
+<div class="job-info">
+
+<div>🎓 <b>Qualification</b><br>Post के अनुसार</div>
+
+<div>💼 <b>Post</b><br>Associate Consultant</div>
+
+<div>📅 <b>Last Date</b><br>
+<span class="last-date">27 August 2026</span>
+</div>
+
+<div>🇮🇳 <b>Location</b><br>New Delhi</div>
+
+</div>
+
+<p>
+Telecom Regulatory Authority of India में Associate Consultant opportunity।
+</p>
+
+<div class="countdown">⏳ Status check हो रहा है...</div>
+
+<a
+class="apply"
+href="https://trai.gov.in/vacancies"
+target="_blank"
+rel="noopener"
+>
+📡 Official Details →
+</a>
+
+</div>
+
+
+<!-- NCS -->
+
+<div
+class="job searchable"
+data-search="NCS National Career Service all India government private jobs work from home WFH remote"
+>
+
+<h3>🇮🇳 National Career Service – All India Jobs</h3>
+
+<span class="badge">All India</span>
+<span class="badge">Government Portal</span>
+<span class="badge">Private + WFH</span>
+
+<p>
+भारत सरकार के National Career Service portal पर पूरे भारत की Government,
+Private और अन्य jobs खोज सकते हैं।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 All India Jobs →
+</a>
+
+</div>
+
+
+<!-- CATEGORY CARDS -->
+
+<div
+class="job searchable"
+data-search="10th tenth दसवीं दसवी matric government private jobs नौकरी"
+>
+
+<h3>🎓 10th Pass Jobs</h3>
+
+<span class="badge">10th Pass</span>
+
+<p>10वीं पास candidates के लिए Government और Private jobs देखें।</p>
+
+<a class="apply" href="10th-pass.html">10th Jobs →</a>
+
+</div>
+
+
+<div
+class="job searchable"
+data-search="12th twelfth बारहवीं बारहवी inter intermediate government private jobs"
+>
+
+<h3>🎓 12th Pass Jobs</h3>
+
+<span class="badge">12th Pass</span>
+
+<p>12वीं पास candidates के लिए Government और Private jobs देखें।</p>
+
+<a class="apply" href="12th-pass.html">12th Jobs →</a>
+
+</div>
+
+
+<div
+class="job searchable"
+data-search="graduate graduation degree स्नातक graduate jobs government private"
+>
+
+<h3>🎓 Graduate Jobs</h3>
+
+<span class="badge">Graduate</span>
+
+<p>Graduates के लिए Government और Private opportunities देखें।</p>
+
+<a class="apply" href="graduate-jobs.html">Graduate Jobs →</a>
+
+</div>
+
+
+<div
+class="job searchable"
+data-search="work from home WFH remote घर से काम घर बैठे online job private"
+>
+
+<h3>🏠 Work From Home Jobs</h3>
+
+<span class="badge">WFH</span>
+<span class="badge">Remote</span>
+
+<p>
+घर से काम करने वाली opportunities देखने के लिए Work From Home section खोलें।
+</p>
+
+<a class="apply" href="work-from-home.html">WFH Jobs →</a>
+
+</div>
+
+</div>
+
+
+<div class="notice">
+
+<b>⚠️ जरूरी सूचना</b>
+
+<p>
+Rozgar Sathi केवल job information उपलब्ध कराता है।
+Apply करने से पहले qualification, age limit, vacancy, salary,
+fee, selection process और last date को संबंधित official
+notification से जरूर verify करें।
+</p>
+
+</div>
+
+
+<div class="warning">
+
+<b>🚨 Job Scam से सावधान रहें</b>
+
+<p>
+किसी भी job के लिए OTP, UPI PIN, ATM PIN, password या
+अनजान व्यक्ति को पैसे न दें। Application हमेशा official
+website से verify करें।
+</p>
+
+</div>
+
+
+<div style="text-align:center;padding:20px">
+
+<a
+href="closed-jobs.html"
+style="text-decoration:none;color:#075e54;font-weight:bold"
+>
+📁 Closed Jobs देखें →
+</a>
+
+</div>
+
+</div>
+
 
 <footer>
 
-  <p>
-    <b>© 2026 Rozgar Sathi</b>
-  </p>
+<p><b>© 2026 Rozgar Sathi</b></p>
 
-  <p>
-    Jobs • Career • Employment
-  </p>
+<p>Jobs • Career • Employment</p>
 
-  <p>
+<p>
 
-    <a href="about.html">
-      About Us
-    </a>
+<a href="about.html">About Us</a>
+&nbsp; | &nbsp;
+<a href="contact.html">Contact Us</a>
+&nbsp; | &nbsp;
+<a href="disclaimer.html">Disclaimer</a>
 
-    &nbsp; | &nbsp;
-
-    <a href="contact.html">
-      Contact Us
-    </a>
-
-    &nbsp; | &nbsp;
-
-    <a href="disclaimer.html">
-      Disclaimer
-    </a>
-
-  </p>
+</p>
 
 </footer>
+
 
 <script>
 
 /* =====================================================
-   ROZGAR SATHI
-   PROFESSIONAL SEARCH SYSTEM
+   ROZGAR SATHI PROFESSIONAL SEARCH
 ===================================================== */
 
-const searchInput =
-  document.getElementById("jobSearch");
-
-const clearButton =
-  document.getElementById("clearSearch");
-
-const statusBox =
-  document.getElementById("searchStatus");
-
-const suggestionBox =
-  document.getElementById("suggestions");
-
-const searchResults =
-  document.getElementById("searchResults");
-
-const resultList =
-  document.getElementById("resultList");
-
-const noResult =
-  document.getElementById("noResult");
+const searchInput=document.getElementById("jobSearch");
+const clearButton=document.getElementById("clearSearch");
+const statusBox=document.getElementById("searchStatus");
+const suggestionBox=document.getElementById("suggestions");
+const searchResults=document.getElementById("searchResults");
+const resultList=document.getElementById("resultList");
+const noResult=document.getElementById("noResult");
 
 
-/* =========================
-   SEARCH ALIASES
-========================= */
+const aliases={
 
-const aliases = {
+sbi:["sbi","state bank","bank","banking","बैंक"],
 
-  "sbi":[
-    "sbi",
-    "state bank",
-    "state bank of india",
-    "bank",
-    "banking",
-    "बैंक"
-  ],
+bank:["bank","banking","sbi","ibps","बैंक"],
 
-  "bank":[
-    "bank",
-    "banking",
-    "sbi",
-    "ibps",
-    "बैंक",
-    "बैंकिंग"
-  ],
+ibps:["ibps","bank","banking"],
 
-  "banking":[
-    "bank",
-    "banking",
-    "sbi",
-    "ibps"
-  ],
+railway:["railway","rail","rrb","रेलवे","रेल"],
 
-  "ibps":[
-    "ibps",
-    "bank",
-    "banking"
-  ],
+rrb:["railway","rail","रेलवे"],
 
-  "railway":[
-    "railway",
-    "rail",
-    "rrb",
-    "रेलवे",
-    "रेल"
-  ],
+ssc:["ssc","staff selection commission","सरकारी"],
 
-  "rail":[
-    "railway",
-    "rrb",
-    "रेलवे",
-    "रेल"
-  ],
+government:["government","govt","gov","सरकारी","sarkari"],
 
-  "rrb":[
-    "railway",
-    "rail",
-    "रेलवे"
-  ],
+govt:["government","सरकारी","sarkari"],
 
-  "ssc":[
-    "ssc",
-    "staff selection commission",
-    "chsl",
-    "सरकारी"
-  ],
+private:["private","company","प्राइवेट","कंपनी","निजी"],
 
-  "government":[
-    "government",
-    "govt",
-    "gov",
-    "सरकारी",
-    "sarkari"
-  ],
+company:["private","प्राइवेट","कंपनी"],
 
-  "govt":[
-    "government",
-    "सरकारी",
-    "sarkari"
-  ],
+"10th":["10th","tenth","दसवीं","दसवी","matric"],
 
-  "सरकारी":[
-    "government",
-    "govt",
-    "sarkari"
-  ],
+tenth:["10th","दसवीं","matric"],
 
-  "sarkari":[
-    "government",
-    "govt",
-    "सरकारी"
-  ],
+"12th":["12th","twelfth","बारहवीं","बारहवी","inter","intermediate"],
 
-  "private":[
-    "private",
-    "company",
-    "प्राइवेट",
-    "कंपनी",
-    "निजी"
-  ],
+twelfth:["12th","बारहवीं","intermediate"],
 
-  "company":[
-    "private",
-    "प्राइवेट",
-    "कंपनी"
-  ],
+graduate:["graduate","graduation","degree","स्नातक","ग्रेजुएट"],
 
-  "10th":[
-    "10th",
-    "tenth",
-    "दसवीं",
-    "दसवी",
-    "matric"
-  ],
+graduation:["graduate","degree","स्नातक"],
 
-  "tenth":[
-    "10th",
-    "दसवीं",
-    "matric"
-  ],
+wfh:["wfh","work from home","remote","घर से","घर बैठे"],
 
-  "दसवीं":[
-    "10th",
-    "tenth",
-    "matric"
-  ],
+remote:["wfh","work from home","घर से","घर बैठे"],
 
-  "12th":[
-    "12th",
-    "twelfth",
-    "बारहवीं",
-    "बारहवी",
-    "inter",
-    "intermediate"
-  ],
+job:["job","jobs","नौकरी","vacancy","भर्ती"],
 
-  "twelfth":[
-    "12th",
-    "बारहवीं",
-    "intermediate"
-  ],
+jobs:["job","नौकरी","vacancy","भर्ती"],
 
-  "बारहवीं":[
-    "12th",
-    "twelfth",
-    "intermediate"
-  ],
+नौकरी:["job","jobs","vacancy","भर्ती"],
 
-  "graduate":[
-    "graduate",
-    "graduation",
-    "degree",
-    "स्नातक",
-    "ग्रेजुएट"
-  ],
+vacancy:["vacancy","job","jobs","भर्ती"],
 
-  "graduation":[
-    "graduate",
-    "degree",
-    "स्नातक"
-  ],
+भर्ती:["vacancy","job","jobs"],
 
-  "स्नातक":[
-    "graduate",
-    "graduation"
-  ],
+isro:["isro","lpsc","hsfc","ursc","nrsc","prl","space"],
 
-  "wfh":[
-    "wfh",
-    "work from home",
-    "remote",
-    "घर से",
-    "घर बैठे"
-  ],
+iti:["iti","technical","technician","10th"],
 
-  "remote":[
-    "wfh",
-    "work from home",
-    "घर से",
-    "घर बैठे"
-  ],
+diploma:["diploma","technical","iti"],
 
-  "work from home":[
-    "wfh",
-    "remote",
-    "घर से",
-    "घर बैठे"
-  ],
+apprentice:["apprentice","trainee","training"],
 
-  "job":[
-    "job",
-    "jobs",
-    "नौकरी",
-    "vacancy",
-    "भर्ती"
-  ],
+trai:["trai","consultant","telecom"],
 
-  "jobs":[
-    "job",
-    "नौकरी",
-    "vacancy",
-    "भर्ती"
-  ],
+india:["india","all india","भारत","पूरे भारत"],
 
-  "नौकरी":[
-    "job",
-    "jobs",
-    "vacancy",
-    "भर्ती"
-  ],
-
-  "vacancy":[
-    "vacancy",
-    "job",
-    "jobs",
-    "भर्ती"
-  ],
-
-  "भर्ती":[
-    "vacancy",
-    "job",
-    "jobs"
-  ],
-
-  "isro":[
-    "isro",
-    "lpsc",
-    "hsfc",
-    "ursc",
-    "nrsc",
-    "prl",
-    "space"
-  ],
-
-  "iti":[
-    "iti",
-    "technical",
-    "technician",
-    "10th"
-  ],
-
-  "diploma":[
-    "diploma",
-    "technical",
-    "iti"
-  ],
-
-  "apprentice":[
-    "apprentice",
-    "trainee",
-    "training"
-  ],
-
-  "trai":[
-    "trai",
-    "consultant",
-    "telecom"
-  ],
-
-  "india":[
-    "india",
-    "all india",
-    "भारत",
-    "पूरे भारत"
-  ],
-
-  "भारत":[
-    "india",
-    "all india",
-    "पूरे भारत"
-  ]
+भारत:["india","all india","पूरे भारत"]
 
 };
 
 
-/* =========================
-   NORMALIZE
-========================= */
-
 function normalize(text){
 
-  return String(text || "")
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s-]/gu," ")
-    .replace(/\s+/g," ")
-    .trim();
+return String(text||"")
+.toLowerCase()
+.replace(/[^\p{L}\p{N}\s-]/gu," ")
+.replace(/\s+/g," ")
+.trim();
 
 }
 
-
-/* =========================
-   VARIATIONS
-========================= */
 
 function getVariations(word){
 
-  let result = [word];
+let result=[word];
 
-  if(aliases[word]){
-    result = result.concat(aliases[word]);
-  }
+if(aliases[word]){
+result=result.concat(aliases[word]);
+}
 
-  return [
-    ...new Set(
-      result
-        .map(normalize)
-        .filter(Boolean)
-    )
-  ];
+return [...new Set(
+result.map(normalize).filter(Boolean)
+)];
 
 }
 
-
-/* =========================
-   JOB MATCH
-========================= */
 
 function jobMatches(job,input){
 
-  if(!input){
-    return true;
-  }
+if(!input)return true;
 
-  const text = normalize(
-    (job.innerText || "") +
-    " " +
-    (job.dataset.search || "")
-  );
+const text=normalize(
+(job.innerText||"")+" "+
+(job.dataset.search||"")
+);
 
-  const words = normalize(input)
-    .split(" ")
-    .filter(Boolean);
+const words=normalize(input)
+.split(" ")
+.filter(Boolean);
 
-  /*
-    सभी words को check करेंगे।
-    इससे unrelated result कम होंगे।
-  */
+return words.every(function(word){
 
-  return words.every(function(word){
+const variations=getVariations(word);
 
-    const variations =
-      getVariations(word);
+return variations.some(function(v){
+return text.includes(v);
+});
 
-    for(const variation of variations){
-
-      if(text.includes(variation)){
-        return true;
-      }
-
-    }
-
-    /* छोटा spelling tolerance */
-
-    if(word.length >= 4){
-
-      const textWords =
-        text.split(" ");
-
-      for(const textWord of textWords){
-
-        if(
-          textWord.includes(word) ||
-          word.includes(textWord)
-        ){
-          return true;
-        }
-
-      }
-
-    }
-
-    return false;
-
-  });
+});
 
 }
 
-
-/* =========================
-   ALL JOBS
-========================= */
 
 function getAllJobs(){
 
-  return Array.from(
-    document.querySelectorAll(".searchable")
-  );
+return Array.from(
+document.querySelectorAll(".searchable")
+);
 
 }
 
-
-/* =========================
-   SEARCH
-========================= */
-
-function searchJobs(){
-
-  const input =
-    normalize(searchInput.value);
-
-  const jobs =
-    getAllJobs();
-
-  clearButton.style.display =
-    input ? "block" : "none";
-
-
-  /* EMPTY */
-
-  if(!input){
-
-    jobs.forEach(function(job){
-
-      job.style.display="block";
-
-    });
-
-    searchResults.style.display="none";
-
-    resultList.innerHTML="";
-
-    noResult.style.display="none";
-
-    suggestionBox.style.display="none";
-
-    statusBox.innerHTML =
-      "सभी उपलब्ध jobs में तुरंत खोजें";
-
-    return;
-
-  }
-
-
-  /* FIND */
-
-  const found=[];
-
-  jobs.forEach(function(job){
-
-    if(jobMatches(job,input)){
-
-      found.push(job);
-
-    }
-
-  });
-
-
-  /* RESULTS */
-
-  if(found.length){
-
-    statusBox.innerHTML =
-      "<b>"+found.length+
-      "</b> job result मिले";
-
-
-    noResult.style.display="none";
-
-    resultList.innerHTML="";
-
-
-    found.forEach(function(job){
-
-      const titleElement =
-        job.querySelector("h3");
-
-      if(!titleElement){
-        return;
-      }
-
-      const title =
-        titleElement.innerText;
-
-      let description="";
-
-      const p =
-        job.querySelector("p");
-
-      if(p){
-        description =
-          p.innerText;
-      }
-
-      let lastDate="";
-
-      const date =
-        job.querySelector(".last-date");
-
-      if(date){
-        lastDate =
-          date.innerText;
-      }
-
-
-      const resultCard =
-        document.createElement("div");
-
-      resultCard.className =
-        "search-result-card";
-
-
-      resultCard.innerHTML =
-
-        "<h3>"+escapeHTML(title)+"</h3>" +
-
-        "<p>"+escapeHTML(description)+"</p>" +
-
-        (
-          lastDate
-          ?
-          "<p>📅 <b>Last Date:</b> "+
-          escapeHTML(lastDate)+
-          "</p>"
-          :
-          ""
-        ) +
-
-        "<button class='result-button' type='button'>"+
-        "👀 नौकरी देखें →"+
-        "</button>";
-
-
-      const button =
-        resultCard.querySelector(
-          ".result-button"
-        );
-
-
-      button.onclick=function(){
-
-        searchResults.style.display="none";
-
-        suggestionBox.style.display="none";
-
-        jobs.forEach(function(item){
-
-          item.style.display =
-            item === job
-            ? "block"
-            : "none";
-
-        });
-
-
-        setTimeout(function(){
-
-          job.scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-          });
-
-
-          job.style.boxShadow =
-            "0 0 0 3px #0b806f";
-
-
-          setTimeout(function(){
-
-            job.style.boxShadow =
-              "0 2px 8px #ddd";
-
-          },1800);
-
-        },100);
-
-      };
-
-
-      resultList.appendChild(resultCard);
-
-    });
-
-
-    searchResults.style.display="block";
-
-
-    jobs.forEach(function(job){
-
-      job.style.display="none";
-
-    });
-
-
-    showSuggestions(found);
-
-
-  }else{
-
-    statusBox.innerHTML =
-      "0 job result मिले";
-
-    searchResults.style.display="none";
-
-    resultList.innerHTML="";
-
-    noResult.style.display="block";
-
-    suggestionBox.style.display="none";
-
-
-    jobs.forEach(function(job){
-
-      job.style.display="none";
-
-    });
-
-  }
-
-}
-
-
-/* =========================
-   SAFE HTML
-========================= */
 
 function escapeHTML(text){
 
-  return String(text || "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+return String(text||"")
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
 
 }
 
 
-/* =========================
-   SUGGESTIONS
-========================= */
+function searchJobs(){
+
+const input=normalize(searchInput.value);
+
+const jobs=getAllJobs();
+
+clearButton.style.display=input?"block":"none";
+
+if(!input){
+
+jobs.forEach(job=>{
+job.style.display="block";
+});
+
+searchResults.style.display="none";
+noResult.style.display="none";
+suggestionBox.style.display="none";
+
+statusBox.innerHTML=
+"सभी उपलब्ध jobs में तुरंत खोजें";
+
+return;
+}
+
+const found=jobs.filter(job=>
+jobMatches(job,input)
+);
+
+if(found.length){
+
+statusBox.innerHTML=
+"<b>"+found.length+"</b> job result मिले";
+
+noResult.style.display="none";
+
+resultList.innerHTML="";
+
+found.forEach(function(job){
+
+const titleElement=job.querySelector("h3");
+
+if(!titleElement)return;
+
+const title=titleElement.innerText;
+
+const p=job.querySelector("p");
+
+const description=p?p.innerText:"";
+
+const date=job.querySelector(".last-date");
+
+const resultCard=
+document.createElement("div");
+
+resultCard.className=
+"search-result-card";
+
+resultCard.innerHTML=
+"<h3>"+escapeHTML(title)+"</h3>"+
+"<p>"+escapeHTML(description)+"</p>"+
+(date?
+"<p>📅 <b>Last Date:</b> "+
+escapeHTML(date.innerText)+
+"</p>":"")+
+"<button class='result-button'>👀 नौकरी देखें →</button>";
+
+resultCard
+.querySelector("button")
+.onclick=function(){
+
+searchResults.style.display="none";
+suggestionBox.style.display="none";
+
+jobs.forEach(item=>{
+item.style.display=
+item===job?"block":"none";
+});
+
+job.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+job.style.boxShadow=
+"0 0 0 3px #0b806f";
+
+setTimeout(()=>{
+job.style.boxShadow=
+"0 2px 8px #ddd";
+},1800);
+
+};
+
+resultList.appendChild(resultCard);
+
+});
+
+searchResults.style.display="block";
+
+jobs.forEach(job=>{
+job.style.display="none";
+});
+
+showSuggestions(found);
+
+}else{
+
+statusBox.innerHTML="0 job result मिले";
+
+searchResults.style.display="none";
+suggestionBox.style.display="none";
+noResult.style.display="block";
+
+jobs.forEach(job=>{
+job.style.display="none";
+});
+
+}
+
+}
+
 
 function showSuggestions(foundJobs){
 
-  suggestionBox.innerHTML="";
+suggestionBox.innerHTML="";
 
-  const titles=[];
+const unique=[];
 
+foundJobs.forEach(job=>{
 
-  foundJobs.forEach(function(job){
+const h3=job.querySelector("h3");
 
-    const h3 =
-      job.querySelector("h3");
+if(h3&&!unique.includes(h3.innerText)){
+unique.push(h3.innerText);
+}
 
-    if(h3){
+});
 
-      titles.push({
-        title:h3.innerText,
-        job:job
-      });
+unique.slice(0,7).forEach(title=>{
 
-    }
+const div=document.createElement("div");
 
-  });
+div.className="suggestion";
 
+div.innerHTML="🔎 "+escapeHTML(title);
 
-  const unique=[];
+div.onclick=function(){
 
+searchInput.value=title;
+searchJobs();
 
-  titles.forEach(function(item){
+};
 
-    if(
-      !unique.some(
-        x => x.title === item.title
-      )
-    ){
+suggestionBox.appendChild(div);
 
-      unique.push(item);
+});
 
-    }
-
-  });
-
-
-  unique
-    .slice(0,7)
-    .forEach(function(item){
-
-      const div =
-        document.createElement("div");
-
-      div.className="suggestion";
-
-      div.innerHTML =
-        "🔎 "+
-        escapeHTML(item.title);
-
-
-      div.onclick=function(){
-
-        searchInput.value =
-          item.title;
-
-        searchJobs();
-
-      };
-
-
-      suggestionBox.appendChild(div);
-
-    });
-
-
-  if(unique.length){
-
-    suggestionBox.style.display =
-      "block";
-
-  }else{
-
-    suggestionBox.style.display =
-      "none";
-
-  }
+suggestionBox.style.display=
+unique.length?"block":"none";
 
 }
 
-
-/* =========================
-   CLEAR
-========================= */
 
 function clearSearch(){
 
-  searchInput.value="";
+searchInput.value="";
 
-  searchResults.style.display="none";
+searchResults.style.display="none";
+resultList.innerHTML="";
+noResult.style.display="none";
+suggestionBox.style.display="none";
+clearButton.style.display="none";
 
-  resultList.innerHTML="";
+getAllJobs().forEach(job=>{
+job.style.display="block";
+});
 
-  noResult.style.display="none";
+statusBox.innerHTML=
+"सभी उपलब्ध jobs में तुरंत खोजें";
 
-  suggestionBox.style.display="none";
-
-  clearButton.style.display="none";
-
-
-  getAllJobs().forEach(function(job){
-
-    job.style.display="block";
-
-  });
-
-
-  statusBox.innerHTML =
-    "सभी उपलब्ध jobs में तुरंत खोजें";
-
-  searchInput.focus();
+searchInput.focus();
 
 }
 
 
-/* =========================
-   SEARCH EVENTS
-========================= */
-
 searchInput.addEventListener(
-  "input",
-  function(){
-
-    searchJobs();
-
-  }
+"input",
+searchJobs
 );
 
-
 searchInput.addEventListener(
-  "keydown",
-  function(event){
+"keydown",
+function(e){
 
-    if(event.key==="Enter"){
+if(e.key==="Enter"){
+e.preventDefault();
+searchJobs();
+}
 
-      event.preventDefault();
+if(e.key==="Escape"){
+clearSearch();
+}
 
-      searchJobs();
+});
 
-    }
-
-    if(event.key==="Escape"){
-
-      clearSearch();
-
-    }
-
-  }
-);
-
-
-/* =========================
-   OUTSIDE CLICK
-========================= */
 
 document.addEventListener(
-  "click",
-  function(event){
+"click",
+function(e){
 
-    if(
-      !event.target.closest(".search")
-    ){
+if(!e.target.closest(".search")){
+suggestionBox.style.display="none";
+}
 
-      suggestionBox.style.display =
-        "none";
+});
 
-    }
 
-  }
+/* =====================================================
+   AUTOMATIC JOB STATUS + COUNTDOWN
+===================================================== */
+
+const monthNames={
+january:0,
+february:1,
+march:2,
+april:3,
+may:4,
+june:5,
+july:6,
+august:7,
+september:8,
+october:9,
+november:10,
+december:11
+};
+
+
+function parseDate(text){
+
+const parts=text.trim().split(/\s+/);
+
+if(parts.length!==3)return null;
+
+const day=parseInt(parts[0]);
+const month=monthNames[
+parts[1].toLowerCase()
+];
+const year=parseInt(parts[2]);
+
+if(
+isNaN(day)||
+month===undefined||
+isNaN(year)
+)return null;
+
+return new Date(
+year,
+month,
+day,
+23,
+59,
+59
+);
+
+}
+
+
+function updateJobStatus(job){
+
+const dateText=job.dataset.lastdate;
+
+if(!dateText)return;
+
+const lastDate=parseDate(dateText);
+
+if(!lastDate)return;
+
+const status=job.querySelector(
+".status-badge"
+);
+
+const countdown=job.querySelector(
+".countdown"
+);
+
+if(!status||!countdown)return;
+
+const now=new Date();
+
+const diff=
+lastDate.getTime()-now.getTime();
+
+
+if(diff<=0){
+
+status.textContent="🔴 Closed";
+
+status.className=
+"status-badge status-closed";
+
+countdown.textContent=
+"⛔ आवेदन की अंतिम तारीख समाप्त हो गई है।";
+
+countdown.className=
+"countdown closed";
+
+return;
+
+}
+
+
+const seconds=
+Math.floor(diff/1000);
+
+const days=
+Math.floor(seconds/86400);
+
+const hours=
+Math.floor((seconds%86400)/3600);
+
+const minutes=
+Math.floor((seconds%3600)/60);
+
+const secs=
+seconds%60;
+
+
+if(days<=3){
+
+status.textContent=
+"🟠 Closing Soon";
+
+status.className=
+"status-badge status-closing";
+
+}else{
+
+status.textContent=
+"🟢 Active";
+
+status.className=
+"status-badge status-active";
+
+}
+
+
+if(days>0){
+
+countdown.textContent=
+"⏳ "+days+
+" दिन "+hours+
+" घंटे बाकी";
+
+}else{
+
+countdown.textContent=
+"🔥 "+hours+
+" घंटे "+minutes+
+" मिनट "+secs+
+" सेकंड बाकी";
+
+}
+
+}
+
+
+function updateAllStatuses(){
+
+getAllJobs().forEach(
+updateJobStatus
+);
+
+}
+
+
+updateAllStatuses();
+
+setInterval(
+updateAllStatuses,
+1000
 );
 
 
-/* =========================
-   ANIMATED NUMBERS
-========================= */
+/* INITIAL */
 
-document
-  .querySelectorAll(".stat-number")
-  .forEach(function(counter){
-
-    const target =
-      Number(counter.dataset.target);
-
-    let current=0;
-
-    const duration=1400;
-
-    const startTime =
-      performance.now();
-
-
-    function updateNumber(now){
-
-      const progress =
-        Math.min(
-          (now-startTime) /
-          duration,
-          1
-        );
-
-
-      const eased =
-        1-Math.pow(
-          1-progress,
-          3
-        );
-
-
-      current =
-        Math.floor(
-          target*eased
-        );
-
-
-      counter.textContent =
-        current.toLocaleString("en-IN")+
-        "+";
-
-
-      if(progress<1){
-
-        requestAnimationFrame(
-          updateNumber
-        );
-
-      }
-
-    }
-
-
-    requestAnimationFrame(
-      updateNumber
-    );
-
-  });
-
-
-/* =========================
-   INITIAL STATE
-========================= */
-
-getAllJobs().forEach(function(job){
-
-  job.style.display="block";
-
+getAllJobs().forEach(job=>{
+job.style.display="block";
 });
 
 </script>
 
 </body>
-   </html>
+  </html>
