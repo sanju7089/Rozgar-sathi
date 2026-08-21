@@ -1,173 +1,86 @@
 import re
-import json
 import hashlib
 from datetime import datetime
 from urllib.request import Request, urlopen
+from urllib.parse import urljoin
 from html import unescape
 
 
 JOBS_FILE = "jobs-data.js"
 CLOSED_FILE = "closed-jobs-data.js"
-SOURCES_FILE = "job-sources.json"
 
 DRDO_URL = "https://drdo.gov.in/drdo/en/offerings/vacancies"
+INDIA_POST_URL = "https://www.indiapost.gov.in/vacancies"
+SBI_URL = "https://sbi.co.in/web/careers/current-openings"
 
 
 # =========================================================
-# BASIC FUNCTIONS
+# DATE
 # =========================================================
 
-def today_date():
+def today():
     return datetime.now().date()
 
 
-def parse_date(date_string):
-    return datetime.strptime(
-        date_string,
-        "%Y-%m-%d"
-    ).date()
-
-
-def job_to_js(job):
-
-    def clean(value):
-        return str(value).replace(
-            "\\",
-            "\\\\"
-        ).replace(
-            '"',
-            '\\"'
-        )
-
-    return f'''{{
-  id:"{clean(job[0])}",
-  title:"{clean(job[1])}",
-  category:"{clean(job[2])}",
-  qualification:"{clean(job[3])}",
-  posts:"{clean(job[4])}",
-  lastDate:"{clean(job[5])}",
-  page:"{clean(job[6])}"
-}}'''
-
-
-# =========================================================
-# READ EXISTING JOB DATABASE
-# =========================================================
-
-def read_jobs(filename):
+def parse_date(value):
 
     try:
+        return datetime.strptime(
+            value,
+            "%Y-%m-%d"
+        ).date()
 
-        with open(
-            filename,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            content = f.read()
-
-    except FileNotFoundError:
-
-        return []
+    except ValueError:
+        return None
 
 
-    pattern = re.compile(
-        r'\{\s*'
-        r'id:"([^"]+)",\s*'
-        r'title:"([^"]+)",\s*'
-        r'category:"([^"]+)",\s*'
-        r'qualification:"([^"]+)",\s*'
-        r'posts:"([^"]+)",\s*'
-        r'lastDate:"([^"]+)",\s*'
-        r'page:"([^"]+)"\s*'
-        r'\}',
-        re.MULTILINE
-    )
+def convert_date(value):
 
+    value = value.strip()
 
-    return pattern.findall(content)
+    formats = [
+        "%d-%m-%Y",
+        "%d/%m/%Y",
+        "%d.%m.%Y",
+        "%d-%m-%y",
+        "%d/%m/%y",
+        "%d.%m.%y"
+    ]
 
+    for fmt in formats:
 
-# =========================================================
-# WRITE JOB DATABASE
-# =========================================================
+        try:
 
-def write_jobs(
-    filename,
-    variable_name,
-    jobs
-):
+            return datetime.strptime(
+                value,
+                fmt
+            ).strftime("%Y-%m-%d")
 
-    output = (
-        f"const {variable_name} = [\n\n"
-    )
+        except ValueError:
+            pass
 
-
-    if jobs:
-
-        output += ",\n\n".join(
-            job_to_js(job)
-            for job in jobs
-        )
-
-
-    output += "\n\n];\n"
-
-
-    with open(
-        filename,
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        f.write(output)
+    return ""
 
 
 # =========================================================
-# DOWNLOAD WEB PAGE
-# =========================================================
-
-def download_page(url):
-
-    try:
-
-        request = Request(
-            url,
-            headers={
-                "User-Agent":
-                "Mozilla/5.0 "
-                "(Rozgar-Sathi-Automatic-Bot)"
-            }
-        )
-
-
-        with urlopen(
-            request,
-            timeout=30
-        ) as response:
-
-            return response.read().decode(
-                "utf-8",
-                errors="ignore"
-            )
-
-
-    except Exception as error:
-
-        print(
-            "Download failed:",
-            url,
-            error
-        )
-
-        return ""
-
-
-# =========================================================
-# HTML CLEANING
+# HTML
 # =========================================================
 
 def clean_html(text):
+
+    text = re.sub(
+        r"<script.*?</script>",
+        " ",
+        text,
+        flags=re.I | re.S
+    )
+
+    text = re.sub(
+        r"<style.*?</style>",
+        " ",
+        text,
+        flags=re.I | re.S
+    )
 
     text = re.sub(
         r"<[^>]+>",
@@ -186,136 +99,271 @@ def clean_html(text):
     return text.strip()
 
 
+def download(url):
+
+    try:
+
+        request = Request(
+            url,
+            headers={
+                "User-Agent":
+                "Mozilla/5.0 "
+                "(Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 "
+                "Chrome/120 Safari/537.36"
+            }
+        )
+
+        with urlopen(
+            request,
+            timeout=30
+        ) as response:
+
+            return response.read().decode(
+                "utf-8",
+                errors="ignore"
+            )
+
+    except Exception as error:
+
+        print(
+            "Download failed:",
+            url,
+            error
+        )
+
+        return ""
+
+
 # =========================================================
-# DATE CONVERSION
+# JOB ID
 # =========================================================
 
-def convert_date(date_string):
+def make_id(prefix, title, date, page):
 
-    date_string = date_string.strip()
+    raw = (
+        prefix
+        + "|"
+        + title
+        + "|"
+        + date
+        + "|"
+        + page
+    )
 
-
-    formats = [
-        "%d/%m/%Y",
-        "%d-%m-%Y",
-        "%d.%m.%Y",
-        "%d/%m/%y",
-        "%d-%m-%y"
-    ]
-
-
-    for fmt in formats:
-
-        try:
-
-            return datetime.strptime(
-                date_string,
-                fmt
-            ).strftime("%Y-%m-%d")
-
-        except ValueError:
-
-            pass
-
-
-    return ""
-
-
-# =========================================================
-# DRDO TITLE FILTER
-# =========================================================
-
-def is_real_drdo_vacancy(title):
-
-    title_lower = title.lower()
-
-
-    blocked_words = [
-
-        "result",
-
-        "selected candidate",
-
-        "provisionally selected",
-
-        "waitlisted",
-
-        "selection list",
-
-        "corrigendum",
-
-        "shortlisted",
-
-        "admit card",
-
-        "answer key",
-
-        "skill-seeker"
-
-    ]
-
-
-    for word in blocked_words:
-
-        if word in title_lower:
-
-            return False
-
-
-    vacancy_words = [
-
-        "invite",
-
-        "invites",
-
-        "application",
-
-        "applications",
-
-        "recruitment",
-
-        "apprentice",
-
-        "fellowship",
-
-        "jrf",
-
-        "research associate",
-
-        "ra & jrf",
-
-        "project assistant",
-
-        "scientist",
-
-        "technician",
-
-        "internship"
-
-    ]
-
-
-    return any(
-        word in title_lower
-        for word in vacancy_words
+    return (
+        prefix
+        + "-"
+        + hashlib.sha1(
+            raw.encode("utf-8")
+        ).hexdigest()[:12]
     )
 
 
 # =========================================================
-# DRDO SCRAPER
+# JS
+# =========================================================
+
+def job_to_js(job):
+
+    def clean(value):
+
+        return (
+            str(value)
+            .replace("\\", "\\\\")
+            .replace('"', '\\"')
+            .replace("\n", " ")
+            .replace("\r", " ")
+        )
+
+    return f'''{{
+  id:"{clean(job[0])}",
+  title:"{clean(job[1])}",
+  category:"{clean(job[2])}",
+  qualification:"{clean(job[3])}",
+  posts:"{clean(job[4])}",
+  lastDate:"{clean(job[5])}",
+  page:"{clean(job[6])}"
+}}'''
+
+
+# =========================================================
+# READ DATABASE
+# =========================================================
+
+def read_jobs(filename):
+
+    try:
+
+        with open(
+            filename,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            content = file.read()
+
+    except FileNotFoundError:
+
+        return []
+
+    pattern = re.compile(
+        r'\{\s*'
+        r'id:"([^"]+)",\s*'
+        r'title:"([^"]+)",\s*'
+        r'category:"([^"]+)",\s*'
+        r'qualification:"([^"]+)",\s*'
+        r'posts:"([^"]+)",\s*'
+        r'lastDate:"([^"]+)",\s*'
+        r'page:"([^"]+)"\s*'
+        r'\}',
+        re.MULTILINE
+    )
+
+    return pattern.findall(content)
+
+
+# =========================================================
+# WRITE DATABASE
+# =========================================================
+
+def write_jobs(
+    filename,
+    variable,
+    jobs
+):
+
+    output = (
+        f"const {variable} = [\n\n"
+    )
+
+    if jobs:
+
+        output += ",\n\n".join(
+            job_to_js(job)
+            for job in jobs
+        )
+
+    output += "\n\n];\n"
+
+    with open(
+        filename,
+        "w",
+        encoding="utf-8"
+    ) as file:
+
+        file.write(output)
+
+
+# =========================================================
+# ADD JOBS + DUPLICATE PROTECTION
+# =========================================================
+
+def add_jobs(
+    existing,
+    new_jobs
+):
+
+    result = list(existing)
+
+    ids = {
+        job[0]
+        for job in result
+    }
+
+    added = 0
+
+    for job in new_jobs:
+
+        if job[0] not in ids:
+
+            result.append(job)
+
+            ids.add(
+                job[0]
+            )
+
+            added += 1
+
+    return result, added
+
+
+# =========================================================
+# EXPIRED JOB SYSTEM
+# =========================================================
+
+def move_expired(
+    active,
+    closed
+):
+
+    active_result = []
+
+    closed_result = list(
+        closed
+    )
+
+    closed_ids = {
+        job[0]
+        for job in closed_result
+    }
+
+    moved = 0
+
+    for job in active:
+
+        expiry = parse_date(
+            job[5]
+        )
+
+        if expiry is None:
+
+            active_result.append(
+                job
+            )
+
+            continue
+
+        if expiry < today():
+
+            if job[0] not in closed_ids:
+
+                closed_result.append(
+                    job
+                )
+
+                closed_ids.add(
+                    job[0]
+                )
+
+                moved += 1
+
+        else:
+
+            active_result.append(
+                job
+            )
+
+    return (
+        active_result,
+        closed_result,
+        moved
+    )
+
+
+# =========================================================
+# DRDO
 # =========================================================
 
 def scrape_drdo():
 
     print("--------------------------------")
-    print("DRDO AUTOMATIC VACANCY SCANNER")
+    print("DRDO AUTOMATIC SCANNER")
     print("--------------------------------")
 
+    jobs = []
 
-    new_jobs = []
-
-
-    # Current page + next pages
+    # DRDO current page + next pages
     for page_number in range(0, 3):
 
         if page_number == 0:
@@ -326,30 +374,14 @@ def scrape_drdo():
 
             url = (
                 DRDO_URL
-                +
-                "?page="
-                +
-                str(page_number)
+                + "?page="
+                + str(page_number)
             )
 
-
-        print(
-            "Scanning:",
-            url
-        )
-
-
-        html = download_page(url)
-
+        html = download(url)
 
         if not html:
-
             continue
-
-
-        # -------------------------------------------------
-        # Find vacancy links
-        # -------------------------------------------------
 
         links = re.findall(
             r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>'
@@ -359,103 +391,84 @@ def scrape_drdo():
             flags=re.I | re.S
         )
 
-
         for href, raw_title in links:
 
             title = clean_html(
                 raw_title
             )
 
-
-            if not title:
-
-                continue
-
-
             if len(title) < 15:
-
                 continue
 
+            lower = title.lower()
 
-            if not is_real_drdo_vacancy(
-                title
+            # Result/selection notices को vacancy नहीं मानना
+            blocked = [
+                "result",
+                "selected candidate",
+                "provisionally selected",
+                "waitlisted",
+                "corrigendum",
+                "shortlisted",
+                "answer key"
+            ]
+
+            if any(
+                word in lower
+                for word in blocked
             ):
-
                 continue
 
+            vacancy_words = [
+                "application",
+                "recruitment",
+                "apprentice",
+                "jrf",
+                "research associate",
+                "scientist",
+                "technician",
+                "project assistant",
+                "internship"
+            ]
 
-            # Only links which look like
-            # DRDO vacancy detail pages
-            if (
-                "vacanc" not in href.lower()
-                and
-                "career" not in href.lower()
-                and
-                "recruit" not in href.lower()
+            if not any(
+                word in lower
+                for word in vacancy_words
             ):
-
                 continue
 
+            page_url = urljoin(
+                url,
+                href
+            )
 
-            if href.startswith("/"):
-
-                page_url = (
-                    "https://drdo.gov.in"
-                    +
-                    href
-                )
-
-            elif href.startswith("http"):
-
-                page_url = href
-
-            else:
-
-                continue
-
-
-            # -------------------------------------------------
-            # Find nearby dates
-            # -------------------------------------------------
-
-            link_position = html.find(
+            position = html.find(
                 raw_title
             )
 
-
-            if link_position < 0:
-
+            if position < 0:
                 continue
 
-
-            nearby_html = html[
-                link_position:
-                link_position + 5000
+            nearby = html[
+                position:
+                position + 6000
             ]
 
-
-            nearby_text = clean_html(
-                nearby_html
+            text = clean_html(
+                nearby
             )
 
-
-            date_matches = re.findall(
+            dates = re.findall(
                 r'\b\d{2}[/-]\d{2}[/-]\d{4}\b',
-                nearby_text
+                text
             )
 
-
-            if not date_matches:
-
+            if not dates:
                 continue
-
 
             last_date = ""
 
-
-            # Usually the last displayed date
-            # in the vacancy block is End Date.
-            for date_value in date_matches:
+            for date_value in dates:
 
                 converted = convert_date(
                     date_value
@@ -465,321 +478,562 @@ def scrape_drdo():
 
                     last_date = converted
 
-
             if not last_date:
-
                 continue
 
-
-            # -------------------------------------------------
-            # Don't add already expired vacancy
-            # -------------------------------------------------
-
-            try:
-
-                if parse_date(
-                    last_date
-                ) < today_date():
-
-                    continue
-
-            except ValueError:
-
-                continue
-
-
-            # -------------------------------------------------
-            # Unique ID
-            # -------------------------------------------------
-
-            unique_text = (
-                title
-                +
-                "|"
-                +
+            expiry = parse_date(
                 last_date
-                +
-                "|"
-                +
-                page_url
             )
 
+            if expiry is None:
+                continue
 
-            job_id = (
-                "drdo-"
-                +
-                hashlib.sha1(
-                    unique_text.encode(
-                        "utf-8"
-                    )
-                ).hexdigest()[:12]
-            )
+            if expiry < today():
+                continue
 
-
-            job = (
-
-                job_id,
-
+            job_id = make_id(
+                "drdo",
                 title,
-
-                "Government • Defence • DRDO",
-
-                "Notification के अनुसार",
-
-                "Multiple / Notification के अनुसार",
-
                 last_date,
-
                 page_url
-
             )
 
+            jobs.append((
+                job_id,
+                title,
+                "Government • Defence • DRDO",
+                "Notification के अनुसार",
+                "Multiple / Notification के अनुसार",
+                last_date,
+                page_url
+            ))
 
-            # Duplicate protection
-
-            if not any(
-                existing[0] == job_id
-                for existing in new_jobs
-            ):
-
-                new_jobs.append(job)
-
-
-    print(
-        "DRDO vacancies found:",
-        len(new_jobs)
-    )
-
-
-    return new_jobs
-
-
-# =========================================================
-# ADD NEW JOBS
-# =========================================================
-
-def merge_new_jobs(
-    existing_jobs,
-    scraped_jobs
-):
-
-    result = list(
-        existing_jobs
-    )
-
-
-    existing_ids = {
-        job[0]
-        for job in existing_jobs
-    }
-
-
-    added = 0
-
-
-    for job in scraped_jobs:
-
-        if job[0] not in existing_ids:
-
-            result.append(job)
-
-            existing_ids.add(
-                job[0]
-            )
-
-            added += 1
-
-
-    return result, added
-
-
-# =========================================================
-# MOVE EXPIRED JOBS
-# =========================================================
-
-def move_expired_jobs(
-    jobs,
-    closed_jobs
-):
-
-    today = today_date()
-
-
-    active_jobs = []
-
-    closed = list(
-        closed_jobs
-    )
-
-
-    closed_ids = {
-        job[0]
-        for job in closed
-    }
-
-
-    moved = 0
-
+    unique = {}
 
     for job in jobs:
 
-        try:
+        unique[job[0]] = job
 
-            expiry_date = parse_date(
-                job[5]
-            )
+    jobs = list(
+        unique.values()
+    )
 
-        except ValueError:
+    print(
+        "DRDO vacancies found:",
+        len(jobs)
+    )
 
-            active_jobs.append(job)
+    return jobs
 
+
+# =========================================================
+# INDIA POST
+# =========================================================
+
+def scrape_india_post():
+
+    print("--------------------------------")
+    print("INDIA POST AUTOMATIC SCANNER")
+    print("--------------------------------")
+
+    html = download(
+        INDIA_POST_URL
+    )
+
+    if not html:
+        return []
+
+    jobs = []
+
+    links = re.findall(
+        r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>'
+        r'(.*?)'
+        r'</a>',
+        html,
+        flags=re.I | re.S
+    )
+
+    for href, raw_title in links:
+
+        title = clean_html(
+            raw_title
+        )
+
+        if len(title) < 20:
             continue
 
+        lower = title.lower()
 
-        if expiry_date < today:
+        allowed = [
+            "recruitment",
+            "vacancies",
+            "vacancy",
+            "driver",
+            "skilled artisan",
+            "staff car",
+            "postman",
+            "assistant"
+        ]
 
-            if job[0] not in closed_ids:
+        if not any(
+            word in lower
+            for word in allowed
+        ):
+            continue
 
-                closed.append(job)
+        blocked = [
+            "corrigendum",
+            "result",
+            "merit list",
+            "selected candidate",
+            "shortlisted",
+            "answer key"
+        ]
 
-                closed_ids.add(
-                    job[0]
-                )
+        if any(
+            word in lower
+            for word in blocked
+        ):
+            continue
 
-                moved += 1
+        page_url = urljoin(
+            INDIA_POST_URL,
+            href
+        )
 
-        else:
+        # India Post listing पर कई बार last date
+        # नहीं होती; detail/PDF के आसपास खोजें
+        position = html.find(
+            raw_title
+        )
 
-            active_jobs.append(job)
+        nearby = html[
+            position:
+            position + 7000
+        ]
 
+        text = clean_html(
+            nearby
+        )
 
-    return (
-        active_jobs,
-        closed,
-        moved
+        dates = re.findall(
+            r'\b\d{2}[-/.]\d{2}[-/.]\d{4}\b',
+            text
+        )
+
+        if not dates:
+            continue
+
+        last_date = ""
+
+        for value in dates:
+
+            converted = convert_date(
+                value
+            )
+
+            if converted:
+                last_date = converted
+
+        if not last_date:
+            continue
+
+        expiry = parse_date(
+            last_date
+        )
+
+        if expiry is None:
+            continue
+
+        if expiry < today():
+            continue
+
+        job_id = make_id(
+            "indiapost",
+            title,
+            last_date,
+            page_url
+        )
+
+        jobs.append((
+            job_id,
+            title,
+            "Government • India Post",
+            "Notification के अनुसार",
+            "Notification के अनुसार",
+            last_date,
+            page_url
+        ))
+
+    unique = {}
+
+    for job in jobs:
+
+        unique[job[0]] = job
+
+    jobs = list(
+        unique.values()
     )
+
+    print(
+        "India Post vacancies found:",
+        len(jobs)
+    )
+
+    return jobs
+
+
+# =========================================================
+# SBI
+# =========================================================
+
+def scrape_sbi():
+
+    print("--------------------------------")
+    print("SBI AUTOMATIC SCANNER")
+    print("--------------------------------")
+
+    html = download(
+        SBI_URL
+    )
+
+    if not html:
+        return []
+
+    jobs = []
+
+    # SBI page पर Last Date to Apply के आसपास
+    # recruitment title ढूँढना
+    date_pattern = re.compile(
+        r'LAST\s+DATE\s+TO\s+APPLY\s*:?\s*'
+        r'(\d{2}[-/.]\d{2}[-/.]\d{4})',
+        re.I
+    )
+
+    matches = list(
+        date_pattern.finditer(html)
+    )
+
+    for match in matches:
+
+        date_value = match.group(1)
+
+        last_date = convert_date(
+            date_value
+        )
+
+        if not last_date:
+            continue
+
+        expiry = parse_date(
+            last_date
+        )
+
+        if expiry is None:
+            continue
+
+        if expiry < today():
+            continue
+
+        # Last date से पहले का HTML block
+        start = max(
+            0,
+            match.start() - 5000
+        )
+
+        before_html = html[
+            start:
+            match.start()
+        ]
+
+        text = clean_html(
+            before_html
+        )
+
+        # Candidate title lines
+        candidates = re.split(
+            r'(?<=[.!?])\s+|(?=\b(?:RECRUITMENT|ENGAGEMENT)\b)',
+            text
+        )
+
+        title = ""
+
+        # पहले uppercase recruitment title ढूँढें
+        for candidate in reversed(
+            candidates
+        ):
+
+            candidate = candidate.strip()
+
+            upper = candidate.upper()
+
+            if (
+                "RECRUITMENT" in upper
+                or
+                "ENGAGEMENT" in upper
+            ):
+
+                if len(candidate) >= 25:
+
+                    title = candidate
+
+                    break
+
+        # दूसरा fallback
+        if not title:
+
+            found = re.findall(
+                r'(?:RECRUITMENT|ENGAGEMENT)[^.!?]{20,350}',
+                text,
+                flags=re.I
+            )
+
+            if found:
+
+                title = found[-1].strip()
+
+        if not title:
+            continue
+
+        # अनावश्यक text साफ करें
+        title = re.sub(
+            r'\s+',
+            ' ',
+            title
+        ).strip()
+
+        # HTML/UI text से बचाव
+        blocked = [
+            "result",
+            "selected",
+            "interview schedule",
+            "call letter",
+            "provisionally selected",
+            "answer key",
+            "shortlisted"
+        ]
+
+        lower = title.lower()
+
+        if any(
+            word in lower
+            for word in blocked
+        ):
+            continue
+
+        # Title बहुत बड़ा हो तो छोटा करें
+        if len(title) > 350:
+
+            title = title[:350].strip()
+
+        page_url = SBI_URL
+
+        job_id = make_id(
+            "sbi",
+            title,
+            last_date,
+            page_url
+        )
+
+        jobs.append((
+            job_id,
+            title,
+            "Bank • SBI • All India",
+            "Notification के अनुसार",
+            "Notification के अनुसार",
+            last_date,
+            page_url
+        ))
+
+    unique = {}
+
+    for job in jobs:
+
+        unique[job[0]] = job
+
+    jobs = list(
+        unique.values()
+    )
+
+    print(
+        "SBI vacancies found:",
+        len(jobs)
+    )
+
+    return jobs
 
 
 # =========================================================
 # MAIN UPDATE
 # =========================================================
 
-def update_jobs():
+def update():
 
     print("================================")
-    print("ROZGAR SATHI AUTOMATIC SYSTEM")
+    print("ROZGAR SATHI AUTO JOB SYSTEM")
     print("================================")
 
     print(
         "Today's date:",
-        today_date()
+        today()
     )
 
-
-    # Existing databases
-
-    active_jobs = read_jobs(
+    # Existing database
+    active = read_jobs(
         JOBS_FILE
     )
 
-    closed_jobs = read_jobs(
+    closed = read_jobs(
         CLOSED_FILE
     )
 
-
     print(
         "Existing active jobs:",
-        len(active_jobs)
+        len(active)
     )
-
 
     print(
         "Existing closed jobs:",
-        len(closed_jobs)
+        len(closed)
     )
 
 
     # -----------------------------------------------------
-    # 1. Remove expired jobs first
+    # STEP 1
+    # Expired jobs -> Closed
     # -----------------------------------------------------
 
     (
-        active_jobs,
-        closed_jobs,
-        moved_count
-    ) = move_expired_jobs(
-        active_jobs,
-        closed_jobs
+        active,
+        closed,
+        moved
+    ) = move_expired(
+        active,
+        closed
     )
 
-
     print(
-        "Moved to closed:",
-        moved_count
+        "Expired jobs moved:",
+        moved
     )
 
 
     # -----------------------------------------------------
-    # 2. Scan DRDO
+    # STEP 2
+    # DRDO
     # -----------------------------------------------------
 
     drdo_jobs = scrape_drdo()
 
-
-    # -----------------------------------------------------
-    # 3. Add new DRDO jobs
-    # -----------------------------------------------------
-
     (
-        active_jobs,
-        added_count
-    ) = merge_new_jobs(
-        active_jobs,
+        active,
+        drdo_added
+    ) = add_jobs(
+        active,
         drdo_jobs
     )
 
-
     print(
         "New DRDO jobs added:",
-        added_count
+        drdo_added
     )
 
 
     # -----------------------------------------------------
-    # 4. Save databases
+    # STEP 3
+    # INDIA POST
+    # -----------------------------------------------------
+
+    india_post_jobs = scrape_india_post()
+
+    (
+        active,
+        post_added
+    ) = add_jobs(
+        active,
+        india_post_jobs
+    )
+
+    print(
+        "New India Post jobs added:",
+        post_added
+    )
+
+
+    # -----------------------------------------------------
+    # STEP 4
+    # SBI
+    # -----------------------------------------------------
+
+    sbi_jobs = scrape_sbi()
+
+    (
+        active,
+        sbi_added
+    ) = add_jobs(
+        active,
+        sbi_jobs
+    )
+
+    print(
+        "New SBI jobs added:",
+        sbi_added
+    )
+
+
+    # -----------------------------------------------------
+    # STEP 5
+    # FINAL DATABASE SAVE
     # -----------------------------------------------------
 
     write_jobs(
         JOBS_FILE,
         "jobs",
-        active_jobs
+        active
     )
-
 
     write_jobs(
         CLOSED_FILE,
         "closedJobs",
-        closed_jobs
+        closed
     )
 
 
+    # -----------------------------------------------------
+    # FINAL REPORT
+    # -----------------------------------------------------
+
     print("--------------------------------")
+
     print(
         "Final active jobs:",
-        len(active_jobs)
+        len(active)
     )
 
     print(
         "Final closed jobs:",
-        len(closed_jobs)
+        len(closed)
+    )
+
+    print(
+        "DRDO added:",
+        drdo_added
+    )
+
+    print(
+        "India Post added:",
+        post_added
+    )
+
+    print(
+        "SBI added:",
+        sbi_added
     )
 
     print("--------------------------------")
-
     print(
         "ROZGAR SATHI UPDATE COMPLETE"
     )
-
     print("================================")
 
 
@@ -789,4 +1043,4 @@ def update_jobs():
 
 if __name__ == "__main__":
 
-    update_jobs()
+    update()
