@@ -283,7 +283,65 @@ Work From Home
 
 
 <h2>🔥 Latest Jobs</h2>
+<div id="latestJobs"></div>
 
+<script src="jobs-data.js"></script>
+
+<script>
+function showLatestJobs() {
+
+    const container = document.getElementById("latestJobs");
+
+    if (!container) return;
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    container.innerHTML = "";
+
+    jobs.forEach(function(job) {
+
+        const lastDate = new Date(job.lastDate);
+        lastDate.setHours(23, 59, 59, 999);
+
+        if (lastDate < today) return;
+
+        container.innerHTML += `
+            <div class="job">
+
+                <h3>💼 ${job.title}</h3>
+
+                <p>
+                    <b>Category:</b>
+                    ${job.category}
+                </p>
+
+                <p>
+                    <b>Qualification:</b>
+                    ${job.qualification}
+                </p>
+
+                <p>
+                    <b>Total Posts:</b>
+                    ${job.posts}
+                </p>
+
+                <p>
+                    <b>Last Date:</b>
+                    ${job.lastDate}
+                </p>
+
+                <a class="apply" href="${job.page}">
+                    A2Z Details →
+                </a>
+
+            </div>
+        `;
+    });
+}
+
+showLatestJobs();
+</script>
 
 <div id="jobList">
 
