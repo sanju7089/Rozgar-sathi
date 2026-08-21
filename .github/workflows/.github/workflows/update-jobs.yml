@@ -1,0 +1,42 @@
+name: Rozgar Sathi Automatic Job Update
+
+on:
+  schedule:
+    # रोज सुबह 6:00 UTC = लगभग 11:30 AM IST
+    - cron: "0 6 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+
+  update-jobs:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Automatic Job Update
+        run: |
+          python scripts/update_jobs.py
+
+      - name: Save Updated Jobs
+        run: |
+          git config user.name "Rozgar Sathi Bot"
+          git config user.email "actions@github.com"
+
+          git add jobs-data.js
+
+          git diff --cached --quiet || git commit -m "Automatic job update"
+
+          git push
