@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Government Jobs | Rozgar Sathi</title>
 
-<meta name="description" content="Rozgar Sathi पर Government Jobs और सरकारी भर्ती की जानकारी।">
+<meta name="description" content="भारत की Government Jobs, SSC, Railway, UPSC और अन्य सरकारी भर्ती की जानकारी।">
 
 <style>
 
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
 margin:0;
@@ -69,30 +68,27 @@ margin:auto;
 padding:15px;
 }
 
-.intro{
+.intro,
+.job{
 background:white;
-padding:20px;
 border-radius:12px;
 box-shadow:0 2px 8px #ddd;
+}
+
+.intro{
+padding:20px;
 margin-bottom:20px;
 }
 
-.intro h2{
+.intro h2,
+.job h3{
 color:#075e54;
-margin-top:0;
 }
 
 .job{
-background:white;
 padding:18px;
 margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 2px 8px #ddd;
-}
-
-.job h3{
-color:#075e54;
-margin-top:0;
+border-left:5px solid #075e54;
 }
 
 .badge{
@@ -106,6 +102,13 @@ font-weight:bold;
 margin:2px;
 }
 
+.info{
+background:#f4f6f8;
+padding:10px;
+border-radius:8px;
+margin-top:12px;
+}
+
 .apply{
 display:inline-block;
 margin-top:10px;
@@ -117,12 +120,47 @@ text-decoration:none;
 font-weight:bold;
 }
 
+.search{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 2px 8px #ddd;
+margin-bottom:20px;
+}
+
+.search input{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+outline:none;
+}
+
+.noresult{
+display:none;
+background:white;
+padding:20px;
+margin-top:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 8px #ddd;
+}
+
 .notice{
 background:#fff8dc;
 border-left:5px solid #e0b100;
 padding:14px;
 border-radius:7px;
 margin-top:15px;
+}
+
+.warning{
+background:#fff3f3;
+border-left:5px solid #d32f2f;
+padding:14px;
+border-radius:7px;
+margin-top:20px;
 }
 
 footer{
@@ -155,7 +193,7 @@ font-size:25px;
 
 <h1>🏛️ Government Jobs</h1>
 
-<p>सरकारी नौकरी की जानकारी एक जगह</p>
+<p>भारत की सरकारी नौकरी की जानकारी एक जगह</p>
 
 </header>
 
@@ -186,66 +224,351 @@ font-size:25px;
 
 <div class="intro">
 
-<h2>सरकारी नौकरियाँ</h2>
+<h2>🇮🇳 सरकारी नौकरियाँ</h2>
 
 <p>
-यहाँ अलग-अलग सरकारी departments और organizations
-की recruitment information category-wise दी जाएगी।
+Central Government, SSC, Railway, UPSC और
+अन्य सरकारी recruitment की जानकारी यहाँ मिलेगी।
+</p>
+
+<p>
+<strong>
+Apply करने से पहले official notification जरूर check करें।
+</strong>
 </p>
 
 </div>
 
 
-<div class="job">
+<div class="search">
 
-<h3>🏛️ NRLM Recruitment 2026</h3>
+<input
+type="text"
+id="jobSearch"
+placeholder="🔎 Job खोजें... SSC, Railway, UPSC, 10th, 12th"
+onkeyup="searchJobs()"
+>
 
-<span class="badge">
-Government / Contract
-</span>
+</div>
 
-<span class="badge">
-202 Posts*
-</span>
+
+<div id="jobList">
+
+
+<!-- SSC CHSL -->
+
+<div
+class="job searchable"
+data-search="SSC CHSL 12th pass central government LDC JSA DEO">
+
+<h3>📋 SSC CHSL 2026</h3>
+
+<span class="badge">12th Pass</span>
+
+<span class="badge">Central Government</span>
+
+<span class="badge">SSC</span>
+
+<div class="info">
 
 <p>
-<b>Last Date:</b>
-17 September 2026*
+<b>🎓 Qualification:</b>
+12th / 10+2
 </p>
 
 <p>
-NRLM recruitment की eligibility,
-selection process और application information
-देखने के लिए A2Z details खोलें।
+<b>💼 Posts:</b>
+LDC / JSA / DEO आदि
 </p>
 
-<a class="apply" href="nrlm-2026.html">
-A2Z Details →
+<p>
+<b>📅 2026 Calendar:</b>
+Exam July–September 2026
+के लिए scheduled है।
+</p>
+
+</div>
+
+<a
+class="apply"
+href="https://ssc.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 SSC Official Website →
 </a>
 
 </div>
 
 
-<div class="job">
+<!-- SSC STENOGRAPHER -->
 
-<h3>📋 SSC CHSL</h3>
+<div
+class="job searchable"
+data-search="SSC Stenographer Grade C D 12th government">
 
-<span class="badge">
+<h3>⌨️ SSC Stenographer Grade C & D</h3>
+
+<span class="badge">12th Pass</span>
+
+<span class="badge">Central Government</span>
+
+<span class="badge">SSC</span>
+
+<div class="info">
+
+<p>
+<b>🎓 Qualification:</b>
 12th Pass
-</span>
-
-<span class="badge">
-Central Government
-</span>
-
-<p>
-SSC CHSL की current recruitment information
-और official notification जरूर check करें।
 </p>
 
-<a class="apply" href="ssc-chsl.html">
-A2Z Details →
+<p>
+<b>📅 2026 Calendar:</b>
+Exam August–September 2026
+के लिए scheduled है।
+</p>
+
+</div>
+
+<a
+class="apply"
+href="https://ssc.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 SSC Official Website →
 </a>
+
+</div>
+
+
+<!-- SSC MTS -->
+
+<div
+class="job searchable"
+data-search="SSC MTS Havaldar 10th government central">
+
+<h3>🛡️ SSC MTS & Havaldar 2026</h3>
+
+<span class="badge">10th Pass</span>
+
+<span class="badge">Central Government</span>
+
+<span class="badge">SSC</span>
+
+<div class="info">
+
+<p>
+<b>🎓 Qualification:</b>
+10th Pass
+</p>
+
+<p>
+<b>📅 2026 Calendar:</b>
+Advertisement June 2026,
+application closing July 2026 और
+exam September–November 2026 scheduled है।
+</p>
+
+</div>
+
+<a
+class="apply"
+href="https://ssc.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 SSC Official Website →
+</a>
+
+</div>
+
+
+<!-- SSC CGL -->
+
+<div
+class="job searchable"
+data-search="SSC CGL graduate government inspector auditor accountant">
+
+<h3>📊 SSC CGL 2026</h3>
+
+<span class="badge">Graduate</span>
+
+<span class="badge">Central Government</span>
+
+<span class="badge">SSC</span>
+
+<div class="info">
+
+<p>
+<b>🎓 Qualification:</b>
+Graduate
+</p>
+
+<p>
+<b>💼 Posts:</b>
+Inspector, Auditor, Accountant,
+Assistant और अन्य posts।
+</p>
+
+<p>
+<b>📅 2026:</b>
+Tier-I exam May–June 2026
+के लिए calendar में scheduled था।
+</p>
+
+</div>
+
+<a
+class="apply"
+href="https://ssc.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 SSC Official Website →
+</a>
+
+</div>
+
+
+<!-- RAILWAY ALP -->
+
+<div
+class="job searchable"
+data-search="Railway RRB ALP Assistant Loco Pilot 10th ITI government">
+
+<h3>🚆 Railway ALP 2026</h3>
+
+<span class="badge">Railway</span>
+
+<span class="badge">Government</span>
+
+<span class="badge">10th + ITI</span>
+
+<div class="info">
+
+<p>
+<b>🏢 Organization:</b>
+Railway Recruitment Boards
+</p>
+
+<p>
+<b>💼 Post:</b>
+Assistant Loco Pilot (ALP)
+</p>
+
+<p>
+<b>📅 Application:</b>
+15 May 2026 से 14 June 2026
+तक application window थी।
+</p>
+
+</div>
+
+<p>
+Application window बंद हो चुकी है।
+आगे की exam और recruitment updates
+official RRB website पर देखें।
+</p>
+
+<a
+class="apply"
+href="https://www.rrbcdg.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🚆 RRB Official Website →
+</a>
+
+</div>
+
+
+<!-- UPSC -->
+
+<div
+class="job searchable"
+data-search="UPSC government recruitment graduate civil services India">
+
+<h3>🇮🇳 UPSC Recruitment</h3>
+
+<span class="badge">Graduate</span>
+
+<span class="badge">Central Government</span>
+
+<span class="badge">UPSC</span>
+
+<p>
+UPSC की official recruitment advertisement
+page पर अलग-अलग Central Government
+posts की vacancies और advertisements
+जारी होते हैं।
+</p>
+
+<a
+class="apply"
+href="https://www.upsc.gov.in/recruitment/recruitment-advertisement"
+target="_blank"
+rel="noopener"
+>
+🔎 Current UPSC Vacancies →
+</a>
+
+</div>
+
+
+<!-- NCS -->
+
+<div
+class="job searchable"
+data-search="National Career Service NCS government jobs all India employment">
+
+<h3>🇮🇳 National Career Service (NCS)</h3>
+
+<span class="badge">All India</span>
+
+<span class="badge">Government Portal</span>
+
+<p>
+भारत सरकार के National Career Service portal
+पर Government और Private employment
+opportunities search की जा सकती हैं।
+</p>
+
+<a
+class="apply"
+href="https://www.ncs.gov.in/"
+target="_blank"
+rel="noopener"
+>
+🔎 NCS Jobs देखें →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div id="noResult" class="noresult">
+
+<h3>😔 कोई Job नहीं मिली</h3>
+
+<p>
+दूसरा keyword try करें।
+</p>
+
+</div>
+
+
+<div class="warning">
+
+<b>🚨 Fake Job से सावधान!</b>
+
+<p>
+किसी भी सरकारी नौकरी के नाम पर
+registration fee, OTP, UPI PIN,
+ATM PIN या password किसी को न दें।
+</p>
 
 </div>
 
@@ -255,10 +578,37 @@ A2Z Details →
 <b>⚠️ जरूरी सूचना</b>
 
 <p>
-हर भर्ती की final eligibility, age limit,
-fee, vacancy और last date संबंधित department
-की official notification से ही verify करें।
+Vacancy, qualification, age limit,
+salary, fee, selection process और
+last date को हमेशा संबंधित department
+की official notification से verify करें।
 </p>
+
+</div>
+
+
+<div style="text-align:center;padding:20px">
+
+<a
+class="apply"
+href="10th-pass.html"
+>
+🎓 10th Jobs →
+</a>
+
+<a
+class="apply"
+href="12th-pass.html"
+>
+🎓 12th Jobs →
+</a>
+
+<a
+class="apply"
+href="graduate-jobs.html"
+>
+🎓 Graduate Jobs →
+</a>
 
 </div>
 
@@ -293,6 +643,71 @@ Disclaimer
 </p>
 
 </footer>
+
+
+<script>
+
+function searchJobs(){
+
+let input =
+document.getElementById("jobSearch")
+.value
+.toLowerCase()
+.trim();
+
+let jobs =
+document.querySelectorAll(".searchable");
+
+let found=0;
+
+jobs.forEach(function(job){
+
+let text =
+(
+job.innerText +
+" " +
+(job.dataset.search || "")
+)
+.toLowerCase();
+
+if(
+input === "" ||
+text.includes(input)
+){
+
+job.style.display="block";
+
+found++;
+
+}else{
+
+job.style.display="none";
+
+}
+
+});
+
+if(
+input !== "" &&
+found === 0
+){
+
+document.getElementById(
+"noResult"
+).style.display="block";
+
+}else{
+
+document.getElementById(
+"noResult"
+).style.display="none";
+
+}
+
+}
+
+</script>
+
 
 </body>
     </html>
