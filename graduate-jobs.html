@@ -5,168 +5,355 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Graduate Jobs | Rozgar Sathi</title>
+<title>Graduate Jobs 2026 | Rozgar Sathi</title>
 
-<meta name="description" content="Graduate candidates के लिए SSC CGL, Banking, UPSC, Government, Private और Work From Home Jobs।">
+<meta name="description" content="Graduate Jobs 2026 - SSC CGL, Banking, UPSC, Railway, Government, Private और Work From Home Jobs की जानकारी।">
 
 <style>
 
-*{box-sizing:border-box}
-
-body{
+*{
+box-sizing:border-box;
 margin:0;
-font-family:Arial,sans-serif;
-background:#f4f6f8;
-color:#222;
+padding:0;
 }
 
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#202124;
+line-height:1.6;
+}
+
+/* HEADER */
+
 header{
-background:linear-gradient(135deg,#075e54,#0b806f);
+background:linear-gradient(135deg,#075e54,#0b806f,#11998e);
 color:white;
 text-align:center;
-padding:28px 15px;
+padding:30px 15px 35px;
+}
+
+.logo{
+font-size:14px;
+font-weight:bold;
+letter-spacing:1px;
+margin-bottom:8px;
+opacity:.9;
 }
 
 header h1{
-margin:0;
-font-size:28px;
+font-size:30px;
+margin-bottom:7px;
 }
 
 header p{
-margin:7px 0 0;
+font-size:15px;
+opacity:.95;
 }
+
+/* NAVIGATION */
 
 nav{
 background:white;
+display:flex;
+justify-content:center;
+gap:5px;
 padding:10px;
-text-align:center;
 overflow-x:auto;
 white-space:nowrap;
-box-shadow:0 2px 7px #ddd;
 position:sticky;
 top:0;
-z-index:10;
+z-index:100;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 nav a{
 display:inline-block;
-margin:3px;
-padding:9px 12px;
+padding:9px 13px;
+border-radius:8px;
 text-decoration:none;
 color:#075e54;
 font-weight:bold;
-border-radius:7px;
+font-size:14px;
 }
 
-nav a:hover{
-background:#e8f5f3;
+nav a:hover,
+nav a.active{
+background:#e7f6f3;
 }
+
+/* CONTAINER */
 
 .container{
-max-width:900px;
+max-width:1050px;
 margin:auto;
-padding:15px;
-}
-
-.intro,.job{
-background:white;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
-}
-
-.intro{
-padding:20px;
-margin-bottom:20px;
-}
-
-.intro h2,
-.job h3{
-color:#075e54;
-}
-
-.job{
 padding:18px;
-margin-bottom:15px;
-border-left:5px solid #075e54;
 }
 
-.badge{
-display:inline-block;
-background:#e8f5f3;
-color:#075e54;
-padding:5px 9px;
-border-radius:15px;
-font-size:13px;
-font-weight:bold;
-margin:2px;
-}
+/* HERO */
 
-.info{
-background:#f4f6f8;
-padding:10px;
-border-radius:8px;
-margin-top:12px;
-}
-
-.apply{
-display:inline-block;
-margin-top:10px;
-background:#075e54;
-color:white;
-padding:10px 18px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.search{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
+.hero{
+background:linear-gradient(135deg,#fff,#eaf8f5);
+padding:25px;
+border-radius:18px;
 margin-bottom:20px;
+box-shadow:0 5px 18px rgba(0,0,0,.07);
+border:1px solid #e3eeee;
+}
+
+.hero h2{
+color:#075e54;
+font-size:25px;
+margin-bottom:8px;
+}
+
+.hero p{
+color:#555;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+margin:20px 0;
+}
+
+.stat{
+background:white;
+padding:18px 10px;
+text-align:center;
+border-radius:14px;
+box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+
+.stat strong{
+display:block;
+font-size:22px;
+color:#075e54;
+}
+
+.stat span{
+font-size:12px;
+color:#666;
+}
+
+/* SEARCH */
+
+.search-box{
+background:white;
+padding:18px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.07);
+margin-bottom:22px;
+}
+
+.search-title{
+font-size:18px;
+font-weight:bold;
+color:#075e54;
+margin-bottom:10px;
 }
 
 .search input{
 width:100%;
-padding:14px;
-border:1px solid #ddd;
-border-radius:8px;
+padding:15px;
+border:2px solid #e1e5e8;
+border-radius:10px;
 font-size:16px;
 outline:none;
 }
 
+.search input:focus{
+border-color:#0b806f;
+}
+
+/* SECTION */
+
+.section-title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:25px 0 14px;
+}
+
+.section-title h2{
+font-size:21px;
+color:#075e54;
+}
+
+/* JOB GRID */
+
+.job-list{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+/* JOB CARD */
+
+.job{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,.07);
+border:1px solid #e9eeee;
+border-top:4px solid #075e54;
+transition:.2s;
+}
+
+.job:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 22px rgba(0,0,0,.1);
+}
+
+.job h3{
+color:#075e54;
+font-size:19px;
+margin-bottom:8px;
+}
+
+.job p{
+font-size:14px;
+color:#555;
+margin:8px 0;
+}
+
+/* BADGES */
+
+.badge{
+display:inline-block;
+background:#e8f6f3;
+color:#075e54;
+padding:5px 9px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin:2px;
+}
+
+/* JOB INFO */
+
+.info{
+background:#f6f8f9;
+padding:12px;
+border-radius:10px;
+margin-top:12px;
+}
+
+.info p{
+margin:5px 0;
+font-size:13px;
+}
+
+/* BUTTON */
+
+.apply{
+display:inline-block;
+margin-top:9px;
+background:#075e54;
+color:white;
+padding:10px 15px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+.apply:hover{
+background:#064c44;
+}
+
+/* NO RESULT */
+
 .noresult{
 display:none;
 background:white;
-padding:20px;
-border-radius:10px;
+padding:30px;
+border-radius:15px;
 text-align:center;
-box-shadow:0 2px 8px #ddd;
+box-shadow:0 4px 15px rgba(0,0,0,.07);
 }
+
+.noresult h3{
+color:#075e54;
+margin-bottom:5px;
+}
+
+/* WARNING */
 
 .warning{
 background:#fff3f3;
 border-left:5px solid #d32f2f;
-padding:14px;
-border-radius:7px;
-margin-top:20px;
+padding:18px;
+border-radius:10px;
+margin-top:22px;
 }
 
+.warning h3{
+color:#c62828;
+margin-bottom:5px;
+}
+
+/* NOTICE */
+
 .notice{
-background:#fff8dc;
+background:#fff9df;
 border-left:5px solid #e0b100;
-padding:14px;
-border-radius:7px;
+padding:18px;
+border-radius:10px;
 margin-top:15px;
 }
 
+.notice h3{
+color:#806500;
+margin-bottom:5px;
+}
+
+/* QUICK LINKS */
+
+.quick-title{
+margin-top:25px;
+margin-bottom:14px;
+color:#075e54;
+font-size:21px;
+}
+
+.quick-links{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+
+.quick-link{
+background:white;
+padding:18px;
+border-radius:13px;
+text-align:center;
+text-decoration:none;
+color:#075e54;
+font-weight:bold;
+box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+
+.quick-link:hover{
+background:#eaf8f5;
+}
+
+/* FOOTER */
+
 footer{
-margin-top:30px;
-background:#222;
+background:#202124;
 color:white;
 text-align:center;
-padding:25px 15px;
+padding:30px 15px;
+margin-top:30px;
+}
+
+footer p{
+margin:6px 0;
+color:#ddd;
 }
 
 footer a{
@@ -174,24 +361,70 @@ color:white;
 text-decoration:none;
 }
 
-@media(max-width:600px){
+/* MOBILE */
+
+@media(max-width:700px){
 
 header h1{
 font-size:25px;
 }
 
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.job-list{
+grid-template-columns:1fr;
+}
+
+.quick-links{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:450px){
+
+.container{
+padding:12px;
+}
+
+.stats{
+gap:8px;
+}
+
+.stat{
+padding:14px 5px;
+}
+
+.stat strong{
+font-size:18px;
+}
+
+.stat span{
+font-size:11px;
+}
+
+.quick-links{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
+
 <header>
 
-<h1>🎓 Graduate Jobs</h1>
+<div class="logo">ROZGAR SATHI</div>
 
-<p>Graduate • Government • Banking • Private • WFH</p>
+<h1>🎓 Graduate Jobs 2026</h1>
+
+<p>Government • Banking • Railway • Private • WFH</p>
 
 </header>
 
@@ -199,66 +432,108 @@ font-size:25px;
 <nav>
 
 <a href="index.html">🏠 Home</a>
+
 <a href="government.html">🏛️ Government</a>
+
 <a href="private.html">🏢 Private</a>
+
 <a href="10th-pass.html">🎓 10th</a>
+
 <a href="12th-pass.html">🎓 12th</a>
-<a href="graduate-jobs.html">🎓 Graduate</a>
+
+<a href="graduate-jobs.html" class="active">🎓 Graduate</a>
+
 <a href="work-from-home.html">🏠 WFH</a>
+
 <a href="closed-jobs.html">📁 Closed</a>
 
 </nav>
 
 
-<div class="container">
+<main class="container">
 
 
-<div class="intro">
+<!-- HERO -->
+
+<section class="hero">
 
 <h2>🎓 Graduates के लिए Jobs</h2>
 
 <p>
-Graduation complete candidates के लिए
-Government, Banking, Railway, Private और
-Work From Home opportunities यहाँ मिलेंगी।
+Graduation complete candidates के लिए Government,
+Banking, Railway, Private और Work From Home
+opportunities एक ही जगह खोजें।
 </p>
 
-<p>
-<strong>
-Vacancy की details official source से verify
-करके ही website पर दिखाई जाएँगी।
-</strong>
-</p>
+</section>
 
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat">
+<strong>🎓 Graduate</strong>
+<span>Qualification</span>
 </div>
 
+<div class="stat">
+<strong>🏛️ Govt</strong>
+<span>Government Jobs</span>
+</div>
 
-<div class="search">
+<div class="stat">
+<strong>🏢 Private</strong>
+<span>Private Jobs</span>
+</div>
+
+<div class="stat">
+<strong>🏠 WFH</strong>
+<span>Remote Jobs</span>
+</div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="search-box">
+
+<div class="search-title">
+🔎 Graduate Job खोजें
+</div>
 
 <input
 type="text"
 id="jobSearch"
-placeholder="🔎 Job खोजें... जैसे SSC, CGL, Banking, UPSC"
+placeholder="जैसे SSC, CGL, Banking, UPSC, Railway..."
 onkeyup="searchJobs()"
 >
+
+</section>
+
+
+<div class="section-title">
+
+<h2>🔥 Popular Graduate Opportunities</h2>
 
 </div>
 
 
-<div id="jobList">
+<div id="jobList" class="job-list">
 
 
-<!-- SSC CGL -->
+<!-- SSC -->
 
 <div
 class="job searchable"
-data-search="SSC CGL 2026 graduate government central income tax inspector assistant section officer">
+data-search="ssc cgl 2026 graduate government central inspector income tax assistant section officer">
 
 <h3>📊 SSC CGL 2026</h3>
 
 <span class="badge">Graduate</span>
-<span class="badge">Central Government</span>
 <span class="badge">SSC</span>
+<span class="badge">Central Govt</span>
 
 <div class="info">
 
@@ -274,42 +549,35 @@ Graduate
 
 <p>
 <b>💼 Posts:</b>
-Assistant Section Officer, Inspector of Income Tax,
+Assistant Section Officer, Inspector,
 Assistant Audit Officer आदि
 </p>
 
 <p>
-<b>📅 Application:</b>
-2026 application window बंद हो चुकी है।
+<b>📅 Status:</b>
+Application information official SSC source से verify करें।
 </p>
 
 </div>
-
-<p>
-SSC CGL 2026 का official notification जारी हो चुका है।
-नई update, exam और result information के लिए
-official SSC website देखें।
-</p>
 
 <a
 class="apply"
 href="https://ssc.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 SSC Official Website →
+rel="noopener">
+🔎 SSC Official →
 </a>
 
 </div>
 
 
-<!-- IBPS PO -->
+<!-- IBPS -->
 
 <div
 class="job searchable"
-data-search="IBPS PO MT XVI banking graduate bank probationary officer management trainee">
+data-search="ibps po banking bank probationary officer management trainee graduate">
 
-<h3>🏦 IBPS PO / MT-XVI</h3>
+<h3>🏦 IBPS PO / MT</h3>
 
 <span class="badge">Graduate</span>
 <span class="badge">Banking</span>
@@ -333,25 +601,18 @@ Probationary Officer / Management Trainee
 </p>
 
 <p>
-<b>📅 Application:</b>
-Registration 26 July 2026 को बंद हो चुकी है।
+<b>📅 Status:</b>
+Current dates official IBPS source से check करें।
 </p>
 
 </div>
-
-<p>
-IBPS PO/MT-XVI की recruitment process जारी है।
-Official exam updates और call letter के लिए
-IBPS की website देखें।
-</p>
 
 <a
 class="apply"
 href="https://www.ibps.in/"
 target="_blank"
-rel="noopener"
->
-🔎 IBPS Official Website →
+rel="noopener">
+🔎 IBPS Official →
 </a>
 
 </div>
@@ -361,41 +622,41 @@ rel="noopener"
 
 <div
 class="job searchable"
-data-search="UPSC graduate government recruitment civil services central government">
+data-search="upsc civil services graduate government recruitment central government">
 
-<h3>🇮🇳 UPSC – Graduate Recruitment</h3>
+<h3>🇮🇳 UPSC Graduate Jobs</h3>
 
 <span class="badge">Graduate</span>
 <span class="badge">Government</span>
 <span class="badge">UPSC</span>
 
 <p>
-UPSC पर अलग-अलग Graduate-level examinations
-और direct recruitment advertisements जारी होते हैं।
+UPSC द्वारा Civil Services और अन्य Graduate-level
+recruitment examinations तथा direct recruitment
+advertisements जारी किए जाते हैं।
 </p>
 
 <p>
-Current advertisements और application dates
-के लिए official UPSC recruitment page देखें।
+Current vacancies और notifications official UPSC
+website पर check करें।
 </p>
 
 <a
 class="apply"
 href="https://www.upsc.gov.in/recruitment/recruitment-advertisement"
 target="_blank"
-rel="noopener"
->
-🔎 Current UPSC Vacancies →
+rel="noopener">
+🔎 UPSC Vacancies →
 </a>
 
 </div>
 
 
-<!-- RRB -->
+<!-- RAILWAY -->
 
 <div
 class="job searchable"
-data-search="RRB railway graduate jobs government India railway recruitment">
+data-search="railway rrb graduate government railway recruitment jobs india">
 
 <h3>🚆 Railway Graduate Jobs</h3>
 
@@ -404,23 +665,21 @@ data-search="RRB railway graduate jobs government India railway recruitment">
 <span class="badge">Government</span>
 
 <p>
-Railway Recruitment Boards समय-समय पर
-Graduate candidates के लिए विभिन्न posts की
-recruitment जारी करते हैं।
+Railway Recruitment Boards द्वारा Graduate candidates
+के लिए अलग-अलग posts की recruitment जारी की जाती है।
 </p>
 
 <p>
-Current notification और region-wise vacancy के लिए
-official RRB website check करें।
+Current notification और vacancy details official
+RRB source पर check करें।
 </p>
 
 <a
 class="apply"
 href="https://www.rrbcdg.gov.in/"
 target="_blank"
-rel="noopener"
->
-🚆 RRB Official Website →
+rel="noopener">
+🚆 RRB Official →
 </a>
 
 </div>
@@ -430,27 +689,25 @@ rel="noopener"
 
 <div
 class="job searchable"
-data-search="NCS National Career Service graduate private government jobs all India">
+data-search="ncs national career service graduate private government all india jobs">
 
-<h3>🇮🇳 National Career Service – Graduate Jobs</h3>
+<h3>🇮🇳 National Career Service</h3>
 
 <span class="badge">Graduate</span>
 <span class="badge">All India</span>
-<span class="badge">Government Portal</span>
+<span class="badge">Official Portal</span>
 
 <p>
-National Career Service पर Graduate candidates
-के लिए Government और Private employment
-opportunities खोजी जा सकती हैं।
+Graduate candidates Government और Private दोनों
+तरह की employment opportunities NCS पर खोज सकते हैं।
 </p>
 
 <a
 class="apply"
 href="https://www.ncs.gov.in/"
 target="_blank"
-rel="noopener"
->
-🔎 NCS Jobs देखें →
+rel="noopener">
+🔎 NCS Jobs →
 </a>
 
 </div>
@@ -460,7 +717,7 @@ rel="noopener"
 
 <div
 class="job searchable"
-data-search="private graduate jobs fresher sales HR customer support back office">
+data-search="private graduate fresher sales hr customer support back office operations">
 
 <h3>🏢 Private Graduate Jobs</h3>
 
@@ -469,15 +726,14 @@ data-search="private graduate jobs fresher sales HR customer support back office
 <span class="badge">Fresher</span>
 
 <p>
-Graduates और freshers के लिए Sales,
-HR, Customer Support, Back Office,
-Operations और अन्य private opportunities।
+Graduates और freshers के लिए Sales, HR,
+Customer Support, Back Office और Operations
+से जुड़ी opportunities।
 </p>
 
 <a
 class="apply"
-href="private.html"
->
+href="private.html">
 🏢 Private Jobs →
 </a>
 
@@ -488,116 +744,196 @@ href="private.html"
 
 <div
 class="job searchable"
-data-search="work from home graduate WFH remote private jobs">
+data-search="work from home graduate wfh remote private jobs">
 
-<h3>🏠 Work From Home – Graduate</h3>
+<h3>🏠 Graduate Work From Home</h3>
 
 <span class="badge">Graduate</span>
 <span class="badge">WFH</span>
 <span class="badge">Remote</span>
 
 <p>
-Graduates के लिए remote और work-from-home
-private opportunities देखने के लिए WFH section खोलें।
+Graduates के लिए घर से काम करने वाली
+remote और private opportunities देखें।
 </p>
 
 <a
 class="apply"
-href="work-from-home.html"
->
+href="work-from-home.html">
 🏠 WFH Jobs →
 </a>
 
 </div>
 
 
+<!-- BANKING -->
+
+<div
+class="job searchable"
+data-search="banking graduate bank jobs sbi ibps clerk po banking jobs">
+
+<h3>🏦 Banking Jobs</h3>
+
+<span class="badge">Graduate</span>
+<span class="badge">Banking</span>
+
+<p>
+Banking sector में Graduate candidates के लिए
+PO, Clerk और अन्य recruitment opportunities खोजें।
+</p>
+
+<a
+class="apply"
+href="https://www.ibps.in/"
+target="_blank"
+rel="noopener">
+🏦 Banking Portal →
+</a>
+
 </div>
 
+
+<!-- STATE JOBS -->
+
+<div
+class="job searchable"
+data-search="state government graduate jobs state govt madhya pradesh mp government">
+
+<h3>🏛️ State Government Jobs</h3>
+
+<span class="badge">Graduate</span>
+<span class="badge">State Govt</span>
+
+<p>
+अलग-अलग राज्यों की Graduate-level Government
+vacancies और recruitment notifications देखें।
+</p>
+
+<a
+class="apply"
+href="government.html">
+🏛️ Government Jobs →
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- NO RESULT -->
 
 <div id="noResult" class="noresult">
 
 <h3>😔 कोई Job नहीं मिली</h3>
 
 <p>
-दूसरा keyword try करें।
+दूसरा keyword try करें, जैसे SSC, Banking, Railway या Private।
 </p>
 
 </div>
 
 
-<div class="warning">
+<!-- WARNING -->
 
-<b>🚨 Job Scam से सावधान!</b>
+<section class="warning">
+
+<h3>🚨 Job Scam से सावधान!</h3>
 
 <p>
-Job के नाम पर registration fee,
-security deposit, OTP, UPI PIN,
-ATM PIN या password किसी को न दें।
+Job देने के नाम पर registration fee, security deposit
+या पहले पैसे माँगने वालों से सावधान रहें।
 </p>
-
-</div>
-
-
-<div class="notice">
-
-<b>⚠️ जरूरी सूचना</b>
 
 <p>
-हर vacancy की qualification, age limit,
-salary, fee, selection process और last date
-को apply करने से पहले official notification
-से जरूर verify करें।
+<strong>
+OTP, UPI PIN, ATM PIN, CVV या password किसी को न दें।
+</strong>
 </p>
 
+</section>
+
+
+<!-- NOTICE -->
+
+<section class="notice">
+
+<h3>⚠️ जरूरी सूचना</h3>
+
+<p>
+हर vacancy की qualification, age limit, salary,
+application fee, selection process और last date
+को apply करने से पहले official notification से verify करें।
+</p>
+
+</section>
+
+
+<!-- QUICK LINKS -->
+
+<h2 class="quick-title">
+⚡ Quick Links
+</h2>
+
+<div class="quick-links">
+
+<a class="quick-link" href="government.html">
+🏛️ Government Jobs
+</a>
+
+<a class="quick-link" href="private.html">
+🏢 Private Jobs
+</a>
+
+<a class="quick-link" href="10th-pass.html">
+🎓 10th Pass
+</a>
+
+<a class="quick-link" href="12th-pass.html">
+🎓 12th Pass
+</a>
+
+<a class="quick-link" href="work-from-home.html">
+🏠 Work From Home
+</a>
+
+<a class="quick-link" href="index.html">
+🏠 Home
+</a>
+
 </div>
 
 
-<div style="text-align:center;padding:20px">
-
-<a
-class="apply"
-href="government.html"
->
-🏛️ Government Jobs →
-</a>
-
-<a
-class="apply"
-href="private.html"
->
-🏢 Private Jobs →
-</a>
-
-<a
-class="apply"
-href="index.html"
->
-🏠 Home →
-</a>
-
-</div>
-
-
-</div>
+</main>
 
 
 <footer>
 
-<p><b>© 2026 Rozgar Sathi</b></p>
+<p>
+<b>© 2026 Rozgar Sathi</b>
+</p>
 
-<p>Jobs • Career • Employment</p>
+<p>
+Jobs • Career • Employment
+</p>
 
 <p>
 
-<a href="about.html">About Us</a>
+<a href="about.html">
+About Us
+</a>
 
 &nbsp; | &nbsp;
 
-<a href="contact.html">Contact</a>
+<a href="contact.html">
+Contact
+</a>
 
 &nbsp; | &nbsp;
 
-<a href="disclaimer.html">Disclaimer</a>
+<a href="disclaimer.html">
+Disclaimer
+</a>
 
 </p>
 
@@ -617,7 +953,7 @@ document.getElementById("jobSearch")
 let jobs =
 document.querySelectorAll(".searchable");
 
-let found=0;
+let found = 0;
 
 jobs.forEach(function(job){
 
@@ -634,31 +970,28 @@ input === "" ||
 text.includes(input)
 ){
 
-job.style.display="block";
+job.style.display = "block";
+
 found++;
 
 }else{
 
-job.style.display="none";
+job.style.display = "none";
 
 }
 
 });
 
-if(
-input !== "" &&
-found === 0
-){
+let noResult =
+document.getElementById("noResult");
 
-document.getElementById(
-"noResult"
-).style.display="block";
+if(input !== "" && found === 0){
+
+noResult.style.display = "block";
 
 }else{
 
-document.getElementById(
-"noResult"
-).style.display="none";
+noResult.style.display = "none";
 
 }
 
@@ -668,4 +1001,4 @@ document.getElementById(
 
 
 </body>
-                                 </html>
+  </html>
