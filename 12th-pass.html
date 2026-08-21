@@ -5,47 +5,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>12th Pass Jobs | Rozgar Sathi</title>
+<title>12th Pass Jobs 2026 | Rozgar Sathi</title>
 
-<meta name="description" content="12वीं पास उम्मीदवारों के लिए SSC CHSL, Government, Private, Apprentice और Work From Home Jobs।">
+<meta name="description" content="12वीं पास उम्मीदवारों के लिए SSC CHSL, SSC Stenographer, Railway, Government, Private, Apprentice और Work From Home Jobs।">
 
 <style>
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background:#f4f6f8;
+font-family:Arial,Helvetica,sans-serif;
+background:#eef1f5;
 color:#222;
 }
 
+/* ================= HEADER ================= */
+
 header{
-background:linear-gradient(135deg,#075e54,#0b806f);
+background:linear-gradient(135deg,#063f38,#075e54,#0b806f);
 color:white;
 text-align:center;
-padding:28px 15px;
+padding:25px 15px 22px;
+border-bottom:4px solid #f4c400;
 }
 
 header h1{
 margin:0;
-font-size:28px;
+font-size:30px;
+font-weight:800;
 }
 
 header p{
 margin:7px 0 0;
+font-size:15px;
 }
+
+/* ================= MOVING NOTICE ================= */
+
+.top-notice{
+background:#fff;
+border-bottom:1px solid #ddd;
+height:38px;
+overflow:hidden;
+display:flex;
+align-items:center;
+}
+
+.notice-label{
+background:#c62828;
+color:white;
+font-weight:bold;
+padding:10px 14px;
+height:38px;
+display:flex;
+align-items:center;
+white-space:nowrap;
+z-index:2;
+}
+
+.marquee{
+white-space:nowrap;
+animation:marquee 20s linear infinite;
+font-size:14px;
+font-weight:bold;
+color:#333;
+padding-left:25px;
+}
+
+@keyframes marquee{
+
+0%{
+transform:translateX(100%);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
+}
+
+/* ================= NAV ================= */
 
 nav{
 background:white;
-padding:10px;
+padding:9px;
 text-align:center;
 overflow-x:auto;
 white-space:nowrap;
-box-shadow:0 2px 7px #ddd;
+box-shadow:0 2px 7px #ccc;
 position:sticky;
 top:0;
-z-index:10;
+z-index:100;
 }
 
 nav a{
@@ -55,95 +112,332 @@ padding:9px 12px;
 text-decoration:none;
 color:#075e54;
 font-weight:bold;
-border-radius:7px;
+border-radius:6px;
+font-size:14px;
 }
 
 nav a:hover{
-background:#e8f5f3;
+background:#e7f4f2;
 }
 
+/* ================= CONTAINER ================= */
+
 .container{
-max-width:900px;
+max-width:950px;
 margin:auto;
 padding:15px;
 }
 
-.intro,.job{
-background:white;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
+/* ================= LIVE BAR ================= */
+
+.live-bar{
+background:#fff;
+border:1px solid #ddd;
+border-left:5px solid #075e54;
+padding:11px 14px;
+margin-bottom:15px;
+border-radius:6px;
+box-shadow:0 2px 7px #ddd;
+font-size:14px;
 }
+
+.live-dot{
+display:inline-block;
+width:10px;
+height:10px;
+background:#e53935;
+border-radius:50%;
+margin-right:7px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+
+0%,100%{
+opacity:1;
+box-shadow:0 0 5px #e53935;
+}
+
+50%{
+opacity:.25;
+box-shadow:none;
+}
+
+}
+
+/* ================= INTRO ================= */
 
 .intro{
+background:#fff;
 padding:20px;
-margin-bottom:20px;
+border-radius:8px;
+box-shadow:0 2px 8px #d4d4d4;
+margin-bottom:16px;
+border-top:4px solid #075e54;
 }
 
-.intro h2,
-.job h3{
+.intro h2{
 color:#075e54;
+margin-top:0;
+margin-bottom:8px;
 }
+
+/* ================= STATS ================= */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-bottom:18px;
+}
+
+.stat{
+background:#fff;
+border-radius:8px;
+padding:14px 8px;
+text-align:center;
+box-shadow:0 2px 8px #d4d4d4;
+border-bottom:3px solid #075e54;
+}
+
+.stat-number{
+font-size:25px;
+font-weight:900;
+color:#075e54;
+line-height:1.2;
+}
+
+.stat-label{
+font-size:12px;
+font-weight:bold;
+margin-top:5px;
+color:#555;
+}
+
+.static-number{
+animation:shine 2s infinite;
+}
+
+@keyframes shine{
+
+0%,100%{
+text-shadow:none;
+}
+
+50%{
+text-shadow:0 0 8px #58b9a9;
+}
+
+}
+
+/* ================= QUICK LINKS ================= */
+
+.quick-title{
+font-size:19px;
+font-weight:bold;
+color:#075e54;
+margin:18px 0 10px;
+}
+
+.quick-links{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:9px;
+margin-bottom:18px;
+}
+
+.quick{
+background:#fff;
+padding:12px 8px;
+text-align:center;
+border-radius:7px;
+text-decoration:none;
+color:#075e54;
+font-size:13px;
+font-weight:bold;
+box-shadow:0 2px 7px #ddd;
+border:1px solid #e3e3e3;
+}
+
+.quick:hover{
+background:#eaf7f5;
+}
+
+/* ================= SEARCH ================= */
+
+.search{
+background:#fff;
+padding:15px;
+border-radius:8px;
+box-shadow:0 2px 8px #d4d4d4;
+margin-bottom:18px;
+border-top:3px solid #075e54;
+}
+
+.search-title{
+font-weight:bold;
+color:#075e54;
+margin-bottom:9px;
+}
+
+.search-box{
+position:relative;
+}
+
+.search input{
+width:100%;
+padding:14px 45px 14px 14px;
+border:2px solid #075e54;
+border-radius:7px;
+font-size:16px;
+outline:none;
+}
+
+.search input:focus{
+box-shadow:0 0 0 3px #d8eeea;
+}
+
+.clear{
+position:absolute;
+right:9px;
+top:8px;
+width:32px;
+height:32px;
+border:0;
+border-radius:50%;
+background:#eee;
+font-size:20px;
+cursor:pointer;
+display:none;
+}
+
+/* ================= SECTION ================= */
+
+.section-title{
+background:#075e54;
+color:white;
+padding:11px 14px;
+border-radius:6px;
+font-size:19px;
+font-weight:bold;
+margin:18px 0 12px;
+}
+
+/* ================= JOB ================= */
 
 .job{
+background:#fff;
 padding:18px;
 margin-bottom:15px;
+border-radius:8px;
+box-shadow:0 2px 9px #d4d4d4;
 border-left:5px solid #075e54;
+scroll-margin-top:80px;
+}
+
+.job:hover{
+box-shadow:0 4px 14px #c8c8c8;
+}
+
+.job h3{
+color:#075e54;
+margin-top:0;
+margin-bottom:8px;
+font-size:19px;
 }
 
 .badge{
 display:inline-block;
-background:#e8f5f3;
+background:#e7f4f2;
 color:#075e54;
 padding:5px 9px;
 border-radius:15px;
-font-size:13px;
+font-size:12px;
 font-weight:bold;
 margin:2px;
+border:1px solid #d0e9e5;
 }
 
 .info{
-background:#f4f6f8;
+background:#f5f7f9;
 padding:10px;
-border-radius:8px;
+border-radius:7px;
 margin-top:12px;
 }
+
+/* ================= BUTTON ================= */
 
 .apply{
 display:inline-block;
 margin-top:10px;
 background:#075e54;
 color:white;
-padding:10px 18px;
+padding:11px 18px;
 border-radius:6px;
 text-decoration:none;
 font-weight:bold;
 }
 
-.search{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
-margin-bottom:20px;
+.apply:hover{
+background:#064c44;
 }
 
-.search input{
-width:100%;
-padding:14px;
-border:1px solid #ddd;
-border-radius:8px;
-font-size:16px;
-outline:none;
+.official{
+display:inline-block;
+margin-top:10px;
+background:#1565c0;
+color:white;
+padding:11px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
 }
+
+.official:hover{
+background:#0d47a1;
+}
+
+/* ================= NEW ================= */
+
+.new{
+background:#d32f2f;
+color:white;
+padding:3px 7px;
+font-size:10px;
+border-radius:4px;
+font-weight:bold;
+margin-left:5px;
+animation:blink 1.2s infinite;
+}
+
+.new-btn{
+animation:buttonGlow 1.8s infinite;
+}
+
+@keyframes buttonGlow{
+
+0%,100%{
+box-shadow:0 0 0 transparent;
+}
+
+50%{
+box-shadow:0 0 10px #4db6ac;
+}
+
+}
+
+/* ================= NO RESULT ================= */
 
 .noresult{
 display:none;
 background:white;
-padding:20px;
-border-radius:10px;
+padding:22px;
+border-radius:8px;
 text-align:center;
 box-shadow:0 2px 8px #ddd;
 }
+
+/* ================= WARNING ================= */
 
 .warning{
 background:#fff3f3;
@@ -161,9 +455,11 @@ border-radius:7px;
 margin-top:15px;
 }
 
+/* ================= FOOTER ================= */
+
 footer{
 margin-top:30px;
-background:#222;
+background:#202020;
 color:white;
 text-align:center;
 padding:25px 15px;
@@ -174,10 +470,75 @@ color:white;
 text-decoration:none;
 }
 
-@media(max-width:600px){
+/* ================= TOP BUTTON ================= */
+
+#topBtn{
+position:fixed;
+right:15px;
+bottom:15px;
+width:42px;
+height:42px;
+border:0;
+border-radius:50%;
+background:#075e54;
+color:white;
+font-size:20px;
+cursor:pointer;
+display:none;
+box-shadow:0 3px 10px #999;
+z-index:200;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
 header h1{
 font-size:25px;
 }
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+.quick-links{
+grid-template-columns:1fr 1fr;
+}
+
+.notice-label{
+font-size:12px;
+padding:10px 8px;
+}
+
+.marquee{
+font-size:12px;
+}
+
+}
+
+@media(max-width:420px){
+
+.stat{
+padding:12px 5px;
+}
+
+.stat-number{
+font-size:21px;
+}
+
+.stat-label{
+font-size:11px;
+}
+
+.quick{
+font-size:12px;
+padding:10px 5px;
+}
+
+.job{
+padding:15px;
+}
+
 }
 
 </style>
@@ -185,30 +546,66 @@ font-size:25px;
 
 <body>
 
+
 <header>
 
-<h1>🎓 12th Pass Jobs</h1>
+<h1>🎓 12th Pass Jobs 2026</h1>
 
 <p>12वीं पास • Government • Private • Fresher</p>
 
 </header>
 
 
+<!-- MOVING NOTICE -->
+
+<div class="top-notice">
+
+<div class="notice-label">
+📢 NOTICE
+</div>
+
+<div class="marquee">
+
+Rozgar Sathi पर 12वीं पास उम्मीदवारों के लिए नई नौकरी की जानकारी • SSC • Railway • Government • Private • WFH • Apply करने से पहले Official Notification जरूर पढ़ें • Job Scam से सावधान रहें •
+
+</div>
+
+</div>
+
+
 <nav>
 
 <a href="index.html">🏠 Home</a>
+
 <a href="government.html">🏛️ Government</a>
+
 <a href="private.html">🏢 Private</a>
+
 <a href="10th-pass.html">🎓 10th</a>
+
 <a href="12th-pass.html">🎓 12th</a>
+
 <a href="graduate-jobs.html">🎓 Graduate</a>
+
 <a href="work-from-home.html">🏠 WFH</a>
+
 <a href="closed-jobs.html">📁 Closed</a>
 
 </nav>
 
 
 <div class="container">
+
+
+<div class="live-bar">
+
+<span class="live-dot"></span>
+
+<b>LIVE UPDATE:</b>
+
+12वीं पास candidates के लिए available opportunities नीचे देखें।
+
+</div>
 
 
 <div class="intro">
@@ -231,14 +628,129 @@ opportunities यहाँ मिलेंगी।
 </div>
 
 
+<!-- ================= STATS ================= -->
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="stat-number" data-target="7">
+0
+</div>
+
+<div class="stat-label">
+AVAILABLE JOB SECTIONS
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number" data-target="3">
+0
+</div>
+
+<div class="stat-label">
+GOVERNMENT OPTIONS
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number static-number">
+12+
+</div>
+
+<div class="stat-label">
+12th OPPORTUNITIES
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number static-number">
+24×7
+</div>
+
+<div class="stat-label">
+JOB INFORMATION
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= QUICK LINKS ================= -->
+
+<div class="quick-title">
+⚡ Quick Links
+</div>
+
+<div class="quick-links">
+
+<a class="quick" href="government.html">
+🏛️ Government
+</a>
+
+<a class="quick" href="private.html">
+🏢 Private
+</a>
+
+<a class="quick" href="10th-pass.html">
+🎓 10th Pass
+</a>
+
+<a class="quick" href="work-from-home.html">
+🏠 Work From Home
+</a>
+
+</div>
+
+
+<!-- ================= SEARCH ================= -->
+
 <div class="search">
+
+<div class="search-title">
+🔎 Job Search
+</div>
+
+<div class="search-box">
 
 <input
 type="text"
 id="jobSearch"
-placeholder="🔎 Job खोजें... जैसे SSC, CHSL, Railway, Private"
-onkeyup="searchJobs()"
+placeholder="Job खोजें... SSC, CHSL, Railway, Private..."
+autocomplete="off"
 >
+
+<button
+class="clear"
+id="clearBtn"
+type="button"
+onclick="clearSearch()"
+>
+×
+</button>
+
+</div>
+
+</div>
+
+
+<div class="section-title">
+
+📋 Latest 12th Pass Jobs
+
+<span class="new">
+NEW
+</span>
 
 </div>
 
@@ -252,11 +764,26 @@ onkeyup="searchJobs()"
 class="job searchable"
 data-search="SSC CHSL 12th pass central government LDC JSA DEO">
 
-<h3>📋 SSC CHSL – Combined Higher Secondary Level</h3>
+<h3>
+📋 SSC CHSL – Combined Higher Secondary Level
 
-<span class="badge">12th Pass</span>
-<span class="badge">Central Government</span>
-<span class="badge">SSC</span>
+<span class="new">
+NEW
+</span>
+
+</h3>
+
+<span class="badge">
+12th Pass
+</span>
+
+<span class="badge">
+Central Government
+</span>
+
+<span class="badge">
+SSC
+</span>
 
 <div class="info">
 
@@ -290,7 +817,7 @@ SSC की official website जरूर check करें।
 </p>
 
 <a
-class="apply"
+class="apply new-btn"
 href="https://ssc.gov.in/"
 target="_blank"
 rel="noopener"
@@ -307,11 +834,21 @@ rel="noopener"
 class="job searchable"
 data-search="SSC Stenographer grade C D 12th pass government">
 
-<h3>⌨️ SSC Stenographer Grade C & D</h3>
+<h3>
+⌨️ SSC Stenographer Grade C & D
+</h3>
 
-<span class="badge">12th Pass</span>
-<span class="badge">Central Government</span>
-<span class="badge">SSC</span>
+<span class="badge">
+12th Pass
+</span>
+
+<span class="badge">
+Central Government
+</span>
+
+<span class="badge">
+SSC
+</span>
 
 <p>
 12वीं पास candidates के लिए SSC Stenographer
@@ -343,11 +880,21 @@ rel="noopener"
 class="job searchable"
 data-search="railway RRB 12th pass government jobs clerk ticket railway">
 
-<h3>🚆 Railway Jobs – 12th Pass</h3>
+<h3>
+🚆 Railway Jobs – 12th Pass
+</h3>
 
-<span class="badge">Railway</span>
-<span class="badge">12th Pass</span>
-<span class="badge">Government</span>
+<span class="badge">
+Railway
+</span>
+
+<span class="badge">
+12th Pass
+</span>
+
+<span class="badge">
+Government
+</span>
 
 <p>
 Railway में 12वीं qualification वाली vacancies
@@ -373,10 +920,17 @@ rel="noopener"
 class="job searchable"
 data-search="NCS National Career Service private 12th pass jobs all india">
 
-<h3>🇮🇳 National Career Service – All India Jobs</h3>
+<h3>
+🇮🇳 National Career Service – All India Jobs
+</h3>
 
-<span class="badge">All India</span>
-<span class="badge">Government Portal</span>
+<span class="badge">
+All India
+</span>
+
+<span class="badge">
+Government Portal
+</span>
 
 <p>
 National Career Service पर 12th Pass candidates
@@ -402,11 +956,21 @@ rel="noopener"
 class="job searchable"
 data-search="private jobs 12th pass fresher sales customer support back office">
 
-<h3>🏢 Private Jobs – 12th Pass</h3>
+<h3>
+🏢 Private Jobs – 12th Pass
+</h3>
 
-<span class="badge">12th Pass</span>
-<span class="badge">Private</span>
-<span class="badge">Fresher</span>
+<span class="badge">
+12th Pass
+</span>
+
+<span class="badge">
+Private
+</span>
+
+<span class="badge">
+Fresher
+</span>
 
 <p>
 12वीं पास candidates के लिए Sales,
@@ -430,10 +994,17 @@ href="private.html"
 class="job searchable"
 data-search="work from home WFH remote 12th pass private">
 
-<h3>🏠 Work From Home – 12th Pass</h3>
+<h3>
+🏠 Work From Home – 12th Pass
+</h3>
 
-<span class="badge">WFH</span>
-<span class="badge">Remote</span>
+<span class="badge">
+WFH
+</span>
+
+<span class="badge">
+Remote
+</span>
 
 <p>
 घर से काम करने वाली private और remote
@@ -456,10 +1027,17 @@ href="work-from-home.html"
 class="job searchable"
 data-search="apprentice apprenticeship 12th pass india training">
 
-<h3>🛠️ Apprenticeship Opportunities</h3>
+<h3>
+🛠️ Apprenticeship Opportunities
+</h3>
 
-<span class="badge">Apprentice</span>
-<span class="badge">12th / ITI</span>
+<span class="badge">
+Apprentice
+</span>
+
+<span class="badge">
+12th / ITI
+</span>
 
 <p>
 Apprenticeship India portal पर available
@@ -482,16 +1060,26 @@ rel="noopener"
 </div>
 
 
-<div id="noResult" class="noresult">
+<!-- NO RESULT -->
 
-<h3>😔 कोई Job नहीं मिली</h3>
+<div
+id="noResult"
+class="noresult"
+>
+
+<h3>
+😔 कोई Job नहीं मिली
+</h3>
 
 <p>
-दूसरा keyword try करें।
+दूसरा keyword try करें जैसे SSC,
+CHSL, Railway या Private।
 </p>
 
 </div>
 
+
+<!-- WARNING -->
 
 <div class="warning">
 
@@ -505,6 +1093,8 @@ OTP, UPI PIN, ATM PIN या password
 
 </div>
 
+
+<!-- NOTICE -->
 
 <div class="notice">
 
@@ -551,34 +1141,65 @@ href="index.html"
 
 <footer>
 
-<p><b>© 2026 Rozgar Sathi</b></p>
+<p>
+<b>© 2026 Rozgar Sathi</b>
+</p>
 
-<p>Jobs • Career • Employment</p>
+<p>
+Jobs • Career • Employment
+</p>
 
 <p>
 
-<a href="about.html">About Us</a>
+<a href="about.html">
+About Us
+</a>
 
 &nbsp; | &nbsp;
 
-<a href="contact.html">Contact</a>
+<a href="contact.html">
+Contact
+</a>
 
 &nbsp; | &nbsp;
 
-<a href="disclaimer.html">Disclaimer</a>
+<a href="disclaimer.html">
+Disclaimer
+</a>
 
 </p>
 
 </footer>
 
 
+<!-- BACK TO TOP -->
+
+<button
+id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})"
+>
+↑
+</button>
+
+
 <script>
+
+/* ================= SEARCH ================= */
+
+const searchInput =
+document.getElementById("jobSearch");
+
+const clearBtn =
+document.getElementById("clearBtn");
+
+const noResult =
+document.getElementById("noResult");
+
 
 function searchJobs(){
 
 let input =
-document.getElementById("jobSearch")
-.value
+searchInput.value
 .toLowerCase()
 .trim();
 
@@ -586,6 +1207,7 @@ let jobs =
 document.querySelectorAll(".searchable");
 
 let found=0;
+
 
 jobs.forEach(function(job){
 
@@ -597,12 +1219,14 @@ job.innerText +
 )
 .toLowerCase();
 
+
 if(
-input === "" ||
+input==="" ||
 text.includes(input)
 ){
 
 job.style.display="block";
+
 found++;
 
 }else{
@@ -613,27 +1237,143 @@ job.style.display="none";
 
 });
 
+
 if(
-input !== "" &&
-found === 0
+input!=="" &&
+found===0
 ){
 
-document.getElementById(
-"noResult"
-).style.display="block";
+noResult.style.display="block";
 
 }else{
 
-document.getElementById(
-"noResult"
-).style.display="none";
+noResult.style.display="none";
+
+}
+
+
+if(input!==""){
+
+clearBtn.style.display="block";
+
+}else{
+
+clearBtn.style.display="none";
 
 }
 
 }
+
+
+/* INPUT */
+
+searchInput.addEventListener(
+"input",
+searchJobs
+);
+
+
+/* ENTER + ESC */
+
+searchInput.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Enter"){
+
+event.preventDefault();
+
+searchJobs();
+
+}
+
+if(event.key==="Escape"){
+
+clearSearch();
+
+}
+
+}
+);
+
+
+/* CLEAR */
+
+function clearSearch(){
+
+searchInput.value="";
+
+searchJobs();
+
+searchInput.focus();
+
+}
+
+
+/* ================= COUNTER ================= */
+
+const counters =
+document.querySelectorAll(
+".stat-number[data-target]"
+);
+
+
+counters.forEach(function(counter){
+
+let target =
+parseInt(counter.dataset.target);
+
+let current=0;
+
+let duration=900;
+
+let interval =
+duration / target;
+
+
+let timer =
+setInterval(function(){
+
+current++;
+
+counter.innerText=current;
+
+if(current>=target){
+
+clearInterval(timer);
+
+}
+
+},interval);
+
+});
+
+
+/* ================= TOP BUTTON ================= */
+
+const topBtn =
+document.getElementById("topBtn");
+
+
+window.addEventListener(
+"scroll",
+function(){
+
+if(window.scrollY>350){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+}
+);
 
 </script>
 
 
 </body>
-</html>
+  </html>
