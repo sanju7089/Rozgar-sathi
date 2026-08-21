@@ -6,7 +6,7 @@
 
 <title>Rozgar Sathi | Latest Government & Private Jobs</title>
 
-<meta name="description" content="Rozgar Sathi पर भारत भर की Government, Private, 10th Pass, 12th Pass, Graduate और Work From Home Jobs की जानकारी।">
+<meta name="description" content="Rozgar Sathi पर Government, Private, 10th Pass, 12th Pass, Graduate और Work From Home Jobs की जानकारी।">
 
 <style>
 *{box-sizing:border-box}
@@ -37,7 +37,7 @@ white-space:nowrap;
 box-shadow:0 2px 7px #ddd;
 position:sticky;
 top:0;
-z-index:20;
+z-index:10;
 }
 
 nav a{
@@ -59,15 +59,13 @@ max-width:900px;
 margin:auto;
 position:sticky;
 top:58px;
-z-index:19;
+z-index:9;
 box-shadow:0 2px 7px #ddd;
 }
 
-.search-box{position:relative}
-
 .search input{
 width:100%;
-padding:15px 48px 15px 16px;
+padding:15px;
 border:2px solid #ddd;
 border-radius:10px;
 font-size:16px;
@@ -75,46 +73,6 @@ outline:none;
 }
 
 .search input:focus{border-color:#075e54}
-
-.clear-btn{
-position:absolute;
-right:9px;
-top:8px;
-border:0;
-background:#eee;
-width:36px;
-height:36px;
-border-radius:50%;
-font-size:20px;
-cursor:pointer;
-display:none;
-}
-
-.search-status{
-font-size:13px;
-color:#666;
-margin-top:8px;
-}
-
-#suggestions{
-display:none;
-background:white;
-border:1px solid #ddd;
-border-radius:10px;
-margin-top:5px;
-box-shadow:0 3px 10px #ccc;
-overflow:hidden;
-max-height:280px;
-overflow-y:auto;
-}
-
-.suggestion{
-padding:12px 15px;
-cursor:pointer;
-border-bottom:1px solid #eee;
-}
-
-.suggestion:hover{background:#e8f5f3}
 
 .container{
 max-width:900px;
@@ -140,8 +98,6 @@ color:#222;
 font-weight:bold;
 box-shadow:0 2px 8px #ddd;
 }
-
-.category:hover{transform:translateY(-2px)}
 
 .job{
 background:white;
@@ -198,8 +154,6 @@ text-decoration:none;
 font-weight:bold;
 }
 
-.apply:hover{background:#064c44}
-
 #noResult{
 display:none;
 background:white;
@@ -213,14 +167,6 @@ box-shadow:0 2px 8px #ddd;
 .notice{
 background:#fff8dc;
 border-left:5px solid #e0b100;
-padding:14px;
-border-radius:7px;
-margin-top:20px;
-}
-
-.warning{
-background:#fff3f3;
-border-left:5px solid #d32f2f;
 padding:14px;
 border-radius:7px;
 margin-top:20px;
@@ -251,12 +197,7 @@ grid-template-columns:1fr 1fr;
 grid-template-columns:1fr;
 }
 
-.search{
-top:55px;
 }
-
-}
-
 </style>
 </head>
 
@@ -279,32 +220,11 @@ top:55px;
 </nav>
 
 <div class="search">
-
-<div class="search-box">
-
 <input
 type="search"
 id="jobSearch"
-placeholder="🔎 कुछ भी खोजें... SSC, SBI, Railway, Bank, 10th, WFH..."
-autocomplete="off"
->
-
-<button
-id="clearSearch"
-class="clear-btn"
-type="button"
-onclick="clearSearch()">
-×
-</button>
-
-</div>
-
-<div id="suggestions"></div>
-
-<div id="searchStatus" class="search-status">
-सभी उपलब्ध jobs में तुरंत खोजें
-</div>
-
+placeholder="🔎 कुछ भी खोजें... SBI, SSC, Railway, Bank, 10th, 12th, WFH..."
+autocomplete="off">
 </div>
 
 <div class="container">
@@ -313,487 +233,52 @@ onclick="clearSearch()">
 
 <div class="categories">
 
-<a class="category" href="government.html">🏛️<br>Government Jobs</a>
-<a class="category" href="private.html">🏢<br>Private Jobs</a>
-<a class="category" href="10th-pass.html">🎓<br>10th Pass</a>
-<a class="category" href="12th-pass.html">🎓<br>12th Pass</a>
-<a class="category" href="graduate-jobs.html">🎓<br>Graduate Jobs</a>
-<a class="category" href="work-from-home.html">🏠<br>Work From Home</a>
+<a class="category" href="government.html">
+🏛️<br>Government Jobs
+</a>
+
+<a class="category" href="private.html">
+🏢<br>Private Jobs
+</a>
+
+<a class="category" href="10th-pass.html">
+🎓<br>10th Pass
+</a>
+
+<a class="category" href="12th-pass.html">
+🎓<br>12th Pass
+</a>
+
+<a class="category" href="graduate-jobs.html">
+🎓<br>Graduate Jobs
+</a>
+
+<a class="category" href="work-from-home.html">
+🏠<br>Work From Home
+</a>
 
 </div>
 
 <h2>🔥 Latest Jobs</h2>
 
-<div id="jobList">
-
-<!-- SBI -->
-
-<div class="job searchable"
-data-search="SBI Junior Associates Customer Support Sales bank clerk banking 2026 12th graduate government bank all india">
-
-<h3>🏦 SBI Junior Associates 2026</h3>
-
-<span class="badge">SBI</span>
-<span class="badge">Banking</span>
-<span class="badge">Government Bank</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Graduation</div>
-<div>💼 <b>Post</b><br>Junior Associate</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">31 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>All India</div>
-
-</div>
-
-<p>
-SBI Junior Associates Customer Support & Sales
-recruitment की official application information।
-</p>
-
-<a class="apply"
-href="https://ibpsreg.ibps.in/sbijajul26/"
-target="_blank"
-rel="noopener">
-🔎 Official Details →
-</a>
-
-</div>
-
-
-<!-- IBPS -->
-
-<div class="job searchable"
-data-search="IBPS CSA XVI Customer Service Associate banking bank 2026 graduate central government">
-
-<h3>🏦 IBPS Customer Service Associate XVI</h3>
-
-<span class="badge">Banking</span>
-<span class="badge">IBPS</span>
-<span class="badge">Central</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Graduation</div>
-<div>💼 <b>Post</b><br>Customer Service Associate</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">21 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>Participating Banks</div>
-
-</div>
-
-<p>
-Public Sector Banks में Customer Service Associate
-recruitment की official information।
-</p>
-
-<a class="apply"
-href="https://ibpsreg.ibps.in/csaxvijul26/"
-target="_blank"
-rel="noopener">
-🔎 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO LPSC -->
-
-<div class="job searchable"
-data-search="ISRO LPSC Technical Assistant Technician B Draughtsman Fireman 10th tenth ITI diploma government 2026">
-
-<h3>🚀 ISRO LPSC Recruitment 2026</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-<span class="badge">10th / ITI / Diploma</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Post के अनुसार</div>
-<div>💼 <b>Posts</b><br>Technical Assistant / Technician B / Fireman आदि</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">04 September 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>LPSC / Bengaluru</div>
-
-</div>
-
-<p>
-ISRO Liquid Propulsion Systems Centre में
-Technical Assistant, Technician B, Draughtsman B
-और Fireman A posts की recruitment।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🚀 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO HSFC -->
-
-<div class="job searchable"
-data-search="ISRO HSFC Scientist Engineer SD engineering graduate government space 2026">
-
-<h3>🚀 ISRO HSFC Scientist/Engineer</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-<span class="badge">Engineering</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Engineering / Relevant Qualification</div>
-<div>💼 <b>Post</b><br>Scientist/Engineer-SD</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">30 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>India</div>
-
-</div>
-
-<p>
-Human Space Flight Centre में Scientist/Engineer
-recruitment की current opportunity।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🚀 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO URSC -->
-
-<div class="job searchable"
-data-search="ISRO URSC Graduate Apprentice Diploma Apprentice 2026 graduate diploma apprentice trainee">
-
-<h3>🚀 ISRO URSC Apprentice 2026</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Apprentice</span>
-<span class="badge">Graduate / Diploma</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Graduate / Diploma</div>
-<div>💼 <b>Post</b><br>Apprentice Trainee</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">28 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>India</div>
-
-</div>
-
-<p>
-ISRO URSC में Graduate Apprentice और
-Diploma Apprentice Trainee opportunities।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🚀 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO NRSC -->
-
-<div class="job searchable"
-data-search="ISRO NRSC Temporary Research Personnel 2026 graduate government Hyderabad">
-
-<h3>🛰️ ISRO NRSC Recruitment 2026</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Post के अनुसार</div>
-<div>💼 <b>Post</b><br>Temporary Research Personnel</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">21 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>Hyderabad</div>
-
-</div>
-
-<p>
-National Remote Sensing Centre में Temporary
-Research Personnel opportunity।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🛰️ Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO PRL -->
-
-<div class="job searchable"
-data-search="ISRO PRL Administrative Officer Accounts Purchase Stores Officer 2026 graduate Ahmedabad">
-
-<h3>🛰️ ISRO PRL Officer Recruitment</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-<span class="badge">Graduate</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Relevant Qualification</div>
-<div>💼 <b>Posts</b><br>Administrative / Accounts / Purchase & Stores</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">24 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>Ahmedabad</div>
-
-</div>
-
-<p>
-Physical Research Laboratory में officer-level
-recruitment opportunity।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🛰️ Official Details →
-</a>
-
-</div>
-
-
-<!-- TRAI -->
-
-<div class="job searchable"
-data-search="TRAI Associate Consultant Consultant government telecom 2026 graduate New Delhi">
-
-<h3>📡 TRAI Associate Consultant</h3>
-
-<span class="badge">TRAI</span>
-<span class="badge">Government</span>
-<span class="badge">Consultant</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Post के अनुसार</div>
-<div>💼 <b>Post</b><br>Associate Consultant</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">27 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>New Delhi</div>
-
-</div>
-
-<p>
-Telecom Regulatory Authority of India में
-Associate Consultant opportunity।
-</p>
-
-<a class="apply"
-href="https://trai.gov.in/vacancies"
-target="_blank"
-rel="noopener">
-📡 Official Details →
-</a>
-
-</div>
-
-
-<!-- TRAI CONSULTANT -->
-
-<div class="job searchable"
-data-search="TRAI Consultant contract government 2026 graduate New Delhi">
-
-<h3>📡 TRAI Consultant Recruitment</h3>
-
-<span class="badge">TRAI</span>
-<span class="badge">Government</span>
-
-<div class="job-info">
-
-<div>🎓 <b>Qualification</b><br>Post के अनुसार</div>
-<div>💼 <b>Post</b><br>Consultant</div>
-<div>📅 <b>Last Date</b><br><span class="last-date">24 August 2026</span></div>
-<div>🇮🇳 <b>Location</b><br>New Delhi</div>
-
-</div>
-
-<p>
-TRAI Headquarters में Consultant(s) on Contract
-basis opportunity।
-</p>
-
-<a class="apply"
-href="https://trai.gov.in/vacancies"
-target="_blank"
-rel="noopener">
-📡 Official Details →
-</a>
-
-</div>
-
-
-<!-- NCS -->
-
-<div class="job searchable"
-data-search="NCS National Career Service all India government private jobs work from home WFH remote">
-
-<h3>🇮🇳 National Career Service – All India Jobs</h3>
-
-<span class="badge">All India</span>
-<span class="badge">Government Portal</span>
-<span class="badge">Private + WFH</span>
-
-<p>
-भारत सरकार के National Career Service portal पर
-पूरे भारत की Government, Private और अन्य jobs
-खोज सकते हैं।
-</p>
-
-<a class="apply"
-href="https://www.ncs.gov.in/"
-target="_blank"
-rel="noopener">
-🔎 All India Jobs →
-</a>
-
-</div>
-
-
-<!-- 10TH -->
-
-<div class="job searchable"
-data-search="10th tenth दसवीं दसवी 10वी matric government private jobs नौकरी">
-
-<h3>🎓 10th Pass Jobs</h3>
-
-<span class="badge">10th Pass</span>
-
-<p>
-10वीं पास candidates के लिए Government और
-Private jobs देखें।
-</p>
-
-<a class="apply" href="10th-pass.html">10th Jobs →</a>
-
-</div>
-
-
-<!-- 12TH -->
-
-<div class="job searchable"
-data-search="12th twelfth बारहवीं बारहवी 12वी inter intermediate government private jobs">
-
-<h3>🎓 12th Pass Jobs</h3>
-
-<span class="badge">12th Pass</span>
-
-<p>
-12वीं पास candidates के लिए Government और
-Private jobs देखें।
-</p>
-
-<a class="apply" href="12th-pass.html">12th Jobs →</a>
-
-</div>
-
-
-<!-- GRADUATE -->
-
-<div class="job searchable"
-data-search="graduate graduation degree स्नातक ग्रेजुएट government private jobs">
-
-<h3>🎓 Graduate Jobs</h3>
-
-<span class="badge">Graduate</span>
-
-<p>
-Graduates के लिए Government और Private
-opportunities देखें।
-</p>
-
-<a class="apply" href="graduate-jobs.html">Graduate Jobs →</a>
-
-</div>
-
-
-<!-- WFH -->
-
-<div class="job searchable"
-data-search="work from home WFH remote घर से काम घर बैठे online job private नौकरी">
-
-<h3>🏠 Work From Home Jobs</h3>
-
-<span class="badge">WFH</span>
-<span class="badge">Remote</span>
-
-<p>
-घर से काम करने वाली opportunities देखने के लिए
-Work From Home section खोलें।
-</p>
-
-<a class="apply" href="work-from-home.html">WFH Jobs →</a>
-
-</div>
-
-</div>
-
+<div id="jobList"></div>
 
 <div id="noResult">
-
 <h3>😔 कोई Job नहीं मिली</h3>
-
 <p>दूसरा keyword try करें।</p>
-
 </div>
 
-
 <div class="notice">
-
 <b>⚠️ जरूरी सूचना</b>
-
 <p>
 Rozgar Sathi केवल job information उपलब्ध कराता है।
 Apply करने से पहले qualification, age limit, vacancy,
 salary, fee, selection process और last date को
-संबंधित official notification से जरूर verify करें।
+official notification से जरूर verify करें।
 </p>
-
-</div>
-
-
-<div class="warning">
-
-<b>🚨 Job Scam से सावधान रहें</b>
-
-<p>
-किसी भी job के लिए OTP, UPI PIN, ATM PIN,
-password या अनजान व्यक्ति को पैसे न दें।
-Application हमेशा official website से verify करें।
-</p>
-
-</div>
-
-
-<div style="text-align:center;padding:20px;">
-
-<a
-href="closed-jobs.html"
-style="text-decoration:none;color:#075e54;font-weight:bold;">
-📁 Closed Jobs देखें →
-</a>
-
 </div>
 
 </div>
-
 
 <footer>
 
@@ -810,491 +295,359 @@ style="text-decoration:none;color:#075e54;font-weight:bold;">
 
 </footer>
 
-
 <script>
 
-/* =====================================================
-   ROZGAR SATHI - FAST & STRONG SEARCH
-   ===================================================== */
+/* =========================================
+   ROZGAR SATHI JOB DATABASE
+   ========================================= */
 
-const searchInput=document.getElementById("jobSearch");
-const clearButton=document.getElementById("clearSearch");
-const statusBox=document.getElementById("searchStatus");
-const suggestionBox=document.getElementById("suggestions");
-const noResult=document.getElementById("noResult");
+const jobs = [
 
-const aliases={
+{
+id:"sbi-junior-associate-2026",
+title:"🏦 SBI Junior Associates 2026",
+search:"sbi state bank india junior associate customer support sales clerk bank banking government 2026 graduation graduate",
+qualification:"Graduation",
+post:"Junior Associate",
+lastDate:"31 August 2026",
+location:"All India",
+category:"Banking / Government Bank",
+description:"SBI Junior Associates Customer Support & Sales recruitment की जानकारी।",
+official:"https://ibpsreg.ibps.in/sbijajul26/"
+},
 
-railway:["rail","रेल","रेलवे","rrb","ntpc","group d","group-d"],
-rail:["railway","रेल","रेलवे","rrb"],
-रेल:["railway","रेलवे","rrb"],
-रेलवे:["railway","रेल","rrb"],
+{
+id:"ibps-csa-2026",
+title:"🏦 IBPS Customer Service Associate XVI",
+search:"ibps csa customer service associate banking bank clerk government central 2026 graduation",
+qualification:"Graduation",
+post:"Customer Service Associate",
+lastDate:"21 August 2026",
+location:"Participating Banks",
+category:"Banking",
+description:"Public Sector Banks में Customer Service Associate recruitment की जानकारी।",
+official:"https://ibpsreg.ibps.in/csaxvijul26/"
+},
 
-bank:["banking","sbi","ibps","बैंक","बैंकिंग"],
-बैंक:["bank","banking","sbi","ibps"],
-sbi:["bank","banking","स्टेट बैंक","state bank"],
-ibps:["bank","banking","बैंक"],
+{
+id:"isro-lpsc-2026",
+title:"🚀 ISRO LPSC Recruitment 2026",
+search:"isro lpsc indian space research organisation technical assistant technician draughtsman fireman 10th tenth iti diploma government",
+qualification:"Post के अनुसार",
+post:"Technical Assistant / Technician B / Draughtsman / Fireman आदि",
+lastDate:"04 September 2026",
+location:"LPSC / Bengaluru",
+category:"Government / ISRO",
+description:"ISRO Liquid Propulsion Systems Centre की recruitment information।",
+official:"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+},
 
-govt:["government","सरकारी","sarkari","gov"],
-government:["govt","सरकारी","sarkari","सरकार"],
-सरकारी:["government","govt","sarkari"],
-sarkari:["government","govt","सरकारी"],
+{
+id:"isro-hsfc-2026",
+title:"🚀 ISRO HSFC Scientist/Engineer",
+search:"isro hsfc scientist engineer engineering graduate government space human space flight centre",
+qualification:"Engineering / Relevant Qualification",
+post:"Scientist/Engineer-SD",
+lastDate:"30 August 2026",
+location:"India",
+category:"Government / ISRO",
+description:"Human Space Flight Centre में Scientist/Engineer opportunity।",
+official:"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+},
 
-private:["company","private job","प्राइवेट","कंपनी"],
-प्राइवेट:["private","company","निजी"],
-company:["private","कंपनी"],
+{
+id:"isro-ursc-apprentice-2026",
+title:"🚀 ISRO URSC Apprentice 2026",
+search:"isro ursc apprentice graduate diploma trainee training government",
+qualification:"Graduate / Diploma",
+post:"Apprentice Trainee",
+lastDate:"28 August 2026",
+location:"India",
+category:"Apprentice / ISRO",
+description:"ISRO URSC में Graduate और Diploma Apprentice opportunities।",
+official:"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+},
 
-"10th":["tenth","दसवीं","दसवी","10वी","matric"],
-tenth:["10th","दसवीं","matric"],
-दसवीं:["10th","tenth","matric"],
+{
+id:"isro-nrsc-2026",
+title:"🛰️ ISRO NRSC Recruitment 2026",
+search:"isro nrsc national remote sensing centre temporary research personnel graduate government hyderabad",
+qualification:"Post के अनुसार",
+post:"Temporary Research Personnel",
+lastDate:"21 August 2026",
+location:"Hyderabad",
+category:"Government / ISRO",
+description:"National Remote Sensing Centre में recruitment opportunity।",
+official:"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+},
 
-"12th":["twelfth","बारहवीं","बारहवी","inter","intermediate"],
-twelfth:["12th","बारहवीं","intermediate"],
-बारहवीं:["12th","twelfth","intermediate"],
+{
+id:"isro-prl-2026",
+title:"🛰️ ISRO PRL Officer Recruitment",
+search:"isro prl administrative officer accounts purchase stores graduate government ahmedabad",
+qualification:"Relevant Qualification",
+post:"Administrative / Accounts / Purchase & Stores",
+lastDate:"24 August 2026",
+location:"Ahmedabad",
+category:"Government / ISRO",
+description:"Physical Research Laboratory में officer-level recruitment opportunity।",
+official:"https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
+},
 
-graduate:["graduation","degree","स्नातक","ग्रेजुएट"],
-graduation:["graduate","degree","स्नातक"],
-स्नातक:["graduate","graduation"],
+{
+id:"trai-associate-consultant-2026",
+title:"📡 TRAI Associate Consultant",
+search:"trai telecom regulatory authority associate consultant consultant government telecom graduate delhi",
+qualification:"Post के अनुसार",
+post:"Associate Consultant",
+lastDate:"27 August 2026",
+location:"New Delhi",
+category:"Government / TRAI",
+description:"Telecom Regulatory Authority of India में Associate Consultant opportunity।",
+official:"https://trai.gov.in/vacancies"
+},
 
-wfh:["work from home","remote","घर से","घर बैठे"],
-remote:["wfh","work from home","घर से"],
-online:["remote","wfh","work from home"],
+{
+id:"trai-consultant-2026",
+title:"📡 TRAI Consultant Recruitment",
+search:"trai consultant contract government telecom graduate new delhi",
+qualification:"Post के अनुसार",
+post:"Consultant",
+lastDate:"24 August 2026",
+location:"New Delhi",
+category:"Government / TRAI",
+description:"TRAI Headquarters में Consultant on Contract basis opportunity।",
+official:"https://trai.gov.in/vacancies"
+},
 
-job:["jobs","नौकरी","रोजगार","vacancy","भर्ती"],
-jobs:["job","नौकरी","vacancy","भर्ती"],
-नौकरी:["job","jobs","vacancy","भर्ती"],
-vacancy:["job","jobs","भर्ती"],
-भर्ती:["vacancy","job","jobs"],
+{
+id:"ncs-all-india",
+title:"🇮🇳 National Career Service – All India Jobs",
+search:"ncs national career service all india india government private jobs work from home wfh remote रोजगार नौकरी",
+qualification:"Job के अनुसार",
+post:"विभिन्न Posts",
+lastDate:"Official Portal पर देखें",
+location:"All India",
+category:"Government + Private + WFH",
+description:"भारत सरकार के National Career Service portal पर Government, Private और अन्य jobs खोजें।",
+official:"https://www.ncs.gov.in/"
+},
 
-isro:["space","अंतरिक्ष","lpsc","hsfc","ursc","nrsc","prl"],
-ssc:["staff selection commission","chsl","सरकारी"],
-chsl:["ssc","12th","staff selection commission"],
+{
+id:"10th-pass-jobs",
+title:"🎓 10th Pass Jobs",
+search:"10th tenth दसवीं दसवी matric government private jobs नौकरी भर्ती",
+qualification:"10th Pass",
+post:"विभिन्न Posts",
+lastDate:"Job के अनुसार",
+location:"India",
+category:"10th Pass",
+description:"10वीं पास candidates के लिए Government और Private jobs।",
+page:"10th-pass.html"
+},
 
-iti:["technician","technical","10th","diploma"],
-diploma:["iti","technical","graduate"],
-apprentice:["trainee","प्रशिक्षु","training"],
-trainee:["apprentice","training"],
+{
+id:"12th-pass-jobs",
+title:"🎓 12th Pass Jobs",
+search:"12th twelfth बारहवीं बारहवी inter intermediate government private jobs नौकरी भर्ती",
+qualification:"12th Pass",
+post:"विभिन्न Posts",
+lastDate:"Job के अनुसार",
+location:"India",
+category:"12th Pass",
+description:"12वीं पास candidates के लिए Government और Private jobs।",
+page:"12th-pass.html"
+},
 
-consultant:["trai","associate consultant"],
-trai:["consultant","telecom"],
+{
+id:"graduate-jobs",
+title:"🎓 Graduate Jobs",
+search:"graduate graduation degree स्नातक ग्रेजुएट government private jobs नौकरी",
+qualification:"Graduation",
+post:"विभिन्न Posts",
+lastDate:"Job के अनुसार",
+location:"India",
+category:"Graduate",
+description:"Graduates के लिए Government और Private opportunities।",
+page:"graduate-jobs.html"
+},
 
-india:["all india","भारत","पूरे भारत"],
-भारत:["india","all india"],
-"all india":["भारत","india","पूरे भारत"],
+{
+id:"work-from-home",
+title:"🏠 Work From Home Jobs",
+search:"work from home wfh remote घर से काम घर बैठे online job private नौकरी",
+qualification:"Job के अनुसार",
+post:"विभिन्न Posts",
+lastDate:"Job के अनुसार",
+location:"Remote / India",
+category:"Work From Home",
+description:"घर से काम करने वाली remote opportunities।",
+page:"work-from-home.html"
+}
 
-घर:["wfh","remote","work from home"],
-"घर बैठे":["wfh","remote","work from home"],
-
-salary:["वेतन","pay","income","कमाई"],
-वेतन:["salary","pay"],
-age:["उम्र","आयु"],
-उम्र:["age","आयु"],
-आयु:["age","उम्र"],
-
-female:["women","महिला","girls","ladies"],
-women:["female","महिला"],
-महिला:["female","women"],
-
-male:["men","पुरुष"],
-पुरुष:["male","men"],
-
-police:["पुलिस","constable","sipahi"],
-पुलिस:["police","constable"],
-army:["सेना","defence","defense"],
-सेना:["army","defence","defense"],
-
-teacher:["शिक्षक","teaching","teacher"],
-शिक्षक:["teacher","teaching"]
-
-};
+];
 
 
-/* Normalize */
+/* =========================================
+   DISPLAY JOBS
+   ========================================= */
+
+function showJobs(list){
+
+const box=document.getElementById("jobList");
+
+box.innerHTML="";
+
+list.forEach(function(job){
+
+let button="";
+
+if(job.official){
+
+button=`
+<a class="apply"
+href="job.html?id=${encodeURIComponent(job.id)}">
+📄 A2Z Details →
+</a>`;
+}else{
+
+button=`
+<a class="apply"
+href="${job.page}">
+📄 View Jobs →
+</a>`;
+}
+
+box.innerHTML += `
+
+<div class="job">
+
+<h3>${job.title}</h3>
+
+<span class="badge">${job.category}</span>
+
+<div class="job-info">
+
+<div>
+🎓 <b>Qualification</b><br>
+${job.qualification}
+</div>
+
+<div>
+💼 <b>Post</b><br>
+${job.post}
+</div>
+
+<div>
+📅 <b>Last Date</b><br>
+<span class="last-date">${job.lastDate}</span>
+</div>
+
+<div>
+🇮🇳 <b>Location</b><br>
+${job.location}
+</div>
+
+</div>
+
+<p>${job.description}</p>
+
+${button}
+
+</div>
+
+`;
+
+});
+
+}
+
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+const input=document.getElementById("jobSearch");
 
 function normalize(text){
 
 return String(text||"")
 .toLowerCase()
-.normalize("NFKC")
-.replace(/[^\p{L}\p{N}\s-]/gu," ")
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"")
+.replace(/[^\p{L}\p{N}\s]/gu," ")
 .replace(/\s+/g," ")
 .trim();
 
 }
 
-
-/* Variations */
-
-function getVariations(word){
-
-let result=[word];
-
-if(aliases[word]){
-result=result.concat(aliases[word]);
-}
-
-return [...new Set(
-result.map(normalize).filter(Boolean)
-)];
-
-}
-
-
-/* Search score */
-
-function scoreJob(job,input){
-
-if(!input)return 1;
-
-const text=normalize(
-(job.innerText||"")+" "+
-(job.dataset.search||"")
-);
-
-const textWords=text.split(/\s+/);
-
-const queryWords=input.split(/\s+/).filter(Boolean);
-
-let score=0;
-
-queryWords.forEach(function(word){
-
-let variations=getVariations(word);
-
-let matched=false;
-
-for(const variation of variations){
-
-if(text.includes(variation)){
-
-score+=variation===word?10:7;
-matched=true;
-break;
-
-}
-
-}
-
-if(matched)return;
-
-
-/* Word beginning match */
-
-for(const variation of variations){
-
-if(variation.length<2)continue;
-
-for(const tw of textWords){
-
-if(
-tw.startsWith(variation) ||
-variation.startsWith(tw)
-){
-
-score+=5;
-matched=true;
-break;
-
-}
-
-}
-
-if(matched)break;
-
-}
-
-
-/* Character similarity */
-
-if(!matched && word.length>=3){
-
-for(const tw of textWords){
-
-if(tw.length<3)continue;
-
-let distance=editDistance(word,tw);
-let maxLen=Math.max(word.length,tw.length);
-
-let similarity=1-(distance/maxLen);
-
-if(
-similarity>=0.70 ||
-(word.length>=7 && similarity>=0.60)
-){
-
-score+=2;
-matched=true;
-break;
-
-}
-
-}
-
-}
-
-});
-
-return score;
-
-}
-
-
-/* Levenshtein */
-
-function editDistance(a,b){
-
-if(a===b)return 0;
-if(!a.length)return b.length;
-if(!b.length)return a.length;
-
-let prev=[];
-
-for(let j=0;j<=b.length;j++)prev[j]=j;
-
-for(let i=1;i<=a.length;i++){
-
-let curr=[i];
-
-for(let j=1;j<=b.length;j++){
-
-let cost=a[i-1]===b[j-1]?0:1;
-
-curr[j]=Math.min(
-curr[j-1]+1,
-prev[j]+1,
-prev[j-1]+cost
-);
-
-}
-
-prev=curr;
-
-}
-
-return prev[b.length];
-
-}
-
-
-/* Main search */
-
 function searchJobs(){
 
-const input=normalize(searchInput.value);
+const query=normalize(input.value);
 
-clearButton.style.display=input?"block":"none";
+if(!query){
 
-const jobs=[
-...document.querySelectorAll(".searchable")
-];
-
-if(!input){
-
-jobs.forEach(job=>{
-job.style.display="block";
-});
-
-statusBox.innerHTML=
-"सभी उपलब्ध jobs में तुरंत खोजें";
-
-noResult.style.display="none";
-suggestionBox.style.display="none";
-
+showJobs(jobs);
+document.getElementById("noResult").style.display="none";
 return;
 
 }
 
-
-/* Calculate scores */
-
-const results=jobs.map(function(job,index){
-
-return{
-job:job,
-score:scoreJob(job,input),
-index:index
-};
-
-}).filter(item=>item.score>0);
-
-
-/* Strong results first */
-
-results.sort(function(a,b){
-
-if(b.score!==a.score){
-return b.score-a.score;
-}
-
-return a.index-b.index;
-
-});
-
-
-/* Hide everything */
-
-jobs.forEach(job=>{
-job.style.display="none";
-});
-
-
-/* Show matched */
-
-results.forEach(function(item){
-
-item.job.style.display="block";
-
-});
-
-
-if(results.length){
-
-statusBox.innerHTML=
-"<b>"+results.length+"</b> job result मिले";
-
-noResult.style.display="none";
-
-}else{
-
-statusBox.innerHTML=
-"<b>0</b> result — दूसरा keyword try करें";
-
-noResult.style.display="block";
-
-}
-
-
-/* Suggestions */
-
-showSuggestions(input,results);
-
-}
-
-
-/* Suggestions */
-
-function showSuggestions(input,results){
-
-suggestionBox.innerHTML="";
-
-if(!input||!results.length){
-
-suggestionBox.style.display="none";
-return;
-
-}
-
-const titles=[];
-
-results.slice(0,6).forEach(function(item){
-
-const title=item.job.querySelector("h3");
-
-if(title){
-
-const text=title.innerText.trim();
-
-if(!titles.includes(text)){
-titles.push(text);
-}
-
-}
-
-});
-
-titles.forEach(function(title){
-
-const div=document.createElement("div");
-
-div.className="suggestion";
-
-div.textContent="🔎 "+title;
-
-div.onclick=function(){
-
-searchInput.value=title;
-
-searchJobs();
-
-suggestionBox.style.display="none";
-
-};
-
-suggestionBox.appendChild(div);
-
-});
-
-if(titles.length){
-
-suggestionBox.style.display="block";
-
-}
-
-}
-
-
-/* Clear */
-
-function clearSearch(){
-
-searchInput.value="";
-searchJobs();
-searchInput.focus();
-
-}
-
-
-/* Instant typing */
-
-searchInput.addEventListener(
-"input",
-searchJobs
+const words=query.split(" ").filter(Boolean);
+
+const results=jobs.filter(function(job){
+
+const text=normalize(
+job.title+" "+
+job.search+" "+
+job.qualification+" "+
+job.post+" "+
+job.category+" "+
+job.location+" "+
+job.description
 );
 
+return words.every(function(word){
 
-/* Enter */
+if(text.includes(word)) return true;
 
-searchInput.addEventListener(
-"keydown",
-function(e){
+if(word==="rail") return text.includes("railway");
+if(word==="रेल") return text.includes("railway") || text.includes("रेल");
+if(word==="रेलवे") return text.includes("railway");
 
-if(e.key==="Enter"){
+if(word==="bank") return text.includes("bank");
+if(word==="बैंक") return text.includes("bank");
 
-e.preventDefault();
-searchJobs();
-suggestionBox.style.display="none";
+if(word==="govt" || word==="sarkari" || word==="सरकारी")
+return text.includes("government") || text.includes("सरकारी");
 
-}
+if(word==="10th" || word==="tenth" || word==="दसवीं")
+return text.includes("10th") || text.includes("tenth") || text.includes("दसवीं");
 
-if(e.key==="Escape"){
+if(word==="12th" || word==="twelfth" || word==="बारहवीं")
+return text.includes("12th") || text.includes("twelfth") || text.includes("बारहवीं");
 
-clearSearch();
+if(word==="wfh" || word==="remote" || word==="घर")
+return text.includes("work from home") || text.includes("remote") || text.includes("घर");
 
-}
-
-});
-
-
-/* Click outside */
-
-document.addEventListener(
-"click",
-function(e){
-
-if(!e.target.closest(".search")){
-
-suggestionBox.style.display="none";
-
-}
+return false;
 
 });
 
+});
 
-/* Start */
+showJobs(results);
 
-searchJobs();
+document.getElementById("noResult").style.display=
+results.length ? "none" : "block";
+
+}
+
+input.addEventListener("input",searchJobs);
+
+showJobs(jobs);
 
 </script>
 
 </body>
-   </html>
+    </html>
