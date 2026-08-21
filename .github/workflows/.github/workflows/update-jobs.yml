@@ -2,7 +2,6 @@ name: Rozgar Sathi Automatic Job Update
 
 on:
   schedule:
-    # रोज सुबह 6:00 UTC = लगभग 11:30 AM IST
     - cron: "0 6 * * *"
 
   workflow_dispatch:
@@ -36,6 +35,7 @@ jobs:
           git config user.email "actions@github.com"
 
           git add jobs-data.js
+          git add closed-jobs-data.js
 
           git diff --cached --quiet || git commit -m "Automatic job update"
 
