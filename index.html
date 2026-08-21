@@ -1,1017 +1,477 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Rozgar Sathi | Latest Government & Private Jobs</title>
-
-<meta name="description" content="Rozgar Sathi पर भारत भर की Government, Private, 10th Pass, 12th Pass, Graduate और Work From Home Jobs की जानकारी।">
-
-<style>
-
-*{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f6f8;
-color:#222;
-}
-
-header{
-background:linear-gradient(135deg,#075e54,#0b806f);
-color:white;
-text-align:center;
-padding:28px 15px;
-}
-
-header h1{
-margin:0;
-font-size:30px;
-}
-
-header p{
-margin:8px 0 0;
-}
-
-nav{
-background:white;
-padding:10px;
-text-align:center;
-overflow-x:auto;
-white-space:nowrap;
-box-shadow:0 2px 7px #ddd;
-position:sticky;
-top:0;
-z-index:10;
-}
-
-nav a{
-display:inline-block;
-margin:3px;
-padding:9px 12px;
-text-decoration:none;
-color:#075e54;
-font-weight:bold;
-border-radius:7px;
-}
-
-nav a:hover{
-background:#e8f5f3;
-}
-
-.search{
-background:white;
-padding:15px;
-max-width:900px;
-margin:auto;
-}
-
-.search input{
-width:100%;
-padding:14px;
-border:1px solid #ddd;
-border-radius:8px;
-font-size:16px;
-outline:none;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:15px;
-}
-
-h2{
-color:#075e54;
-}
-
-.categories{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-}
-
-.category{
-background:white;
-padding:20px 10px;
-border-radius:10px;
-text-align:center;
-text-decoration:none;
-color:#222;
-font-weight:bold;
-box-shadow:0 2px 8px #ddd;
-}
-
-.category:hover{
-transform:translateY(-2px);
-}
-
-.job{
-background:white;
-padding:18px;
-margin:15px 0;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
-border-left:5px solid #075e54;
-}
-
-.job h3{
-color:#075e54;
-margin-top:0;
-}
-
-.badge{
-display:inline-block;
-background:#e8f5f3;
-color:#075e54;
-padding:5px 9px;
-border-radius:15px;
-font-size:13px;
-font-weight:bold;
-margin:2px;
-}
-
-.job-info{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:8px;
-margin:12px 0;
-}
-
-.job-info div{
-background:#f4f6f8;
-padding:10px;
-border-radius:7px;
-font-size:14px;
-}
-
-.last-date{
-color:#c62828;
-font-weight:bold;
-}
-
-.apply{
-display:inline-block;
-margin-top:10px;
-background:#075e54;
-color:white;
-padding:11px 18px;
-border-radius:7px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.apply:hover{
-background:#064c44;
-}
-
-.notice{
-background:#fff8dc;
-border-left:5px solid #e0b100;
-padding:14px;
-border-radius:7px;
-margin-top:20px;
-}
-
-.warning{
-background:#fff3f3;
-border-left:5px solid #d32f2f;
-padding:14px;
-border-radius:7px;
-margin-top:20px;
-}
-
-#noResult{
-display:none;
-background:white;
-padding:20px;
-margin-top:15px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 2px 8px #ddd;
-}
-
-footer{
-margin-top:30px;
-background:#222;
-color:white;
-text-align:center;
-padding:25px 15px;
-}
-
-footer a{
-color:white;
-text-decoration:none;
-}
-
-@media(max-width:600px){
-
-header h1{
-font-size:25px;
-}
-
-.categories{
-grid-template-columns:1fr 1fr;
-}
-
-.job-info{
-grid-template-columns:1fr;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-
-<h1>🇮🇳 Rozgar Sathi</h1>
-
-<p>हर दिन नई नौकरी की जानकारी</p>
-
-</header>
-
-
-<nav>
-
-<a href="index.html">🏠 Home</a>
-
-<a href="government.html">🏛️ Government</a>
-
-<a href="private.html">🏢 Private</a>
-
-<a href="10th-pass.html">🎓 10th</a>
-
-<a href="12th-pass.html">🎓 12th</a>
-
-<a href="graduate-jobs.html">🎓 Graduate</a>
-
-<a href="work-from-home.html">🏠 WFH</a>
-
-<a href="closed-jobs.html">📁 Closed</a>
-
-</nav>
-
-
-<div class="search">
-
-<input
-type="text"
-id="jobSearch"
-placeholder="🔎 Job खोजें... जैसे SSC, SBI, Railway, 10th, 12th, WFH"
-onkeyup="searchJobs()"
->
-
-</div>
-
-
-<div class="container">
-
-
-<h2>📂 Job Categories</h2>
-
-
-<div class="categories">
-
-<a class="category" href="government.html">
-🏛️
-<br>
-Government Jobs
-</a>
-
-<a class="category" href="private.html">
-🏢
-<br>
-Private Jobs
-</a>
-
-<a class="category" href="10th-pass.html">
-🎓
-<br>
-10th Pass
-</a>
-
-<a class="category" href="12th-pass.html">
-🎓
-<br>
-12th Pass
-</a>
-
-<a class="category" href="graduate-jobs.html">
-🎓
-<br>
-Graduate Jobs
-</a>
-
-<a class="category" href="work-from-home.html">
-🏠
-<br>
-Work From Home
-</a>
-
-</div>
-
-
-<h2>🔥 Latest Jobs</h2>
-
-
-<div id="jobList">
-
-
-<!-- SBI JUNIOR ASSOCIATES -->
-
-<div class="job searchable"
-data-search="SBI Junior Associates Customer Support Sales bank clerk 2026 12th graduate government">
-
-<h3>🏦 SBI Junior Associates 2026</h3>
-
-<span class="badge">SBI</span>
-<span class="badge">Banking</span>
-<span class="badge">Government Bank</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Graduation
-</div>
-
-<div>
-💼 <b>Post</b><br>
-Junior Associate
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">31 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-All India
-</div>
-
-</div>
-
-<p>
-SBI Junior Associates (Customer Support & Sales)
-recruitment की official application information।
-</p>
-
-<a class="apply"
-href="https://ibpsreg.ibps.in/sbijajul26/"
-target="_blank"
-rel="noopener">
-🔎 Official Details →
-</a>
-
-</div>
-
-
-<!-- IBPS CSA -->
-
-<div class="job searchable"
-data-search="IBPS CSA XVI Customer Service Associate banking 2026 12th graduate">
-
-<h3>🏦 IBPS Customer Service Associate XVI</h3>
-
-<span class="badge">Banking</span>
-<span class="badge">IBPS</span>
-<span class="badge">Central</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Graduation
-</div>
-
-<div>
-💼 <b>Post</b><br>
-Customer Service Associate
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">21 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-Participating Banks
-</div>
-
-</div>
-
-<p>
-Public Sector Banks में Customer Service Associate
-recruitment की official information।
-</p>
-
-<a class="apply"
-href="https://ibpsreg.ibps.in/csaxvijul26/"
-target="_blank"
-rel="noopener">
-🔎 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO LPSC -->
-
-<div class="job searchable"
-data-search="ISRO LPSC Technical Assistant Technician B Draughtsman Fireman 10th ITI diploma government 2026">
-
-<h3>🚀 ISRO LPSC Recruitment 2026</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-<span class="badge">10th / ITI / Diploma</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Post के अनुसार
-</div>
-
-<div>
-💼 <b>Posts</b><br>
-Technical Assistant / Technician B / Fireman आदि
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">04 September 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-LPSC / Bengaluru
-</div>
-
-</div>
-
-<p>
-ISRO Liquid Propulsion Systems Centre में
-Technical Assistant, Technician B, Draughtsman B
-और Fireman A posts की recruitment।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🚀 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO HSFC -->
-
-<div class="job searchable"
-data-search="ISRO HSFC Scientist Engineer SD 2026 graduate engineering government">
-
-<h3>🚀 ISRO HSFC Scientist/Engineer</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-<span class="badge">Engineering</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Engineering / Relevant Qualification
-</div>
-
-<div>
-💼 <b>Post</b><br>
-Scientist/Engineer-SD
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">30 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-India
-</div>
-
-</div>
-
-<p>
-Human Space Flight Centre में Scientist/Engineer
-recruitment की current opportunity।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🚀 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO URSC APPRENTICE -->
-
-<div class="job searchable"
-data-search="ISRO URSC Graduate Apprentice Diploma Apprentice 2026 graduate diploma apprentice">
-
-<h3>🚀 ISRO URSC Apprentice 2026</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Apprentice</span>
-<span class="badge">Graduate / Diploma</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Graduate / Diploma
-</div>
-
-<div>
-💼 <b>Post</b><br>
-Apprentice Trainee
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">28 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-India
-</div>
-
-</div>
-
-<p>
-ISRO URSC में Graduate Apprentice और
-Diploma Apprentice Trainee opportunities।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🚀 Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO NRSC -->
-
-<div class="job searchable"
-data-search="ISRO NRSC Temporary Research Personnel 2026 graduate government">
-
-<h3>🛰️ ISRO NRSC Recruitment 2026</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Post के अनुसार
-</div>
-
-<div>
-💼 <b>Post</b><br>
-Temporary Research Personnel
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">21 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-Hyderabad
-</div>
-
-</div>
-
-<p>
-National Remote Sensing Centre में Temporary
-Research Personnel opportunity।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🛰️ Official Details →
-</a>
-
-</div>
-
-
-<!-- ISRO PRL -->
-
-<div class="job searchable"
-data-search="ISRO PRL Administrative Officer Accounts Purchase Stores Officer 2026 graduate">
-
-<h3>🛰️ ISRO PRL Officer Recruitment</h3>
-
-<span class="badge">ISRO</span>
-<span class="badge">Government</span>
-<span class="badge">Graduate</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Relevant Qualification
-</div>
-
-<div>
-💼 <b>Posts</b><br>
-Administrative / Accounts / Purchase & Stores
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">24 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-Ahmedabad
-</div>
-
-</div>
-
-<p>
-Physical Research Laboratory में officer-level
-recruitment opportunity।
-</p>
-
-<a class="apply"
-href="https://www.isro.gov.in/ISRO_EN/ViewAllOpportunities.html"
-target="_blank"
-rel="noopener">
-🛰️ Official Details →
-</a>
-
-</div>
-
-
-<!-- TRAI -->
-
-<div class="job searchable"
-data-search="TRAI Associate Consultant Consultant government 2026 graduate">
-
-<h3>📡 TRAI Associate Consultant</h3>
-
-<span class="badge">TRAI</span>
-<span class="badge">Government</span>
-<span class="badge">Consultant</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Post के अनुसार
-</div>
-
-<div>
-💼 <b>Post</b><br>
-Associate Consultant
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">27 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-New Delhi
-</div>
-
-</div>
-
-<p>
-Telecom Regulatory Authority of India में
-Associate Consultant opportunity।
-</p>
-
-<a class="apply"
-href="https://trai.gov.in/vacancies"
-target="_blank"
-rel="noopener">
-📡 Official Details →
-</a>
-
-</div>
-
-
-<!-- TRAI CONSULTANT -->
-
-<div class="job searchable"
-data-search="TRAI Consultant contract government 2026 graduate">
-
-<h3>📡 TRAI Consultant Recruitment</h3>
-
-<span class="badge">TRAI</span>
-<span class="badge">Government</span>
-
-<div class="job-info">
-
-<div>
-🎓 <b>Qualification</b><br>
-Post के अनुसार
-</div>
-
-<div>
-💼 <b>Post</b><br>
-Consultant
-</div>
-
-<div>
-📅 <b>Last Date</b><br>
-<span class="last-date">24 August 2026</span>
-</div>
-
-<div>
-🇮🇳 <b>Location</b><br>
-New Delhi
-</div>
-
-</div>
-
-<p>
-TRAI Headquarters में Consultant(s) on Contract
-basis opportunity।
-</p>
-
-<a class="apply"
-href="https://trai.gov.in/vacancies"
-target="_blank"
-rel="noopener">
-📡 Official Details →
-</a>
-
-</div>
-
-
-<!-- NCS -->
-
-<div class="job searchable"
-data-search="NCS National Career Service all India government private jobs work from home">
-
-<h3>🇮🇳 National Career Service – All India Jobs</h3>
-
-<span class="badge">All India</span>
-<span class="badge">Government Portal</span>
-<span class="badge">Private + WFH</span>
-
-<p>
-भारत सरकार के National Career Service portal पर
-पूरे भारत की Government, Private और अन्य jobs
-खोज सकते हैं।
-</p>
-
-<a
-class="apply"
-href="https://www.ncs.gov.in/"
-target="_blank"
-rel="noopener">
-🔎 All India Jobs →
-</a>
-
-</div>
-
-
-<!-- JOB CATEGORY LINKS -->
-
-<div class="job searchable"
-data-search="10th pass jobs दसवीं government private">
-
-<h3>🎓 10th Pass Jobs</h3>
-
-<span class="badge">10th Pass</span>
-
-<p>
-10वीं पास candidates के लिए Government और
-Private jobs देखें।
-</p>
-
-<a class="apply" href="10th-pass.html">
-10th Jobs →
-</a>
-
-</div>
-
-
-<div class="job searchable"
-data-search="12th pass jobs बारहवीं government private">
-
-<h3>🎓 12th Pass Jobs</h3>
-
-<span class="badge">12th Pass</span>
-
-<p>
-12वीं पास candidates के लिए Government और
-Private jobs देखें।
-</p>
-
-<a class="apply" href="12th-pass.html">
-12th Jobs →
-</a>
-
-</div>
-
-
-<div class="job searchable"
-data-search="graduate jobs graduation government private">
-
-<h3>🎓 Graduate Jobs</h3>
-
-<span class="badge">Graduate</span>
-
-<p>
-Graduates के लिए Government और Private
-opportunities देखें।
-</p>
-
-<a class="apply" href="graduate-jobs.html">
-Graduate Jobs →
-</a>
-
-</div>
-
-
-<div class="job searchable"
-data-search="work from home WFH remote ghar se job">
-
-<h3>🏠 Work From Home Jobs</h3>
-
-<span class="badge">WFH</span>
-<span class="badge">Remote</span>
-
-<p>
-घर से काम करने वाली opportunities देखने के लिए
-Work From Home section खोलें।
-</p>
-
-<a class="apply" href="work-from-home.html">
-WFH Jobs →
-</a>
-
-</div>
-
-
-</div>
-
-
-<div id="noResult">
-
-<h3>😔 कोई Job नहीं मिली</h3>
-
-<p>
-दूसरा keyword try करें।
-</p>
-
-</div>
-
-
-<div class="notice">
-
-<b>⚠️ जरूरी सूचना</b>
-
-<p>
-Rozgar Sathi केवल job information उपलब्ध कराता है।
-Apply करने से पहले qualification, age limit, vacancy,
-salary, fee, selection process और last date को
-संबंधित official notification से जरूर verify करें।
-</p>
-
-</div>
-
-
-<div class="warning">
-
-<b>🚨 Job Scam से सावधान रहें</b>
-
-<p>
-किसी भी job के लिए OTP, UPI PIN, ATM PIN,
-password या अनजान व्यक्ति को पैसे न दें।
-Application हमेशा official website से verify करें।
-</p>
-
-</div>
-
-
-<div style="text-align:center;padding:20px;">
-
-<a
-href="closed-jobs.html"
-style="text-decoration:none;color:#075e54;font-weight:bold;">
-📁 Closed Jobs देखें →
-</a>
-
-</div>
-
-
-</div>
-
-
-<footer>
-
-<p>
-<b>© 2026 Rozgar Sathi</b>
-</p>
-
-<p>
-Jobs • Career • Employment
-</p>
-
-<p>
-
-<a href="about.html">About Us</a>
-
-&nbsp; | &nbsp;
-
-<a href="contact.html">Contact Us</a>
-
-&nbsp; | &nbsp;
-
-<a href="disclaimer.html">Disclaimer</a>
-
-</p>
-
-</footer>
-
-
 <script>
+
+/* =========================================
+   ROZGAR SATHI SMART SEARCH ENGINE
+   ========================================= */
+
+const searchBox = document.getElementById("jobSearch");
+const noResult = document.getElementById("noResult");
+
+let searchTimer = null;
+
+
+/* -----------------------------------------
+   TEXT NORMALIZATION
+----------------------------------------- */
+
+function normalizeText(text){
+
+    return text
+        .toLowerCase()
+
+        // Hindi punctuation / symbols
+        .replace(/[।,!?;:'"(){}\[\]<>\/\\|@#$%^&*+=_~`-]/g," ")
+
+        // Common Hindi variations
+        .replace(/नौकरी/g,"job")
+        .replace(/नौकरियां/g,"job")
+        .replace(/भर्ती/g,"recruitment")
+        .replace(/सरकारी/g,"government")
+        .replace(/सरकार/g,"government")
+        .replace(/दसवीं/g,"10th")
+        .replace(/दसवी/g,"10th")
+        .replace(/बारहवीं/g,"12th")
+        .replace(/बारहवी/g,"12th")
+        .replace(/ग्रेजुएट/g,"graduate")
+        .replace(/स्नातक/g,"graduate")
+        .replace(/घर से काम/g,"work from home")
+        .replace(/घर से/g,"work from home")
+        .replace(/प्राइवेट/g,"private")
+        .replace(/सरकारी बैंक/g,"government bank")
+        .replace(/रेलवे/g,"railway")
+        .replace(/बैंक/g,"bank")
+
+        .replace(/\s+/g," ")
+        .trim();
+}
+
+
+/* -----------------------------------------
+   COMMON SEARCH WORDS / SYNONYMS
+----------------------------------------- */
+
+const synonyms = {
+
+    "govt":["government","sarkari","सरकारी"],
+    "sarkari":["government","govt","सरकारी"],
+
+    "job":["jobs","vacancy","recruitment","नौकरी","भर्ती"],
+    "jobs":["job","vacancy","recruitment"],
+
+    "rail":["railway","rrb","रेलवे"],
+    "railway":["rrb","rail","रेलवे"],
+    "rrb":["railway","rail"],
+
+    "bank":["banking","बैंक"],
+    "banking":["bank"],
+
+    "ssc":["staff selection commission"],
+    "chsl":["ssc","12th"],
+    "cgl":["ssc","graduate"],
+
+    "10":["10th","10वीं","tenth"],
+    "tenth":["10th","10वीं"],
+
+    "12":["12th","12वीं","twelfth"],
+    "twelfth":["12th","12वीं"],
+
+    "graduate":["graduation","degree","स्नातक"],
+    "graduation":["graduate","degree"],
+
+    "wfh":["work from home","remote","घर से काम"],
+    "remote":["wfh","work from home"],
+
+    "private":["company","corporate","प्राइवेट"],
+
+    "police":["constable","sipahi","पुलिस"],
+    "constable":["police"],
+
+    "teacher":["teaching","school","शिक्षक"],
+    "teaching":["teacher"],
+
+    "clerk":["office","assistant"],
+    "assistant":["clerk","office"],
+
+    "iti":["technical","technician"],
+    "diploma":["technical"],
+
+    "fresher":["freshers","new candidate"],
+    "freshers":["fresher"]
+};
+
+
+/* -----------------------------------------
+   LEVENSHTEIN FUZZY MATCH
+   Typing mistakes को समझेगा
+----------------------------------------- */
+
+function levenshtein(a,b){
+
+    if(a === b) return 0;
+
+    if(!a.length) return b.length;
+    if(!b.length) return a.length;
+
+    let matrix = [];
+
+    for(let i=0;i<=b.length;i++){
+        matrix[i] = [i];
+    }
+
+    for(let j=0;j<=a.length;j++){
+        matrix[0][j] = j;
+    }
+
+    for(let i=1;i<=b.length;i++){
+
+        for(let j=1;j<=a.length;j++){
+
+            if(b.charAt(i-1) === a.charAt(j-1)){
+
+                matrix[i][j] = matrix[i-1][j-1];
+
+            }else{
+
+                matrix[i][j] = Math.min(
+
+                    matrix[i-1][j-1] + 1,
+                    matrix[i][j-1] + 1,
+                    matrix[i-1][j] + 1
+
+                );
+
+            }
+
+        }
+
+    }
+
+    return matrix[b.length][a.length];
+}
+
+
+/* -----------------------------------------
+   TOKENIZE
+----------------------------------------- */
+
+function getWords(text){
+
+    return normalizeText(text)
+        .split(/\s+/)
+        .filter(word => word.length > 0);
+
+}
+
+
+/* -----------------------------------------
+   WORD MATCH
+----------------------------------------- */
+
+function wordMatches(queryWord, textWords){
+
+    if(!queryWord) return false;
+
+    for(let word of textWords){
+
+        // Exact
+        if(word === queryWord){
+            return true;
+        }
+
+        // Starts with
+        if(word.startsWith(queryWord)){
+            return true;
+        }
+
+        // Query starts with database word
+        if(queryWord.startsWith(word) && word.length >= 3){
+            return true;
+        }
+
+        // Small spelling mistake
+        if(queryWord.length >= 4 && word.length >= 4){
+
+            let distance = levenshtein(queryWord,word);
+
+            let allowed = queryWord.length >= 7 ? 2 : 1;
+
+            if(distance <= allowed){
+                return true;
+            }
+
+        }
+
+    }
+
+    return false;
+}
+
+
+/* -----------------------------------------
+   SEARCH SCORE
+----------------------------------------- */
+
+function calculateScore(query, job){
+
+    const normalizedQuery = normalizeText(query);
+
+    const normalizedJob = normalizeText(
+
+        job.innerText + " " +
+        (job.dataset.search || "")
+
+    );
+
+    const queryWords = getWords(normalizedQuery);
+    const jobWords = getWords(normalizedJob);
+
+    if(!queryWords.length) return 1;
+
+    let score = 0;
+
+    /* Exact complete phrase */
+
+    if(normalizedJob.includes(normalizedQuery)){
+        score += 100;
+    }
+
+
+    /* Every search word */
+
+    queryWords.forEach(queryWord => {
+
+        if(wordMatches(queryWord,jobWords)){
+            score += 20;
+        }
+
+
+        /* Synonyms */
+
+        if(synonyms[queryWord]){
+
+            synonyms[queryWord].forEach(synonym => {
+
+                const syn = normalizeText(synonym);
+
+                if(normalizedJob.includes(syn)){
+                    score += 15;
+                }
+
+            });
+
+        }
+
+    });
+
+
+    /* Title gets extra priority */
+
+    const title =
+        job.querySelector("h3");
+
+    if(title){
+
+        const titleText =
+            normalizeText(title.innerText);
+
+        queryWords.forEach(word => {
+
+            if(titleText.includes(word)){
+                score += 35;
+            }
+
+        });
+
+    }
+
+
+    return score;
+}
+
+
+/* -----------------------------------------
+   SMART SEARCH
+----------------------------------------- */
 
 function searchJobs(){
 
-let input =
-document.getElementById("jobSearch")
-.value
-.toLowerCase()
-.trim();
+    clearTimeout(searchTimer);
 
-let jobs =
-document.querySelectorAll(".searchable");
+    searchTimer = setTimeout(function(){
 
-let found=0;
+        const input =
+            searchBox.value.trim();
 
-jobs.forEach(function(job){
+        const jobs =
+            Array.from(
+                document.querySelectorAll(".searchable")
+            );
 
-let text =
-(
-job.innerText +
-" " +
-(job.dataset.search || "")
-)
-.toLowerCase();
+        /* Empty search */
 
-if(input === "" || text.includes(input)){
+        if(input === ""){
 
-job.style.display="block";
-found++;
+            jobs.forEach(job => {
 
-}else{
+                job.style.display = "";
 
-job.style.display="none";
+                job.style.order = "";
+
+            });
+
+            noResult.style.display = "none";
+
+            return;
+
+        }
+
+
+        let results = [];
+
+
+        jobs.forEach(function(job){
+
+            const score =
+                calculateScore(input,job);
+
+            if(score > 0){
+
+                results.push({
+                    element:job,
+                    score:score
+                });
+
+            }else{
+
+                job.style.display = "none";
+
+            }
+
+        });
+
+
+        /* Highest relevance first */
+
+        results.sort(function(a,b){
+
+            return b.score - a.score;
+
+        });
+
+
+        /* Show results */
+
+        results.forEach(function(result,index){
+
+            result.element.style.display = "block";
+
+            /*
+            Search result को ऊपर लाने के लिए
+            order इस्तेमाल किया जा रहा है।
+            */
+
+            result.element.style.order = index;
+
+        });
+
+
+        /* No result */
+
+        if(results.length === 0){
+
+            noResult.style.display = "block";
+
+            noResult.innerHTML = `
+
+                <h3>😔 कोई Job नहीं मिली</h3>
+
+                <p>
+                <b>${input}</b> के लिए अभी कोई matching
+                job नहीं मिली।
+                </p>
+
+                <p>
+                दूसरा keyword try करें जैसे:
+                SSC, Railway, Bank, 10th, 12th,
+                Graduate, WFH, Police
+                </p>
+
+            `;
+
+        }else{
+
+            noResult.style.display = "none";
+
+        }
+
+    },50);
 
 }
 
-});
 
-if(input !== "" && found === 0){
+/* -----------------------------------------
+   INSTANT SEARCH
+----------------------------------------- */
 
-document.getElementById("noResult").style.display="block";
+if(searchBox){
 
-}else{
+    searchBox.addEventListener(
+        "input",
+        searchJobs
+    );
 
-document.getElementById("noResult").style.display="none";
+    searchBox.addEventListener(
+        "keyup",
+        searchJobs
+    );
 
 }
 
+
+/* -----------------------------------------
+   ENTER KEY
+----------------------------------------- */
+
+if(searchBox){
+
+    searchBox.addEventListener(
+        "keydown",
+        function(event){
+
+            if(event.key === "Enter"){
+
+                searchJobs();
+
+                event.preventDefault();
+
+            }
+
+        }
+    );
+
 }
 
-</script>
 
+/* -----------------------------------------
+   CLEAR SEARCH WITH ESC
+----------------------------------------- */
 
-</body>
-    </html>
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Escape" &&
+            document.activeElement === searchBox
+        ){
+
+            searchBox.value = "";
+
+            searchJobs();
+
+        }
+
+    }
+);
+
+        </script>
