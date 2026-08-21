@@ -1,22 +1,27 @@
-import re
-import urllib.request
+import os
+import sys
+import importlib
 from datetime import datetime
+
 
 JOBS_FILE = "jobs-data.js"
 CLOSED_FILE = "closed-jobs-data.js"
 
+
 # =========================================================
-# ROZGAR SATHI - AUTOMATIC JOB DATABASE
+# ROZGAR SATHI - AUTOMATIC JOB UPDATE ENGINE
 # =========================================================
 
-try:
-    from sources import (
-        get_government_sources,
-        get_private_sources
-    )
-except ImportError:
-    get_government_sources = lambda: {}
-    get_private_sources = lambda: {}
+PARSERS = [
+
+    ("SSC", "ssc_parser"),
+    ("SBI", "sbi_parser"),
+    ("RRB", "rrb_parser"),
+    ("India Post", "india_post_parser"),
+    ("IBPS", "ibps_parser"),
+    ("UPSC", "upsc_parser"),
+
+]
 
 
 # =========================================================
@@ -24,113 +29,75 @@ except ImportError:
 # =========================================================
 
 def today():
+
     return datetime.now().date()
 
+
+# =========================================================
+# DATE PARSER
+# =========================================================
 
 def parse_date(value):
 
     if not value:
+
         return None
 
+
     formats = [
+
         "%Y-%m-%d",
         "%d-%m-%Y",
         "%d/%m/%Y",
-        "%d.%m.%Y",
-        "%d %B %Y",
-        "%d %b %Y"
+        "%d.%m.%Y"
+
     ]
+
 
     for fmt in formats:
 
         try:
+
             return datetime.strptime(
                 value.strip(),
                 fmt
             ).date()
 
         except ValueError:
+
             pass
+
 
     return None
 
 
 # =========================================================
-# CLEAN / SECURITY
-# =========================================================
-
-def clean(value):
-
-    value = str(value or "")
-
-    value = value.replace(
-        "\n",
-        " "
-    )
-
-    value = re.sub(
-        r"\s+",
-        " ",
-        value
-    )
-
-    return value.strip()
-
-
-def escape_js(value):
-
-    value = clean(value)
-
-    return (
-        value
-        .replace("\\", "\\\\")
-        .replace('"', '\\"')
-    )
-
-
-# =========================================================
-# JOB → JAVASCRIPT
-# =========================================================
-
-def job_to_js(job):
-
-    return f'''{{
-  id:"{escape_js(job.get("id", ""))}",
-  title:"{escape_js(job.get("title", ""))}",
-  category:"{escape_js(job.get("category", ""))}",
-  qualification:"{escape_js(job.get("qualification", ""))}",
-  posts:"{escape_js(job.get("posts", ""))}",
-  lastDate:"{escape_js(job.get("lastDate", ""))}",
-  page:"{escape_js(job.get("page", ""))}"
-}}'''
-
-
-# =========================================================
-# READ EXISTING JOBS
+# READ OLD JOB DATABASE
 # =========================================================
 
 def read_existing_jobs():
 
-    try:
-
-        with open(
-            JOBS_FILE,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            content = f.read()
-
-    except FileNotFoundError:
-
-        print(
-            "jobs-data.js नहीं मिली।"
-        )
+    if not os.path.exists(
+        JOBS_FILE
+    ):
 
         return []
 
 
+    with open(
+        JOBS_FILE,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        content = f.read()
+
+
+    import re
+
+
     pattern = re.compile(
+
         r'\{\s*'
         r'id:"([^"]*)",\s*'
         r'title:"([^"]*)",\s*'
@@ -140,19 +107,18 @@ def read_existing_jobs():
         r'lastDate:"([^"]*)",\s*'
         r'page:"([^"]*)"\s*'
         r'\}',
+
         re.MULTILINE
-    )
 
-
-    matches = pattern.findall(
-        content
     )
 
 
     jobs = []
 
 
-    for item in matches:
+    for item in pattern.findall(
+        content
+    ):
 
         jobs.append({
 
@@ -177,153 +143,173 @@ def read_existing_jobs():
 
 
 # =========================================================
-# DOWNLOAD SOURCE
+# LOAD PARSER
 # =========================================================
 
-def fetch_page(url):
+def load_parser(
+    name,
+    module_name
+):
 
     try:
 
-        request = urllib.request.Request(
+        module = importlib.import_module(
+            module_name
+        )
 
-            url,
+        if not hasattr(
+            module,
+            "get_jobs"
+        ):
 
-            headers={
+            print(
+                f"[WARNING] {name}: get_jobs() नहीं मिला"
+            )
 
-                "User-Agent":
-                "Mozilla/5.0 RozgarSathiBot/1.0"
+            return []
 
-            }
 
+        jobs = module.get_jobs()
+
+
+        if not isinstance(
+            jobs,
+            list
+        ):
+
+            return []
+
+
+        print(
+            f"[OK] {name}: {len(jobs)} notices found"
         )
 
 
-        with urllib.request.urlopen(
-
-            request,
-
-            timeout=25
-
-        ) as response:
-
-            return response.read().decode(
-
-                "utf-8",
-
-                errors="ignore"
-
-            )
+        return jobs
 
 
     except Exception as error:
 
         print(
-            "Source error:",
-            url
+            f"[ERROR] {name}: {error}"
         )
 
-        print(
-            str(error)
-        )
-
-        return ""
+        return []
 
 
 # =========================================================
-# SOURCE CHECK
+# NORMALIZE JOB
 # =========================================================
 
-def check_sources():
+def normalize_job(job):
 
-    print("")
-    print(
-        "Checking Government Sources..."
-    )
+    return {
+
+        "id":
+        str(
+            job.get(
+                "id",
+                ""
+            )
+        ).strip(),
+
+        "title":
+        str(
+            job.get(
+                "title",
+                ""
+            )
+        ).strip(),
+
+        "category":
+        str(
+            job.get(
+                "category",
+                "Government"
+            )
+        ).strip(),
+
+        "qualification":
+        str(
+            job.get(
+                "qualification",
+                "Official notification के अनुसार"
+            )
+        ).strip(),
+
+        "posts":
+        str(
+            job.get(
+                "posts",
+                "Official notification के अनुसार"
+            )
+        ).strip(),
+
+        "lastDate":
+        str(
+            job.get(
+                "lastDate",
+                ""
+            )
+        ).strip(),
+
+        "page":
+        str(
+            job.get(
+                "page",
+                ""
+            )
+        ).strip()
+
+    }
 
 
-    government_sources = (
-        get_government_sources()
-    )
+# =========================================================
+# REMOVE DUPLICATES
+# =========================================================
+
+def remove_duplicates(
+    jobs
+):
+
+    unique = {}
 
 
-    for name, source in (
-        government_sources.items()
-    ):
+    for job in jobs:
 
-        print(
-            "Government:",
-            name
+        job = normalize_job(
+            job
         )
 
 
-        page = fetch_page(
-            source["url"]
-        )
+        if not job["id"]:
+
+            continue
 
 
-        if page:
-
-            print(
-                "  ✓ Source available"
-            )
-
-        else:
-
-            print(
-                "  ✗ Source unavailable"
-            )
+        unique[
+            job["id"]
+        ] = job
 
 
-    print("")
-    print(
-        "Checking Private Sources..."
+    return list(
+        unique.values()
     )
-
-
-    private_sources = (
-        get_private_sources()
-    )
-
-
-    for name, source in (
-        private_sources.items()
-    ):
-
-        print(
-            "Private:",
-            name
-        )
-
-
-        page = fetch_page(
-            source["url"]
-        )
-
-
-        if page:
-
-            print(
-                "  ✓ Source available"
-            )
-
-        else:
-
-            print(
-                "  ✗ Source unavailable"
-            )
 
 
 # =========================================================
 # ACTIVE / CLOSED
 # =========================================================
 
-def split_active_closed(jobs):
+def split_jobs(
+    jobs
+):
 
     active = []
 
     closed = []
 
-    current_date = today()
+    current = today()
 
 
     for job in jobs:
@@ -336,57 +322,85 @@ def split_active_closed(jobs):
         )
 
 
-        # Last date नहीं है तो
-        # existing job को सुरक्षित रखें
+        # अगर last date available नहीं है
+        # तो अभी job को active रखें।
 
         if expiry is None:
 
-            active.append(job)
+            active.append(
+                job
+            )
 
             continue
 
 
-        if expiry < current_date:
+        if expiry < current:
 
-            closed.append(job)
+            closed.append(
+                job
+            )
 
         else:
 
-            active.append(job)
+            active.append(
+                job
+            )
 
 
     return active, closed
 
 
 # =========================================================
-# REMOVE DUPLICATES
+# JS SECURITY
 # =========================================================
 
-def remove_duplicate_jobs(jobs):
+def escape_js(value):
 
-    unique = {}
+    value = str(
+        value or ""
+    )
 
-    for job in jobs:
 
-        job_id = clean(
-            job.get(
-                "id",
-                ""
-            )
+    return (
+
+        value
+        .replace(
+            "\\",
+            "\\\\"
+        )
+        .replace(
+            '"',
+            '\\"'
+        )
+        .replace(
+            "\n",
+            " "
+        )
+        .replace(
+            "\r",
+            " "
         )
 
-
-        if not job_id:
-
-            continue
-
-
-        unique[job_id] = job
-
-
-    return list(
-        unique.values()
     )
+
+
+# =========================================================
+# JOB → JAVASCRIPT
+# =========================================================
+
+def job_to_js(
+    job
+):
+
+    return f'''{{
+  id:"{escape_js(job["id"])}",
+  title:"{escape_js(job["title"])}",
+  category:"{escape_js(job["category"])}",
+  qualification:"{escape_js(job["qualification"])}",
+  posts:"{escape_js(job["posts"])}",
+  lastDate:"{escape_js(job["lastDate"])}",
+  page:"{escape_js(job["page"])}"
+}}'''
 
 
 # =========================================================
@@ -400,28 +414,22 @@ def write_database(
 ):
 
     output = (
-        "const "
-        +
-        variable
-        +
-        " = [\n\n"
+
+        f"const {variable} = [\n\n"
+
     )
 
 
-    if jobs:
+    output += ",\n\n".join(
 
-        output += ",\n\n".join(
+        job_to_js(job)
 
-            job_to_js(job)
+        for job in jobs
 
-            for job in jobs
-
-        )
-
-
-    output += (
-        "\n\n];\n"
     )
+
+
+    output += "\n\n];\n"
 
 
     with open(
@@ -433,51 +441,6 @@ def write_database(
         f.write(
             output
         )
-
-
-# =========================================================
-# AUTOMATIC SOURCE FRAMEWORK
-# =========================================================
-
-def collect_new_jobs():
-
-    """
-    यहाँ केवल verified parser/API/RSS
-    से मिलने वाली वास्तविक vacancies
-    जोड़ी जाएंगी।
-
-    बिना वास्तविक notification data के
-    कोई fake vacancy generate नहीं होगी।
-    """
-
-    new_jobs = []
-
-    # Government
-    government_sources = (
-        get_government_sources()
-    )
-
-
-    # Private
-    private_sources = (
-        get_private_sources()
-    )
-
-
-    print("")
-    print(
-        "Government sources configured:",
-        len(government_sources)
-    )
-
-
-    print(
-        "Private sources configured:",
-        len(private_sources)
-    )
-
-
-    return new_jobs
 
 
 # =========================================================
@@ -493,9 +456,14 @@ def update_jobs():
     )
     print("=" * 55)
 
+    print(
+        "Date:",
+        today()
+    )
+
 
     # -----------------------------------------------------
-    # पुराने jobs-data.js को पढ़ें
+    # OLD DATABASE
     # -----------------------------------------------------
 
     existing_jobs = (
@@ -510,87 +478,73 @@ def update_jobs():
 
 
     # -----------------------------------------------------
-    # Sources check
+    # PARSERS
     # -----------------------------------------------------
 
-    check_sources()
+    collected_jobs = []
 
 
-    # -----------------------------------------------------
-    # नई verified vacancies
-    # -----------------------------------------------------
+    for name, module_name in PARSERS:
 
-    new_jobs = (
-        collect_new_jobs()
-    )
+        jobs = load_parser(
+            name,
+            module_name
+        )
+
+
+        collected_jobs.extend(
+            jobs
+        )
 
 
     print(
-        "New verified jobs:",
-        len(new_jobs)
+        "New notices:",
+        len(collected_jobs)
     )
 
 
     # -----------------------------------------------------
-    # पुरानी + नई vacancies
+    # COMBINE
     # -----------------------------------------------------
 
     all_jobs = (
         existing_jobs
         +
-        new_jobs
+        collected_jobs
+    )
+
+
+    all_jobs = remove_duplicates(
+        all_jobs
     )
 
 
     # -----------------------------------------------------
-    # Duplicate हटाएँ
-    # -----------------------------------------------------
-
-    all_jobs = (
-        remove_duplicate_jobs(
-            all_jobs
-        )
-    )
-
-
-    # -----------------------------------------------------
-    # Active / Closed
+    # ACTIVE / CLOSED
     # -----------------------------------------------------
 
     active_jobs, closed_jobs = (
-        split_active_closed(
+        split_jobs(
             all_jobs
         )
     )
 
 
     # -----------------------------------------------------
-    # Active database
+    # WRITE
     # -----------------------------------------------------
 
     write_database(
-
         JOBS_FILE,
-
         "jobs",
-
         active_jobs
-
     )
 
 
-    # -----------------------------------------------------
-    # Closed database
-    # -----------------------------------------------------
-
     write_database(
-
         CLOSED_FILE,
-
         "closedJobs",
-
         closed_jobs
-
     )
 
 
@@ -600,28 +554,19 @@ def update_jobs():
 
     print("")
     print(
-        "Today's date:",
-        today()
-    )
-
-
-    print(
-        "Total jobs:",
+        "Total:",
         len(all_jobs)
     )
 
-
     print(
-        "Active jobs:",
+        "Active:",
         len(active_jobs)
     )
 
-
     print(
-        "Closed jobs:",
+        "Closed:",
         len(closed_jobs)
     )
-
 
     print("=" * 55)
 
